@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import math
 import re
+import shutil
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -141,6 +142,17 @@ def ensure_dirs(base_output_dir: Path) -> dict[str, Path]:
     tables_dir.mkdir(parents=True, exist_ok=True)
     figures_dir.mkdir(parents=True, exist_ok=True)
     return {"base": base_output_dir, "tables": tables_dir, "figures": figures_dir}
+
+
+def clear_output_dir(base_output_dir: Path) -> None:
+    if not base_output_dir.exists():
+        return
+
+    for child in base_output_dir.iterdir():
+        if child.is_dir():
+            shutil.rmtree(child)
+        else:
+            child.unlink()
 
 
 def merge_genre_metadata(df: pd.DataFrame, metadata_path: Path, output_dir: Path) -> tuple[pd.DataFrame, list[str]]:
@@ -1066,6 +1078,7 @@ def run_pipeline(
     year: int | None = 2026,
     metadata_path: Path | None = None,
 ) -> dict[str, object]:
+    clear_output_dir(output_dir)
     output_dirs = ensure_dirs(output_dir)
     workbook_path = resolve_workbook_path(workbook_path)
     cleaned = clean_workbook(workbook_path, year)

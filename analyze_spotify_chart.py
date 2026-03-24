@@ -9,6 +9,7 @@ from spotify_pipeline import (
     analyze_genre,
     analyze_markov,
     analyze_prediction,
+    clear_output_dir,
     analyze_rank_changes,
     analyze_survival,
     ensure_dirs,
@@ -31,6 +32,7 @@ def main() -> None:
     )
     args = parser.parse_args()
 
+    clear_output_dir(Path(args.output_dir))
     output_dirs = ensure_dirs(Path(args.output_dir))
     df = pd.read_csv(args.input)
     df_with_metadata, notes = merge_genre_metadata(df, Path(args.metadata), output_dirs["base"])
