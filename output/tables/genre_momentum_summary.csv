@@ -1,0 +1,6 @@
+Genre,Mean_Survival,Median_Survival,Spell_Count,Rank_Variance,Rank_Mean,Observations
+Hindi Film,1.0,1.0,24,194.6793478260869,25.375,24
+Hindi Indie,1.0,1.0,13,252.75641025641028,21.384615384615383,13
+International Pop/K-Pop,1.0,1.0,2,162.0,35.0,2
+Punjabi-Haryanvi Pop,1.0,1.0,8,280.4107142857142,28.875,8
+South Indian Film,1.0,1.0,3,124.0,29.0,3

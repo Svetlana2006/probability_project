@@ -1,0 +1,3 @@
+Model,LogLikelihood,AIC,Parameters
+Lognormal,-27.938498028448222,59.876996056896445,"shape=0.4469, scale=1.2028"
+Pareto,17.670734240901528,-31.341468481803055,"shape=5.4167, scale=1.0000"

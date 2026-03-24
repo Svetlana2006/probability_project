@@ -1,0 +1,2 @@
+Analysis,Hypothesis,Test,Statistic,PValue,Decision_5pct,Note
+Artist Dominance,H0: Artist chart appearances are uniformly distributed,Chi-square goodness of fit,56.39999999999998,0.009238744259841059,Reject H0,Expected counts assume equal chart exposure across artists.

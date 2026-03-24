@@ -1,126 +1,83 @@
 import argparse
 from pathlib import Path
 
-import matplotlib.pyplot as plt
 import pandas as pd
-from scipy import stats
-from scipy.stats import shapiro
 
-try:
-    import seaborn as sns
-except ModuleNotFoundError:
-    sns = None
-
-
-def get_state(rank: float) -> str:
-    if pd.isna(rank):
-        return "S4"
-    if rank <= 10:
-        return "S1"
-    if rank <= 25:
-        return "S2"
-    return "S3"
-
-
-def build_analysis(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.copy()
-    df["Date"] = pd.to_datetime(df["Date"])
-    df = df.sort_values(by=["Song", "Date"], kind="stable").reset_index(drop=True)
-    df["Prev_Rank"] = df.groupby("Song")["Rank"].shift(1)
-    df["Delta_R"] = df["Rank"] - df["Prev_Rank"]
-    df["State"] = df["Rank"].apply(get_state)
-    df["Next_State"] = df.groupby("Song")["State"].shift(-1)
-    return df
-
-
-def save_transition_outputs(df: pd.DataFrame, output_dir: Path) -> None:
-    transitions = df.dropna(subset=["Next_State"]).copy()
-    if transitions.empty:
-        print("Transition matrix skipped: you need at least two dates for the same song.")
-        return
-
-    transition_counts = pd.crosstab(transitions["State"], transitions["Next_State"])
-    transition_probs = transition_counts.div(transition_counts.sum(axis=1), axis=0)
-
-    counts_path = output_dir / "transition_counts.csv"
-    probs_path = output_dir / "transition_matrix.csv"
-    transition_counts.to_csv(counts_path)
-    transition_probs.to_csv(probs_path)
-
-    print(f"Saved transition counts to {counts_path.resolve()}")
-    print(f"Saved transition probabilities to {probs_path.resolve()}")
-    print(transition_probs.round(4).to_string())
-
-
-def save_distribution_outputs(df: pd.DataFrame, output_dir: Path) -> None:
-    delta = df["Delta_R"].dropna()
-    if delta.empty:
-        print("Distribution analysis skipped: no previous-day ranks are available yet.")
-        return
-
-    plot_path = output_dir / "delta_rank_distribution.png"
-    plt.figure(figsize=(10, 6))
-    if sns is not None:
-        sns.histplot(delta, bins=30, kde=True)
-    else:
-        plt.hist(delta, bins=30, edgecolor="black")
-    plt.title("Distribution of Rank Changes (Delta R)")
-    plt.xlabel("Delta R")
-    plt.tight_layout()
-    plt.savefig(plot_path, dpi=150)
-    plt.close()
-
-    mu, sigma = stats.norm.fit(delta)
-    loc, scale = stats.laplace.fit(delta)
-
-    print(f"Saved distribution plot to {plot_path.resolve()}")
-    print(f"Normal fit: mu={mu:.4f}, sigma={sigma:.4f}")
-    print(f"Laplace fit: loc={loc:.4f}, scale={scale:.4f}")
-
-    if len(delta) >= 3:
-        stat, p_value = shapiro(delta)
-        print(f"Shapiro-Wilk p-value: {p_value:.6f}")
-        if p_value < 0.05:
-            print("Interpretation: the delta distribution is not normal at the 5% level.")
-        else:
-            print("Interpretation: normality is not rejected at the 5% level.")
-    else:
-        print("Shapiro-Wilk test skipped: it needs at least 3 non-null delta values.")
+from spotify_pipeline import (
+    analyze_artist_dominance,
+    analyze_entries,
+    analyze_genre,
+    analyze_markov,
+    analyze_prediction,
+    analyze_rank_changes,
+    analyze_survival,
+    ensure_dirs,
+    merge_genre_metadata,
+    prepare_analysis_frame,
+    save_hypothesis_table,
+    save_rank_heatmap,
+    write_report,
+)
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Analyze cleaned Spotify chart data.")
+    parser = argparse.ArgumentParser(description="Run the Spotify chart analysis on a cleaned CSV.")
+    parser.add_argument("--input", default="spotify_data.csv", help="Path to the cleaned CSV file.")
+    parser.add_argument("--output-dir", default="output", help="Directory for analysis outputs.")
     parser.add_argument(
-        "--input",
-        default="spotify_data.csv",
-        help="Path to the cleaned CSV file.",
-    )
-    parser.add_argument(
-        "--output-dir",
-        default="output",
-        help="Directory where analysis outputs will be written.",
+        "--metadata",
+        default="genre_mapping.csv",
+        help="Optional CSV file with Artist, Song, Genre columns.",
     )
     args = parser.parse_args()
 
-    input_path = Path(args.input)
-    output_dir = Path(args.output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
+    output_dirs = ensure_dirs(Path(args.output_dir))
+    df = pd.read_csv(args.input)
+    df_with_metadata, notes = merge_genre_metadata(df, Path(args.metadata), output_dirs["base"])
+    analyzed, unique_dates = prepare_analysis_frame(df_with_metadata)
+    analyzed.to_csv(output_dirs["tables"] / "spotify_analysis.csv", index=False)
+    analyzed_public = analyzed.drop(columns=["Song_Key"])
+    analyzed_public.to_csv(output_dirs["tables"] / "spotify_analysis_public.csv", index=False)
+    analyzed_public.to_csv(output_dirs["base"] / "spotify_analysis.csv", index=False)
 
-    df = pd.read_csv(input_path)
-    analyzed = build_analysis(df)
+    if save_rank_heatmap(analyzed, output_dirs["figures"]) is None:
+        notes.append("Rank heatmap was skipped because at least two chart dates are needed.")
 
-    analyzed_path = output_dir / "spotify_analysis.csv"
-    analyzed.to_csv(analyzed_path, index=False)
-    print(f"Saved analysis table to {analyzed_path.resolve()}")
-    print(analyzed.head(10).to_string(index=False))
+    hypothesis_rows: list[dict] = []
+    _, tests, more_notes = analyze_rank_changes(analyzed, output_dirs["tables"], output_dirs["figures"])
+    hypothesis_rows.extend(tests)
+    notes.extend(more_notes)
+    spells, tests, more_notes = analyze_survival(analyzed, output_dirs["tables"], output_dirs["figures"])
+    hypothesis_rows.extend(tests)
+    notes.extend(more_notes)
+    _, tests, more_notes = analyze_entries(analyzed, output_dirs["tables"], output_dirs["figures"])
+    hypothesis_rows.extend(tests)
+    notes.extend(more_notes)
+    _, tests, more_notes = analyze_artist_dominance(analyzed, output_dirs["tables"], output_dirs["figures"])
+    hypothesis_rows.extend(tests)
+    notes.extend(more_notes)
+    _, tests, more_notes = analyze_genre(analyzed, spells, output_dirs["tables"])
+    hypothesis_rows.extend(tests)
+    notes.extend(more_notes)
+    _, tests, more_notes = analyze_markov(analyzed, output_dirs["tables"], output_dirs["figures"])
+    hypothesis_rows.extend(tests)
+    notes.extend(more_notes)
+    _, tests, more_notes = analyze_prediction(analyzed, output_dirs["tables"], output_dirs["figures"])
+    hypothesis_rows.extend(tests)
+    notes.extend(more_notes)
 
-    unique_dates = analyzed["Date"].nunique()
-    print(f"Unique chart dates found: {unique_dates}")
-    if unique_dates < 2:
-        print("Only one chart date is available, so Delta_R and transitions will be mostly empty.")
+    hypothesis_table = save_hypothesis_table(hypothesis_rows, output_dirs["tables"])
+    write_report(
+        report_path=output_dirs["base"] / "report.md",
+        cleaned_rows=len(df),
+        date_count=len(unique_dates),
+        notes=notes,
+        hypothesis_table=hypothesis_table,
+        output_dirs=output_dirs,
+    )
 
-    save_transition_outputs(analyzed, output_dir)
-    save_distribution_outputs(analyzed, output_dir)
+    print(f"Wrote analysis outputs to {output_dirs['base'].resolve()}")
+    print(f"Report: {(output_dirs['base'] / 'report.md').resolve()}")
 
 
 if __name__ == "__main__":
