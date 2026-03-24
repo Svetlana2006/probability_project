@@ -1,5 +1,12 @@
+import os
 import argparse
 from pathlib import Path
+
+PROJECT_DIR = Path(__file__).resolve().parent
+MPL_CONFIG_DIR = PROJECT_DIR / ".matplotlib"
+MPL_CONFIG_DIR.mkdir(exist_ok=True)
+os.environ.setdefault("MPLCONFIGDIR", str(MPL_CONFIG_DIR))
+os.environ.setdefault("MPLBACKEND", "Agg")
 
 from spotify_pipeline import run_pipeline
 

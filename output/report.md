@@ -21,13 +21,13 @@
 - Pareto provides the lower AIC for artist appearance counts in this sample.
 - Top 3 artists account for 28.00% of all Top 50 chart slots in the dataset.
 - The artist-appearance Gini coefficient is 0.2674.
-- Kruskal-Wallis genre test was skipped because all observed genre durations were identical.
 - A Cox proportional hazards model is not included because the required survival package is not installed in this environment.
 - Markov analysis was skipped because the dataset has no next-day chart observations yet.
 - Top 10 prediction was skipped because no day has a next-day label yet.
 
 ## Hypothesis Summary
 - Artist Dominance: Chi-square goodness of fit -> Reject H0 (p=0.009239)
+- Genre Momentum: Kruskal-Wallis -> Fail to reject H0 (p=NA)
 
 ## Output Files
 - Tables:
