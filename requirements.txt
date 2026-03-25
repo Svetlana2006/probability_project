@@ -4,3 +4,5 @@ openpyxl
 matplotlib
 scipy
 scikit-learn
+requests
+playwright

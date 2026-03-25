@@ -1,0 +1,19 @@
+# Browser Profile (contains secrets and locked files)
+.browser-profile/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Matplotlib cache
+.matplotlib/
+
+# Output Data & Reports
+output/
+spotify_data.csv
+pipeline_err.txt
+
+# Personal Workbooks (optional - remove if you want to track the excel)
+# *.xlsx

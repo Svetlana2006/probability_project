@@ -2,12 +2,37 @@
 
 This project automates the workflow for your chart-survival study:
 
+- append the latest India Top 50 daily chart into your workbook
 - clean the Spotify Top 50 workbook
 - build the analysis table
 - run distribution, survival, entry-rate, artist-dominance, Markov, and prediction analyses
 - generate plots, CSV tables, and a report
 
-## One command
+## 1. Append the latest daily chart
+
+```powershell
+python .\append_daily_chart.py
+```
+
+This command:
+
+- opens the Spotify Charts India daily page in a persistent local browser session
+- uses that browser session to fetch the India Top 50 chart data
+- keeps the Top 50 rows
+- writes them into `Probability Project.xlsx` as a sheet named `AUTO_YYYYMMDD`
+- replaces that same auto sheet if you rerun it for the same chart date
+
+If Spotify asks you to log in, complete it once in the opened browser window. The session is then reused from:
+
+- `.\.browser-profile\spotify-charts`
+
+For first-time setup, run it without `--headless`. After the session is saved, you can also use:
+
+```powershell
+python .\append_daily_chart.py --headless
+```
+
+## 2. Run the analysis
 
 ```powershell
 python .\run_pipeline.py
@@ -26,6 +51,7 @@ Default input:
 
 - Reads every sheet in the workbook as one chart date
 - Detects the real header row even if the sheet has blank rows above it
+- Also accepts auto-imported sheets that already contain `Date`, `Rank`, `Song`, and `Artist`
 - Keeps only `Date`, `Rank`, `Song`, and `Artist`
 - Removes bracket metadata like `(w/ ...)` and `(From "...")`
 - Saves the cleaned data to `spotify_data.csv`
@@ -66,6 +92,14 @@ If you want the steps separately:
 ```powershell
 python .\clean_spotify_chart.py
 python .\analyze_spotify_chart.py
+```
+
+## Source note
+
+The default append command uses a browser-authenticated Spotify Charts session. A public Kworb fallback is still available if needed:
+
+```powershell
+python .\append_daily_chart.py --source kworb
 ```
 
 ## Current limitation

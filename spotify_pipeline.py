@@ -1,13 +1,16 @@
 from __future__ import annotations
 
 import math
+import json
 import re
 import shutil
+from html import unescape
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import requests
 from scipy import optimize, stats
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (
@@ -21,6 +24,8 @@ from sklearn.metrics import (
 
 
 STATE_ORDER = ["Top10", "11-25", "26-50", "Exit"]
+DEFAULT_EDGE_PATH = Path(r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
+DEFAULT_CHROME_PATH = Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe")
 
 
 def infer_date(sheet_name: str, year: int | None) -> str:
@@ -52,6 +57,14 @@ def normalize_text(value: str) -> str:
     return text.strip(" -")
 
 
+def strip_html(value: str) -> str:
+    text = re.sub(r"<br\s*/?>", " ", value, flags=re.IGNORECASE)
+    text = re.sub(r"<[^>]+>", "", text)
+    text = unescape(text)
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
 def split_artist_title(value: str) -> tuple[str, str]:
     text = str(value).strip()
     if " - " in text:
@@ -62,6 +75,18 @@ def split_artist_title(value: str) -> tuple[str, str]:
 
 
 def clean_sheet(workbook_path: Path, sheet_name: str, year: int | None) -> pd.DataFrame:
+    standard = pd.read_excel(workbook_path, sheet_name=sheet_name)
+    standard_columns = {str(column).strip() for column in standard.columns}
+    if {"Date", "Rank", "Song", "Artist"}.issubset(standard_columns):
+        cleaned = standard[["Date", "Rank", "Song", "Artist"]].copy()
+        cleaned["Date"] = pd.to_datetime(cleaned["Date"]).dt.strftime("%Y-%m-%d")
+        cleaned["Rank"] = pd.to_numeric(cleaned["Rank"], errors="coerce")
+        cleaned = cleaned.dropna(subset=["Date", "Rank", "Song", "Artist"])
+        cleaned["Rank"] = cleaned["Rank"].astype(int)
+        cleaned["Song"] = cleaned["Song"].astype(str).str.strip()
+        cleaned["Artist"] = cleaned["Artist"].astype(str).str.strip()
+        return cleaned.sort_values(["Date", "Rank"], kind="stable").reset_index(drop=True)
+
     raw = pd.read_excel(workbook_path, sheet_name=sheet_name, header=None)
     header_row_index = None
     for idx, row in raw.iterrows():
@@ -97,6 +122,7 @@ def clean_workbook(workbook_path: Path, year: int | None) -> pd.DataFrame:
     excel_file = pd.ExcelFile(workbook_path)
     frames = [clean_sheet(workbook_path, sheet_name, year) for sheet_name in excel_file.sheet_names]
     combined = pd.concat(frames, ignore_index=True)
+    combined = combined.drop_duplicates(subset=["Date", "Rank", "Song", "Artist"], keep="last")
     return combined.sort_values(["Date", "Rank"], kind="stable").reset_index(drop=True)
 
 
@@ -123,6 +149,451 @@ def resolve_workbook_path(workbook_path: Path) -> Path:
             return candidate
 
     raise FileNotFoundError(f"Workbook not found: {workbook_path}")
+
+
+def resolve_browser_executable() -> Path:
+    candidates = [
+        DEFAULT_EDGE_PATH,
+        Path(r"C:\Program Files\Microsoft\Edge\Application\msedge.exe"),
+        DEFAULT_CHROME_PATH,
+        Path(r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"),
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    raise FileNotFoundError("Could not find a local Edge or Chrome executable.")
+
+
+def normalize_chart_date(value: str | None) -> str | None:
+    if not value:
+        return None
+    parsed = pd.to_datetime(value, errors="coerce")
+    if pd.isna(parsed):
+        return None
+    return parsed.strftime("%Y-%m-%d")
+
+
+def parse_public_chart_response(data: dict) -> pd.DataFrame | None:
+    responses = data.get("chartEntryViewResponses", [])
+    for chart_response in responses:
+        display = chart_response.get("displayChart", {})
+        metadata = display.get("chartMetadata", {})
+        alias = str(metadata.get("alias", "")).lower()
+        readable_title = str(display.get("readableTitle", "")).lower()
+        uri = str(metadata.get("uri", "")).lower()
+        if "regional_in_daily" not in alias and "india" not in readable_title and "regional-in-daily" not in uri:
+            continue
+
+        chart_date = normalize_chart_date(display.get("date"))
+        entries = chart_response.get("entries", [])
+        rows = []
+        for entry in entries[:50]:
+            track = entry.get("trackMetadata", {})
+            chart_data = entry.get("chartEntryData", {})
+            artists = track.get("artists", [])
+            rows.append(
+                {
+                    "Date": chart_date,
+                    "Rank": chart_data.get("currentRank"),
+                    "Song": track.get("trackName"),
+                    "Artist": ", ".join(artist.get("name", "") for artist in artists if artist.get("name")),
+                }
+            )
+        frame = pd.DataFrame(rows)
+        if not frame.empty:
+            return frame
+    return None
+
+
+def parse_auth_chart_response(data: dict) -> pd.DataFrame | None:
+    display = data.get("displayChart", {})
+    chart_date = normalize_chart_date(display.get("date")) or normalize_chart_date(data.get("date"))
+    entries = data.get("entries") or data.get("chartEntries") or data.get("items") or []
+    rows = []
+    for entry in entries[:50]:
+        track = entry.get("trackMetadata", {})
+        chart_data = entry.get("chartEntryData", {})
+        artists = track.get("artists", [])
+        rows.append(
+            {
+                "Date": chart_date,
+                "Rank": chart_data.get("currentRank") or entry.get("currentRank"),
+                "Song": track.get("trackName") or entry.get("trackName"),
+                "Artist": ", ".join(artist.get("name", "") for artist in artists if artist.get("name")),
+            }
+        )
+    frame = pd.DataFrame(rows)
+    if frame.empty:
+        return None
+    return frame
+
+
+def finalize_live_chart(frame: pd.DataFrame) -> pd.DataFrame | None:
+    if frame is None or frame.empty:
+        return None
+    live = frame.copy()
+    live["Date"] = pd.to_datetime(live["Date"], errors="coerce").dt.strftime("%Y-%m-%d")
+    live["Rank"] = pd.to_numeric(live["Rank"], errors="coerce")
+    live["Song"] = live["Song"].astype(str).str.strip()
+    live["Artist"] = live["Artist"].astype(str).str.strip()
+    live = live.dropna(subset=["Date", "Rank", "Song", "Artist"])
+    live = live[live["Song"] != ""]
+    live = live[live["Artist"] != ""]
+    live["Rank"] = live["Rank"].astype(int)
+    live = live[["Date", "Rank", "Song", "Artist"]].sort_values(["Date", "Rank"], kind="stable")
+    # Drop duplicate rank slots — Spotify returns multiple versions of the same song
+    # at the same chart position; keep the first (canonical) entry per rank.
+    live = live.drop_duplicates(subset=["Date", "Rank"], keep="first")
+    if live.empty:
+        return None
+    return live.head(50).reset_index(drop=True)
+
+
+def fetch_india_top_50_live() -> tuple[pd.DataFrame | None, str]:
+    session = requests.Session()
+    headers = {"User-Agent": "Mozilla/5.0"}
+
+    public_url = "https://charts-spotify-com-service.spotify.com/public/v0/charts"
+    public_response = session.get(public_url, headers=headers, timeout=30)
+    public_response.raise_for_status()
+    public_frame = finalize_live_chart(parse_public_chart_response(public_response.json()))
+    if public_frame is not None:
+        chart_date = public_frame["Date"].iloc[0]
+        return public_frame, f"Fetched India Top 50 from Spotify public charts for {chart_date}."
+
+    auth_url = "https://charts-spotify-com-service.spotify.com/auth/v0/charts/regional-in-daily/latest"
+    auth_response = session.get(auth_url, headers=headers, timeout=30)
+    if auth_response.ok:
+        auth_frame = finalize_live_chart(parse_auth_chart_response(auth_response.json()))
+        if auth_frame is not None:
+            chart_date = auth_frame["Date"].iloc[0]
+            return auth_frame, f"Fetched India Top 50 from Spotify authenticated charts for {chart_date}."
+
+    if auth_response.status_code == 401:
+        return None, (
+            "Live Spotify fetch did not add a new daily chart because the India daily endpoint currently requires authentication "
+            "and the public endpoint does not expose that chart."
+        )
+
+    return None, f"Live Spotify fetch did not add a new daily chart. Auth endpoint returned status {auth_response.status_code}."
+
+
+def fetch_india_top_50_kworb() -> tuple[pd.DataFrame, str]:
+    url = "https://kworb.net/spotify/country/in_daily.html"
+    response = requests.get(url, timeout=30, headers={"User-Agent": "Mozilla/5.0"})
+    response.raise_for_status()
+    html = response.text
+
+    date_match = re.search(r"Spotify Daily Chart - India - (\d{4}/\d{2}/\d{2})", html)
+    if not date_match:
+        raise ValueError("Could not find the chart date on the Kworb India daily page.")
+    chart_date = pd.to_datetime(date_match.group(1), format="%Y/%m/%d").strftime("%Y-%m-%d")
+
+    table_match = re.search(
+        r'<table[^>]*id="spotifydaily"[^>]*>.*?<tbody>(.*?)</tbody>.*?</table>',
+        html,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    if not table_match:
+        raise ValueError("Could not find the Spotify daily table on the Kworb India daily page.")
+
+    rows: list[dict[str, object]] = []
+    tbody = table_match.group(1)
+    for row_html in re.findall(r"<tr[^>]*>(.*?)</tr>", tbody, flags=re.IGNORECASE | re.DOTALL):
+        cells = re.findall(r"<td[^>]*>(.*?)</td>", row_html, flags=re.IGNORECASE | re.DOTALL)
+        if len(cells) < 3:
+            continue
+        rank_text = strip_html(cells[0])
+        title_text = strip_html(cells[2])
+        if not rank_text or not title_text:
+            continue
+        rank = pd.to_numeric(rank_text, errors="coerce")
+        if pd.isna(rank):
+            continue
+        artist, song = split_artist_title(title_text)
+        rows.append(
+            {
+                "Date": chart_date,
+                "Rank": int(rank),
+                "Song": song,
+                "Artist": artist,
+            }
+        )
+        if len(rows) >= 50:
+            break
+
+    frame = pd.DataFrame(rows)
+    if len(frame) < 50:
+        raise ValueError(f"Expected 50 chart rows from Kworb, found {len(frame)}.")
+
+    frame = frame.sort_values(["Date", "Rank"], kind="stable").reset_index(drop=True)
+    return frame, chart_date
+
+
+def extract_chart_from_browser_payload(payload: dict) -> pd.DataFrame:
+    return finalize_live_chart(parse_auth_chart_response(payload))  # type: ignore[return-value]
+
+
+def fetch_india_top_50_browser(
+    browser_profile_dir: Path,
+    browser_executable: Path | None = None,
+    headless: bool = False,
+    login_timeout_seconds: int = 300,
+) -> tuple[pd.DataFrame, str]:
+    from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
+    from playwright.sync_api import sync_playwright
+
+    browser_executable = browser_executable or resolve_browser_executable()
+    browser_profile_dir.mkdir(parents=True, exist_ok=True)
+    target_url = "https://charts.spotify.com/charts/view/regional-in-daily/latest"
+
+    def _is_chart_response(response) -> bool:
+        return (
+            "auth/v0/charts/regional-in-daily/latest" in response.url
+            and response.status == 200
+        )
+
+    with sync_playwright() as playwright:
+        print(f"Launching browser with profile: {browser_profile_dir}")
+        context = playwright.chromium.launch_persistent_context(
+            user_data_dir=str(browser_profile_dir),
+            executable_path=str(browser_executable),
+            headless=headless,
+        )
+        page = context.pages[0] if context.pages else context.new_page()
+
+        # ── Attempt 1: navigate and wait 30 s for the chart API response ──────────
+        # This handles the "already logged in" fast path.
+        payload: dict | None = None
+        print(f"Navigating to {target_url}…")
+        try:
+            with page.expect_response(_is_chart_response, timeout=30_000) as response_info:
+                page.goto(target_url, wait_until="domcontentloaded", timeout=60_000)
+            payload = response_info.value.json()
+            print("Chart data received on initial load.")
+        except PlaywrightTimeoutError:
+            pass  # Not logged in yet, or page is slow — handled below
+        except Exception:
+            pass
+
+        # ── If no payload yet, check for login prompt ──────────────────────────────
+        if payload is None:
+            body_text = ""
+            try:
+                body_text = page.locator("body").inner_text(timeout=5_000)
+            except Exception:
+                pass
+
+            login_required = (
+                page.locator("text=Log in with Spotify").count() > 0
+                or page.locator("text=Log in").count() > 0
+                or "Log in with Spotify" in body_text
+                or ("log in" in body_text.lower() and "spotify" in body_text.lower())
+            )
+
+            if login_required and headless:
+                context.close()
+                raise TimeoutError(
+                    "Spotify login is required for the India daily chart. "
+                    "Run append_daily_chart.py without --headless to complete login."
+                )
+
+            if login_required:
+                print(
+                    f"\n*** Spotify Charts requires you to log in. ***\n"
+                    f"Please log in in the browser window that just opened.\n"
+                    f"Waiting up to {login_timeout_seconds} seconds…\n"
+                )
+                # Auto-click the login button to save the user a click
+                try:
+                    for btn_text in ("Log in with Spotify", "Log in"):
+                        btn = page.get_by_text(btn_text)
+                        if btn.count() > 0:
+                            btn.first.click()
+                            break
+                except Exception:
+                    pass
+
+                # Wait until the browser returns to charts.spotify.com after OAuth
+                try:
+                    page.wait_for_url("**/charts.spotify.com/**", timeout=login_timeout_seconds * 1_000)
+                    print("Login detected — reloading chart page to fetch data…")
+                except PlaywrightTimeoutError:
+                    print("Proceeding to reload chart page…")
+
+            else:
+                print("No login prompt found. Doing a fresh reload to trigger the chart API…")
+
+            # ── Attempt 2: reload target URL and properly wait for the API response ─
+            try:
+                with page.expect_response(_is_chart_response, timeout=60_000) as response_info:
+                    page.goto(target_url, wait_until="domcontentloaded", timeout=60_000)
+                payload = response_info.value.json()
+                print("Chart data received.")
+            except PlaywrightTimeoutError:
+                pass
+            except Exception:
+                pass
+
+        # ── Attempt 3: final fallback – networkidle + one more expect_response ─────
+        if payload is None:
+            print("Chart data not yet received. Attempting final reload with longer wait…")
+            try:
+                with page.expect_response(_is_chart_response, timeout=90_000) as response_info:
+                    page.goto(target_url, wait_until="networkidle", timeout=120_000)
+                payload = response_info.value.json()
+                print("Chart data received on final attempt.")
+            except PlaywrightTimeoutError:
+                pass
+            except Exception:
+                pass
+
+        context.close()
+
+        if payload is None:
+            raise RuntimeError("Browser session did not produce the India daily chart response.")
+
+        chart_df = extract_chart_from_browser_payload(payload)
+        if chart_df is None or chart_df.empty:
+            raise RuntimeError("Browser chart response did not contain a usable Top 50 dataset.")
+
+        chart_date = chart_df["Date"].iloc[0]
+        return chart_df, chart_date
+
+
+def fetch_india_top_50_browser_date(
+    chart_date: str,
+    browser_profile_dir: Path,
+    browser_executable: Path | None = None,
+    headless: bool = False,
+) -> pd.DataFrame | None:
+    """Fetch the India Top 50 chart for a specific date using the saved browser session.
+
+    ``chart_date`` should be in ``YYYY-MM-DD`` format.
+    Returns None if Spotify has no chart for that date (e.g. future dates or very old dates).
+    """
+    from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
+    from playwright.sync_api import sync_playwright
+
+    browser_executable = browser_executable or resolve_browser_executable()
+    browser_profile_dir.mkdir(parents=True, exist_ok=True)
+    target_url = f"https://charts.spotify.com/charts/view/regional-in-daily/{chart_date}"
+
+    def _is_chart_response(response) -> bool:
+        return (
+            "auth/v0/charts/regional-in-daily" in response.url
+            and response.status == 200
+        )
+
+    with sync_playwright() as playwright:
+        context = playwright.chromium.launch_persistent_context(
+            user_data_dir=str(browser_profile_dir),
+            executable_path=str(browser_executable),
+            headless=headless,
+        )
+        page = context.pages[0] if context.pages else context.new_page()
+
+        payload: dict | None = None
+
+        # Attempt 1: navigate and wait 25 s for the API response
+        try:
+            with page.expect_response(_is_chart_response, timeout=25_000) as response_info:
+                page.goto(target_url, wait_until="domcontentloaded", timeout=60_000)
+            payload = response_info.value.json()
+        except PlaywrightTimeoutError:
+            pass
+        except Exception:
+            pass
+
+        # Attempt 2: reload with longer wait
+        if payload is None:
+            try:
+                with page.expect_response(_is_chart_response, timeout=60_000) as response_info:
+                    page.goto(target_url, wait_until="networkidle", timeout=120_000)
+                payload = response_info.value.json()
+            except PlaywrightTimeoutError:
+                pass
+            except Exception:
+                pass
+
+        context.close()
+
+        if payload is None:
+            return None
+
+        chart_df = extract_chart_from_browser_payload(payload)
+        # Override the date from the URL in case Spotify returns a slightly different date
+        if chart_df is not None and not chart_df.empty:
+            chart_df["Date"] = chart_date
+        return chart_df
+
+
+def write_live_chart_sheet(workbook_path: Path, chart_df: pd.DataFrame) -> str:
+    chart_date = pd.to_datetime(chart_df["Date"].iloc[0]).strftime("%Y%m%d")
+    sheet_name = f"AUTO_{chart_date}"
+    if workbook_path.exists():
+        mode = "a"
+    else:
+        mode = "w"
+
+    with pd.ExcelWriter(workbook_path, engine="openpyxl", mode=mode, if_sheet_exists="replace") as writer:
+        chart_df.to_excel(writer, sheet_name=sheet_name, index=False)
+    return sheet_name
+
+
+def append_kworb_chart_to_workbook(workbook_path: Path) -> dict[str, str]:
+    workbook_path = workbook_path.resolve()
+    chart_df, chart_date = fetch_india_top_50_kworb()
+    sheet_name = write_live_chart_sheet(workbook_path, chart_df)
+    return {
+        "date": chart_date,
+        "sheet_name": sheet_name,
+        "workbook_path": str(workbook_path),
+    }
+
+
+def append_browser_chart_to_workbook(
+    workbook_path: Path,
+    browser_profile_dir: Path,
+    browser_executable: Path | None = None,
+    headless: bool = False,
+    login_timeout_seconds: int = 300,
+) -> dict[str, str]:
+    workbook_path = workbook_path.resolve()
+    chart_df, chart_date = fetch_india_top_50_browser(
+        browser_profile_dir=browser_profile_dir,
+        browser_executable=browser_executable,
+        headless=headless,
+        login_timeout_seconds=login_timeout_seconds,
+    )
+    sheet_name = write_live_chart_sheet(workbook_path, chart_df)
+    return {
+        "date": chart_date,
+        "sheet_name": sheet_name,
+        "workbook_path": str(workbook_path),
+        "browser_profile_dir": str(browser_profile_dir.resolve()),
+    }
+
+
+def update_workbook_with_live_chart(workbook_path: Path) -> list[str]:
+    notes: list[str] = []
+    try:
+        live_chart, message = fetch_india_top_50_live()
+        notes.append(message)
+        if live_chart is None:
+            return notes
+
+        sheet_name = write_live_chart_sheet(workbook_path, live_chart)
+        notes.append(
+            f"Stored the fetched India Top 50 chart in workbook sheet {sheet_name}."
+        )
+        return notes
+    except requests.RequestException as exc:
+        notes.append(f"Live Spotify fetch failed with a network error: {exc}")
+        return notes
+    except Exception as exc:
+        notes.append(f"Live Spotify fetch failed: {exc}")
+        return notes
 
 
 def assign_state(rank: float) -> str:
@@ -307,7 +778,7 @@ def fit_zero_inflated_poisson(values: pd.Series) -> tuple[float, float, float]:
         lam = float(np.exp(log_lambda))
         pi = 1 / (1 + math.exp(-float(logit_pi)))
         zero_prob = pi + (1 - pi) * np.exp(-lam)
-        positive_prob = (1 - pi) * np.exp(-lam) * np.power(lam, x) / stats.factorial(x)
+        positive_prob = (1 - pi) * np.exp(-lam) * np.power(lam, x) / np.array([math.factorial(int(v)) for v in x], dtype=float)
         probs = np.where(x == 0, zero_prob, positive_prob)
         probs = np.clip(probs, 1e-12, None)
         return -float(np.sum(np.log(probs)))
@@ -900,7 +1371,13 @@ def analyze_markov(df: pd.DataFrame, tables_dir: Path, figures_dir: Path) -> tup
 def analyze_prediction(df: pd.DataFrame, tables_dir: Path, figures_dir: Path) -> tuple[pd.DataFrame, list[dict], list[str]]:
     notes: list[str] = []
     tests: list[dict] = []
+    
+    # Capture "future" rows (latest chart date) where the outcome for tomorrow is unknown
+    future_data = df[df["Top10_Tomorrow"].isna()].copy()
+    
     modeling = df.dropna(subset=["Top10_Tomorrow"]).copy()
+    modeling = modeling[modeling["Top10_Tomorrow"].notna()].copy()
+    modeling["Top10_Tomorrow"] = modeling["Top10_Tomorrow"].astype(int)
     if modeling.empty:
         notes.append("Top 10 prediction was skipped because no day has a next-day label yet.")
         return pd.DataFrame(), tests, notes
@@ -983,6 +1460,27 @@ def analyze_prediction(df: pd.DataFrame, tables_dir: Path, figures_dir: Path) ->
     plt.close(fig)
 
     top_rank_coef = coefficients.loc[coefficients["Feature"] == "Rank", "Coefficient"]
+    
+    # --- Future Prediction ---
+    if not future_data.empty:
+        future_X = future_data[feature_cols].copy()
+        if "Genre" in modeling.columns and modeling["Genre"].notna().any():
+            future_X = pd.concat([future_X, pd.get_dummies(future_data["Genre"], prefix="Genre", dtype=float)], axis=1)
+        
+        # Align future_X with train_X to match the features used for training
+        _, future_X_aligned = train_X.align(future_X, join="left", axis=1, fill_value=0)
+        future_X_aligned = future_X_aligned[train_X.columns]  # Ensure column order matches
+        
+        future_probs = model.predict_proba(future_X_aligned)[:, 1]
+        future_preds = (future_probs >= 0.5).astype(int)
+        
+        future_output = future_data[["Date", "Artist", "Song", "Rank"]].copy()
+        future_output["Predicted_Probability"] = future_probs
+        future_output["Predicted_Class"] = future_preds
+        future_output = future_output.sort_values("Predicted_Probability", ascending=False, kind="stable")
+        future_output.to_csv(tables_dir / "top10_future_predictions.csv", index=False)
+        notes.append(f"Generated future Top 10 predictions for the latest data ({future_data['Date'].iloc[0].strftime('%Y-%m-%d')}).")
+
     if not top_rank_coef.empty:
         tests.append(
             {
@@ -1077,15 +1575,20 @@ def run_pipeline(
     cleaned_csv_path: Path,
     year: int | None = 2026,
     metadata_path: Path | None = None,
+    fetch_live: bool = True,
 ) -> dict[str, object]:
     clear_output_dir(output_dir)
     output_dirs = ensure_dirs(output_dir)
     workbook_path = resolve_workbook_path(workbook_path)
+    notes: list[str] = []
+    if fetch_live:
+        notes.extend(update_workbook_with_live_chart(workbook_path))
     cleaned = clean_workbook(workbook_path, year)
     cleaned.to_csv(cleaned_csv_path, index=False)
 
     metadata_path = metadata_path or Path("genre_mapping.csv")
-    cleaned_with_metadata, notes = merge_genre_metadata(cleaned, metadata_path, output_dirs["base"])
+    cleaned_with_metadata, metadata_notes = merge_genre_metadata(cleaned, metadata_path, output_dirs["base"])
+    notes.extend(metadata_notes)
     analyzed, unique_dates = prepare_analysis_frame(cleaned_with_metadata)
     analyzed.to_csv(output_dirs["tables"] / "spotify_analysis.csv", index=False)
     analyzed_public = analyzed.drop(columns=["Song_Key"])

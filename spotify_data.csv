@@ -1,51 +1,442 @@
 Date,Rank,Song,Artist
+2026-03-15,1,Bairan,Banjaare
+2026-03-15,2,Sheesha - Aakhya Mai Aakh Ghali Jo Bairan,"Mitta Ror, Swara Verma"
+2026-03-15,3,Gehra Hua,"Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan"
+2026-03-15,4,Sahiba,Aditya Rikhari
+2026-03-15,5,Dooron Dooron,"Paresh Pahuja, Shiv Tandan, Meghdeep Bose"
+2026-03-15,6,Khat,Navjot Ahuja
+2026-03-15,7,Samjhawan,"Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Ghoshal"
+2026-03-15,8,"Sitaare (From ""Ikkis"")","Arijit Singh, White Noise Collectives, Amitabh Bhattacharya"
+2026-03-15,9,Shararat,"Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas"
+2026-03-15,10,Finding Her,"Kushagra, Bharath, Saaheal"
+2026-03-15,11,Apna Bana Le,"Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya"
+2026-03-15,12,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain
+2026-03-15,13,Bairi,"Virat, Pradeep Solanki, Heena"
+2026-03-15,14,Ishq,"Faheem Abdullah, Rauhan Malik, Amir Ameer"
+2026-03-15,15,For A Reason,"Karan Aujla, Ikky"
+2026-03-15,16,Saiyaara,"Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Irshad Kamil"
+2026-03-15,17,Mann Mera,Gajendra Verma
+2026-03-15,18,Boyfriend,"Karan Aujla, Ikky"
+2026-03-15,19,Ishqa Ve,"Zeeshan Ali, Yuvraj Tung, Sandeep Aulakh, Honey Dhillon"
+2026-03-15,20,"Raanjhan (From ""Do Patti"")","Sachet-Parampara, Parampara Tandon, Kausar Munir"
+2026-03-15,21,Tere Liye,"Atif Aslam, Shreya Ghoshal, Sachin Gupta, Sameer Anjaan"
+2026-03-15,22,Dhurandhar - Title Track,"Shashwat Sachdev, Hanumankind, Jasmine Sandlas, Sudhir Yaduvanshi, Charanjit Ahuja, Muhammad Sadiq, Ranjit Kaur, Babu Singh Maan"
+2026-03-15,23,Jo Tum Mere Ho,Anuv Jain
+2026-03-15,24,Tere Bina,"A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan"
+2026-03-15,25,Deewaana Deewaana,"A.R. Rahman, Irshad Kamil"
+2026-03-15,26,"Pavazha Malli - From ""Think Indie""","Sai Abhyankkar, Shruti Haasan, Vivek"
+2026-03-15,27,"Aaya Sher (From ""The Paradise"") (Telugu)","Anirudh Ravichander, Jangi Reddy, Arjun Chandy, Kasarla Shyam"
+2026-03-15,28,"Agar Tum Saath Ho (From ""Tamasha"")","Alka Yagnik, Arijit Singh"
+2026-03-15,29,Haseen,"Talwiinder, NDS, Rippy Grewal"
+2026-03-15,30,"Tum Ho Toh (From ""Saiyaara"")","Vishal Mishra, Hansika Pareek, Raj Shekhar"
+2026-03-15,31,Ye Tune Kya Kiya,"Pritam, Javed Bashir, Rajat Arora"
+2026-03-15,32,Not Guilty,Dhanda Nyoliwala
+2026-03-15,33,Zaalima,"Arijit Singh, Harshdeep Kaur"
+2026-03-15,34,Darkhaast,"Mithoon, Arijit Singh, Sunidhi Chauhan, Sayeed Quadri"
+2026-03-15,35,Tu Na Samjhe,"Hellow Raja, MaxxTurnn"
+2026-03-15,36,KALYANI,"ARJN, KDS, FIFTY4, RONN"
+2026-03-15,37,Ehsaas,"Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar"
+2026-03-15,38,"Mast Magan (From ""2 States)","Arijit Singh, Chinmayi"
+2026-03-15,39,Lutt Le Gaya,"Shashwat Sachdev, Simran Choudhary"
+2026-03-15,40,"Barbaad (From ""Saiyaara"")","The Rish, Jubin Nautiyal"
+2026-03-15,41,Teri Deewani,"Kailash Kher, Paresh Kamath, Naresh Kamath"
+2026-03-15,42,Naal Nachna,"Shashwat Sachdev, Afsana Khan, Irshad Kamil, Reble"
+2026-03-15,43,"Humdard (From ""Ek Villain"")",Arijit Singh
+2026-03-15,44,Thodi Si Daaru,"AP Dhillon, Shreya Ghoshal"
+2026-03-15,45,Ishq Jalakar - Karvaan,"Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury, Armaan Khan, Irshad Kamil, Roshan, Sahir Ludhianvi"
+2026-03-15,46,Kithe Reh Gaya,"Neeti Mohan, Abhijit Vaghani"
+2026-03-15,47,Mann Mera - Original Version,Gajendra Verma
+2026-03-15,48,Jhol - Acoustic,"Maanu, Annural Khalid, Abdullah Siddiqui"
+2026-03-15,49,"Dhun (From ""Saiyaara"")","Mithoon, Arijit Singh"
+2026-03-15,50,High On You,Jind Universe
+2026-03-16,1,Bairan,Banjaare
+2026-03-16,2,Sheesha - Aakhya Mai Aakh Ghali Jo Bairan,"Mitta Ror, Swara Verma"
+2026-03-16,3,Gehra Hua,"Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan"
+2026-03-16,4,Dooron Dooron,"Paresh Pahuja, Shiv Tandan, Meghdeep Bose"
+2026-03-16,5,Khat,Navjot Ahuja
+2026-03-16,6,Sahiba,Aditya Rikhari
+2026-03-16,7,Samjhawan,"Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Ghoshal"
+2026-03-16,8,"Sitaare (From ""Ikkis"")","Arijit Singh, White Noise Collectives, Amitabh Bhattacharya"
+2026-03-16,9,Apna Bana Le,"Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya"
+2026-03-16,10,Finding Her,"Kushagra, Bharath, Saaheal"
+2026-03-16,11,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain
+2026-03-16,12,Shararat,"Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas"
+2026-03-16,13,Bairi,"Virat, Pradeep Solanki, Heena"
+2026-03-16,14,Ishq,"Faheem Abdullah, Rauhan Malik, Amir Ameer"
+2026-03-16,15,For A Reason,"Karan Aujla, Ikky"
+2026-03-16,16,Boyfriend,"Karan Aujla, Ikky"
+2026-03-16,17,Saiyaara,"Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Irshad Kamil"
+2026-03-16,18,Mann Mera,Gajendra Verma
+2026-03-16,19,"Raanjhan (From ""Do Patti"")","Sachet-Parampara, Parampara Tandon, Kausar Munir"
+2026-03-16,20,Ishqa Ve,"Zeeshan Ali, Yuvraj Tung, Sandeep Aulakh, Honey Dhillon"
+2026-03-16,21,Tere Liye,"Atif Aslam, Shreya Ghoshal, Sachin Gupta, Sameer Anjaan"
+2026-03-16,22,"Pavazha Malli - From ""Think Indie""","Sai Abhyankkar, Shruti Haasan, Vivek"
+2026-03-16,23,Dhurandhar - Title Track,"Shashwat Sachdev, Hanumankind, Jasmine Sandlas, Sudhir Yaduvanshi, Charanjit Ahuja, Muhammad Sadiq, Ranjit Kaur, Babu Singh Maan"
+2026-03-16,24,Deewaana Deewaana,"A.R. Rahman, Irshad Kamil"
+2026-03-16,25,Jo Tum Mere Ho,Anuv Jain
+2026-03-16,26,Tere Bina,"A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan"
+2026-03-16,27,"Agar Tum Saath Ho (From ""Tamasha"")","Alka Yagnik, Arijit Singh"
+2026-03-16,28,"Aaya Sher (From ""The Paradise"") (Telugu)","Anirudh Ravichander, Jangi Reddy, Arjun Chandy, Kasarla Shyam"
+2026-03-16,29,Haseen,"Talwiinder, NDS, Rippy Grewal"
+2026-03-16,30,"Tum Ho Toh (From ""Saiyaara"")","Vishal Mishra, Hansika Pareek, Raj Shekhar"
+2026-03-16,31,Darkhaast,"Mithoon, Arijit Singh, Sunidhi Chauhan, Sayeed Quadri"
+2026-03-16,32,Not Guilty,Dhanda Nyoliwala
+2026-03-16,33,Ye Tune Kya Kiya,"Pritam, Javed Bashir, Rajat Arora"
+2026-03-16,34,Naal Nachna,"Shashwat Sachdev, Afsana Khan, Irshad Kamil, Reble"
+2026-03-16,35,"Barbaad (From ""Saiyaara"")","The Rish, Jubin Nautiyal"
+2026-03-16,36,Ehsaas,"Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar"
+2026-03-16,37,Zaalima,"Arijit Singh, Harshdeep Kaur"
+2026-03-16,38,"Mast Magan (From ""2 States)","Arijit Singh, Chinmayi"
+2026-03-16,39,Lutt Le Gaya,"Shashwat Sachdev, Simran Choudhary"
+2026-03-16,40,Teri Deewani,"Kailash Kher, Paresh Kamath, Naresh Kamath"
+2026-03-16,41,"Humdard (From ""Ek Villain"")",Arijit Singh
+2026-03-16,42,Thodi Si Daaru,"AP Dhillon, Shreya Ghoshal"
+2026-03-16,43,KALYANI,"ARJN, KDS, FIFTY4, RONN"
+2026-03-16,44,Ishq Jalakar - Karvaan,"Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury, Armaan Khan, Irshad Kamil, Roshan, Sahir Ludhianvi"
+2026-03-16,45,Mann Mera - Original Version,Gajendra Verma
+2026-03-16,46,Kithe Reh Gaya,"Neeti Mohan, Abhijit Vaghani"
+2026-03-16,47,Aakh Ye Taalibaani,"Manish Sonipat Aala, Bali Sharma, Vampire"
+2026-03-16,48,Ucha Lamba Kad,"Anand Raj Anand, Kalpana Patowary, Chorus"
+2026-03-16,49,High On You,Jind Universe
+2026-03-16,50,Tu Na Samjhe,"Hellow Raja, MaxxTurnn"
+2026-03-17,1,Bairan,Banjaare
+2026-03-17,2,Sheesha - Aakhya Mai Aakh Ghali Jo Bairan,"Mitta Ror, Swara Verma"
+2026-03-17,3,Gehra Hua,"Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan"
+2026-03-17,4,Dooron Dooron,"Paresh Pahuja, Shiv Tandan, Meghdeep Bose"
+2026-03-17,5,Khat,Navjot Ahuja
+2026-03-17,6,Sahiba,Aditya Rikhari
+2026-03-17,7,Samjhawan,"Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Ghoshal"
+2026-03-17,8,"Sitaare (From ""Ikkis"")","Arijit Singh, White Noise Collectives, Amitabh Bhattacharya"
+2026-03-17,9,Finding Her,"Kushagra, Bharath, Saaheal"
+2026-03-17,10,Apna Bana Le,"Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya"
+2026-03-17,11,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain
+2026-03-17,12,Shararat,"Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas"
+2026-03-17,13,Ishq,"Faheem Abdullah, Rauhan Malik, Amir Ameer"
+2026-03-17,14,Bairi,"Virat, Pradeep Solanki, Heena"
+2026-03-17,15,For A Reason,"Karan Aujla, Ikky"
+2026-03-17,16,Boyfriend,"Karan Aujla, Ikky"
+2026-03-17,17,Mann Mera,Gajendra Verma
+2026-03-17,18,Saiyaara,"Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Irshad Kamil"
+2026-03-17,19,Ishqa Ve,"Zeeshan Ali, Yuvraj Tung, Sandeep Aulakh, Honey Dhillon"
+2026-03-17,20,Tere Liye,"Atif Aslam, Shreya Ghoshal, Sachin Gupta, Sameer Anjaan"
+2026-03-17,21,"Raanjhan (From ""Do Patti"")","Sachet-Parampara, Parampara Tandon, Kausar Munir"
+2026-03-17,22,"Pavazha Malli - From ""Think Indie""","Sai Abhyankkar, Shruti Haasan, Vivek"
+2026-03-17,23,Dhurandhar - Title Track,"Shashwat Sachdev, Hanumankind, Jasmine Sandlas, Sudhir Yaduvanshi, Charanjit Ahuja, Muhammad Sadiq, Ranjit Kaur, Babu Singh Maan"
+2026-03-17,24,Deewaana Deewaana,"A.R. Rahman, Irshad Kamil"
+2026-03-17,25,Jo Tum Mere Ho,Anuv Jain
+2026-03-17,26,Tere Bina,"A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan"
+2026-03-17,27,"Agar Tum Saath Ho (From ""Tamasha"")","Alka Yagnik, Arijit Singh"
+2026-03-17,28,"Tum Ho Toh (From ""Saiyaara"")","Vishal Mishra, Hansika Pareek, Raj Shekhar"
+2026-03-17,29,"Aaya Sher (From ""The Paradise"") (Telugu)","Anirudh Ravichander, Jangi Reddy, Arjun Chandy, Kasarla Shyam"
+2026-03-17,30,Haseen,"Talwiinder, NDS, Rippy Grewal"
+2026-03-17,31,Darkhaast,"Mithoon, Arijit Singh, Sunidhi Chauhan, Sayeed Quadri"
+2026-03-17,32,Not Guilty,Dhanda Nyoliwala
+2026-03-17,33,Ye Tune Kya Kiya,"Pritam, Javed Bashir, Rajat Arora"
+2026-03-17,34,Shree Hanuman Chalisa,"Hariharan, Lalit Sen, Chander"
+2026-03-17,35,Naal Nachna,"Shashwat Sachdev, Afsana Khan, Irshad Kamil, Reble"
+2026-03-17,36,"Barbaad (From ""Saiyaara"")","The Rish, Jubin Nautiyal"
+2026-03-17,37,"Mast Magan (From ""2 States)","Arijit Singh, Chinmayi"
+2026-03-17,38,Ehsaas,"Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar"
+2026-03-17,39,Zaalima,"Arijit Singh, Harshdeep Kaur"
+2026-03-17,40,Teri Deewani,"Kailash Kher, Paresh Kamath, Naresh Kamath"
+2026-03-17,41,Lutt Le Gaya,"Shashwat Sachdev, Simran Choudhary"
+2026-03-17,42,Thodi Si Daaru,"AP Dhillon, Shreya Ghoshal"
+2026-03-17,43,Kithe Reh Gaya,"Neeti Mohan, Abhijit Vaghani"
+2026-03-17,44,KALYANI,"ARJN, KDS, FIFTY4, RONN"
+2026-03-17,45,Ishq Jalakar - Karvaan,"Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury, Armaan Khan, Irshad Kamil, Roshan, Sahir Ludhianvi"
+2026-03-17,46,"Humdard (From ""Ek Villain"")",Arijit Singh
+2026-03-17,47,Jhol - Acoustic,"Maanu, Annural Khalid, Abdullah Siddiqui"
+2026-03-17,48,"Dhun (From ""Saiyaara"")","Mithoon, Arijit Singh"
+2026-03-17,49,High On You,Jind Universe
+2026-03-17,50,Mann Mera - Original Version,Gajendra Verma
+2026-03-18,1,Bairan,Banjaare
+2026-03-18,2,Sheesha - Aakhya Mai Aakh Ghali Jo Bairan,"Mitta Ror, Swara Verma"
+2026-03-18,3,Gehra Hua,"Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan"
+2026-03-18,4,Dooron Dooron,"Paresh Pahuja, Shiv Tandan, Meghdeep Bose"
+2026-03-18,5,Khat,Navjot Ahuja
+2026-03-18,6,Sahiba,Aditya Rikhari
+2026-03-18,7,"Sitaare (From ""Ikkis"")","Arijit Singh, White Noise Collectives, Amitabh Bhattacharya"
+2026-03-18,8,Samjhawan,"Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Ghoshal"
+2026-03-18,9,Finding Her,"Kushagra, Bharath, Saaheal"
+2026-03-18,10,Apna Bana Le,"Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya"
+2026-03-18,11,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain
+2026-03-18,12,For A Reason,"Karan Aujla, Ikky"
+2026-03-18,13,Bairi,"Virat, Pradeep Solanki, Heena"
+2026-03-18,14,Boyfriend,"Karan Aujla, Ikky"
+2026-03-18,15,Shararat,"Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas"
+2026-03-18,16,Ishq,"Faheem Abdullah, Rauhan Malik, Amir Ameer"
+2026-03-18,17,"Pavazha Malli - From ""Think Indie""","Sai Abhyankkar, Shruti Haasan, Vivek"
+2026-03-18,18,Mann Mera,Gajendra Verma
+2026-03-18,19,Saiyaara,"Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Irshad Kamil"
+2026-03-18,20,Dhurandhar - Title Track,"Shashwat Sachdev, Hanumankind, Jasmine Sandlas, Sudhir Yaduvanshi, Charanjit Ahuja, Muhammad Sadiq, Ranjit Kaur, Babu Singh Maan"
+2026-03-18,21,"Dhurandhar The Revenge - Aari Aari (From ""Dhurandhar The Revenge"")","Shashwat Sachdev, Bombay Rockers, Irshad Kamil, Khan Saab, Reble, Token, Jasmine Sandlas, Sudhir Yaduvanshi"
+2026-03-18,22,"Raanjhan (From ""Do Patti"")","Sachet-Parampara, Parampara Tandon, Kausar Munir"
+2026-03-18,23,Ishqa Ve,"Zeeshan Ali, Yuvraj Tung, Sandeep Aulakh, Honey Dhillon"
+2026-03-18,24,Deewaana Deewaana,"A.R. Rahman, Irshad Kamil"
+2026-03-18,25,Darkhaast,"Mithoon, Arijit Singh, Sunidhi Chauhan, Sayeed Quadri"
+2026-03-18,26,Tere Liye,"Atif Aslam, Shreya Ghoshal, Sachin Gupta, Sameer Anjaan"
+2026-03-18,27,Tere Bina,"A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan"
+2026-03-18,28,Jogi,"thiarajxtt, Bir"
+2026-03-18,29,"Aaya Sher (From ""The Paradise"") (Telugu)","Anirudh Ravichander, Jangi Reddy, Arjun Chandy, Kasarla Shyam"
+2026-03-18,30,"Agar Tum Saath Ho (From ""Tamasha"")","Alka Yagnik, Arijit Singh"
+2026-03-18,31,"Tum Ho Toh (From ""Saiyaara"")","Vishal Mishra, Hansika Pareek, Raj Shekhar"
+2026-03-18,32,Jo Tum Mere Ho,Anuv Jain
+2026-03-18,33,Haseen,"Talwiinder, NDS, Rippy Grewal"
+2026-03-18,34,Not Guilty,Dhanda Nyoliwala
+2026-03-18,35,Naal Nachna,"Shashwat Sachdev, Afsana Khan, Irshad Kamil, Reble"
+2026-03-18,36,"Barbaad (From ""Saiyaara"")","The Rish, Jubin Nautiyal"
+2026-03-18,37,Ye Tune Kya Kiya,"Pritam, Javed Bashir, Rajat Arora"
+2026-03-18,38,Lutt Le Gaya,"Shashwat Sachdev, Simran Choudhary"
+2026-03-18,39,KALYANI,"ARJN, KDS, FIFTY4, RONN"
+2026-03-18,40,Teri Deewani,"Kailash Kher, Paresh Kamath, Naresh Kamath"
+2026-03-18,41,"Mast Magan (From ""2 States)","Arijit Singh, Chinmayi"
+2026-03-18,42,Ehsaas,"Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar"
+2026-03-18,43,Ishq Jalakar - Karvaan,"Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury, Armaan Khan, Irshad Kamil, Roshan, Sahir Ludhianvi"
+2026-03-18,44,Thodi Si Daaru,"AP Dhillon, Shreya Ghoshal"
+2026-03-18,45,"Humdard (From ""Ek Villain"")",Arijit Singh
+2026-03-18,46,Jhol - Acoustic,"Maanu, Annural Khalid, Abdullah Siddiqui"
+2026-03-18,47,High On You,Jind Universe
+2026-03-18,48,"Dhun (From ""Saiyaara"")","Mithoon, Arijit Singh"
+2026-03-18,49,Kithe Reh Gaya,"Neeti Mohan, Abhijit Vaghani"
+2026-03-18,50,Zaalima,"Arijit Singh, Harshdeep Kaur"
+2026-03-19,1,Bairan,Banjaare
+2026-03-19,2,Sheesha - Aakhya Mai Aakh Ghali Jo Bairan,"Mitta Ror, Swara Verma"
+2026-03-19,3,Gehra Hua,"Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan"
+2026-03-19,4,Dooron Dooron,"Paresh Pahuja, Shiv Tandan, Meghdeep Bose"
+2026-03-19,5,Khat,Navjot Ahuja
+2026-03-19,6,"Sitaare (From ""Ikkis"")","Arijit Singh, White Noise Collectives, Amitabh Bhattacharya"
+2026-03-19,7,"Dhurandhar The Revenge - Aari Aari (From ""Dhurandhar The Revenge"")","Shashwat Sachdev, Bombay Rockers, Irshad Kamil, Khan Saab, Reble, Token, Jasmine Sandlas, Sudhir Yaduvanshi"
+2026-03-19,8,Sahiba,Aditya Rikhari
+2026-03-19,9,Samjhawan,"Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Ghoshal"
+2026-03-19,10,Finding Her,"Kushagra, Bharath, Saaheal"
+2026-03-19,11,Apna Bana Le,"Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya"
+2026-03-19,12,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain
+2026-03-19,13,Bairi,"Virat, Pradeep Solanki, Heena"
+2026-03-19,14,"Pavazha Malli - From ""Think Indie""","Sai Abhyankkar, Shruti Haasan, Vivek"
+2026-03-19,15,Ishq,"Faheem Abdullah, Rauhan Malik, Amir Ameer"
+2026-03-19,16,Shararat,"Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas"
+2026-03-19,17,For A Reason,"Karan Aujla, Ikky"
+2026-03-19,18,Dhurandhar - Title Track,"Shashwat Sachdev, Hanumankind, Jasmine Sandlas, Sudhir Yaduvanshi, Charanjit Ahuja, Muhammad Sadiq, Ranjit Kaur, Babu Singh Maan"
+2026-03-19,19,Boyfriend,"Karan Aujla, Ikky"
+2026-03-19,20,Mann Mera,Gajendra Verma
+2026-03-19,21,Saiyaara,"Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Irshad Kamil"
+2026-03-19,22,Ishqa Ve,"Zeeshan Ali, Yuvraj Tung, Sandeep Aulakh, Honey Dhillon"
+2026-03-19,23,"Raanjhan (From ""Do Patti"")","Sachet-Parampara, Parampara Tandon, Kausar Munir"
+2026-03-19,24,Deewaana Deewaana,"A.R. Rahman, Irshad Kamil"
+2026-03-19,25,Darkhaast,"Mithoon, Arijit Singh, Sunidhi Chauhan, Sayeed Quadri"
+2026-03-19,26,Tere Liye,"Atif Aslam, Shreya Ghoshal, Sachin Gupta, Sameer Anjaan"
+2026-03-19,27,Jo Tum Mere Ho,Anuv Jain
+2026-03-19,28,"Agar Tum Saath Ho (From ""Tamasha"")","Alka Yagnik, Arijit Singh"
+2026-03-19,29,Tere Bina,"A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan"
+2026-03-19,30,"Aaya Sher (From ""The Paradise"") (Telugu)","Anirudh Ravichander, Jangi Reddy, Arjun Chandy, Kasarla Shyam"
+2026-03-19,31,Haseen,"Talwiinder, NDS, Rippy Grewal"
+2026-03-19,32,Not Guilty,Dhanda Nyoliwala
+2026-03-19,33,Naal Nachna,"Shashwat Sachdev, Afsana Khan, Irshad Kamil, Reble"
+2026-03-19,34,"Tum Ho Toh (From ""Saiyaara"")","Vishal Mishra, Hansika Pareek, Raj Shekhar"
+2026-03-19,35,"Barbaad (From ""Saiyaara"")","The Rish, Jubin Nautiyal"
+2026-03-19,36,KALYANI,"ARJN, KDS, FIFTY4, RONN"
+2026-03-19,37,Lutt Le Gaya,"Shashwat Sachdev, Simran Choudhary"
+2026-03-19,38,Jogi,"thiarajxtt, Bir"
+2026-03-19,39,Ye Tune Kya Kiya,"Pritam, Javed Bashir, Rajat Arora"
+2026-03-19,40,Ehsaas,"Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar"
+2026-03-19,41,Ishq Jalakar - Karvaan,"Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury, Armaan Khan, Irshad Kamil, Roshan, Sahir Ludhianvi"
+2026-03-19,42,"Mutta Kalakki (From ""Youth"")","G. V. Prakash, Ken Karunaas"
+2026-03-19,43,"Humdard (From ""Ek Villain"")",Arijit Singh
+2026-03-19,44,Jhol - Acoustic,"Maanu, Annural Khalid, Abdullah Siddiqui"
+2026-03-19,45,Oorum Blood,"Sai Abhyankkar, Paal Dabba, Bhumi, Deepthi Suresh"
+2026-03-19,46,Teri Deewani,"Kailash Kher, Paresh Kamath, Naresh Kamath"
+2026-03-19,47,"Dhun (From ""Saiyaara"")","Mithoon, Arijit Singh"
+2026-03-19,48,Zaalima,"Arijit Singh, Harshdeep Kaur"
+2026-03-19,49,Mann Mera - Original Version,Gajendra Verma
+2026-03-19,50,Kithe Reh Gaya,"Neeti Mohan, Abhijit Vaghani"
+2026-03-20,1,Bairan,Banjaare
+2026-03-20,2,Sheesha - Aakhya Mai Aakh Ghali Jo Bairan,"Mitta Ror, Swara Verma"
+2026-03-20,3,Gehra Hua,"Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan"
+2026-03-20,4,"Dhurandhar The Revenge - Aari Aari (From ""Dhurandhar The Revenge"")","Shashwat Sachdev, Bombay Rockers, Irshad Kamil, Khan Saab, Reble, Token, Jasmine Sandlas, Sudhir Yaduvanshi"
+2026-03-20,5,Khat,Navjot Ahuja
+2026-03-20,6,Dooron Dooron,"Paresh Pahuja, Shiv Tandan, Meghdeep Bose"
+2026-03-20,7,"Sitaare (From ""Ikkis"")","Arijit Singh, White Noise Collectives, Amitabh Bhattacharya"
+2026-03-20,8,Sahiba,Aditya Rikhari
+2026-03-20,9,Body to Body,BTS
+2026-03-20,10,SWIM,BTS
+2026-03-20,11,Samjhawan,"Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Ghoshal"
+2026-03-20,12,Finding Her,"Kushagra, Bharath, Saaheal"
+2026-03-20,13,Apna Bana Le,"Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya"
+2026-03-20,14,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain
+2026-03-20,15,Shararat,"Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas"
+2026-03-20,16,Dhurandhar - Title Track,"Shashwat Sachdev, Hanumankind, Jasmine Sandlas, Sudhir Yaduvanshi, Charanjit Ahuja, Muhammad Sadiq, Ranjit Kaur, Babu Singh Maan"
+2026-03-20,17,For A Reason,"Karan Aujla, Ikky"
+2026-03-20,18,"Pavazha Malli - From ""Think Indie""","Sai Abhyankkar, Shruti Haasan, Vivek"
+2026-03-20,19,Bairi,"Virat, Pradeep Solanki, Heena"
+2026-03-20,20,Boyfriend,"Karan Aujla, Ikky"
+2026-03-20,21,Ishqa Ve,"Zeeshan Ali, Yuvraj Tung, Sandeep Aulakh, Honey Dhillon"
+2026-03-20,22,Ishq,"Faheem Abdullah, Rauhan Malik, Amir Ameer"
+2026-03-20,23,Mann Mera,Gajendra Verma
+2026-03-20,24,Saiyaara,"Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Irshad Kamil"
+2026-03-20,25,Deewaana Deewaana,"A.R. Rahman, Irshad Kamil"
+2026-03-20,26,Tere Liye,"Atif Aslam, Shreya Ghoshal, Sachin Gupta, Sameer Anjaan"
+2026-03-20,27,"Raanjhan (From ""Do Patti"")","Sachet-Parampara, Parampara Tandon, Kausar Munir"
+2026-03-20,28,Hooligan,BTS
+2026-03-20,29,Darkhaast,"Mithoon, Arijit Singh, Sunidhi Chauhan, Sayeed Quadri"
+2026-03-20,30,Naal Nachna,"Shashwat Sachdev, Afsana Khan, Irshad Kamil, Reble"
+2026-03-20,31,"Agar Tum Saath Ho (From ""Tamasha"")","Alka Yagnik, Arijit Singh"
+2026-03-20,32,Jo Tum Mere Ho,Anuv Jain
+2026-03-20,33,"Aaya Sher (From ""The Paradise"") (Telugu)","Anirudh Ravichander, Jangi Reddy, Arjun Chandy, Kasarla Shyam"
+2026-03-20,34,Lutt Le Gaya,"Shashwat Sachdev, Simran Choudhary"
+2026-03-20,35,Tere Bina,"A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan"
+2026-03-20,36,Jogi,"thiarajxtt, Bir"
+2026-03-20,37,Haseen,"Talwiinder, NDS, Rippy Grewal"
+2026-03-20,38,Ishq Jalakar - Karvaan,"Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury, Armaan Khan, Irshad Kamil, Roshan, Sahir Ludhianvi"
+2026-03-20,39,KALYANI,"ARJN, KDS, FIFTY4, RONN"
+2026-03-20,40,FYA,BTS
+2026-03-20,41,"Tum Ho Toh (From ""Saiyaara"")","Vishal Mishra, Hansika Pareek, Raj Shekhar"
+2026-03-20,42,Ye Tune Kya Kiya,"Pritam, Javed Bashir, Rajat Arora"
+2026-03-20,43,Aliens,BTS
+2026-03-20,44,"Barbaad (From ""Saiyaara"")","The Rish, Jubin Nautiyal"
+2026-03-20,45,"Mutta Kalakki (From ""Youth"")","G. V. Prakash, Ken Karunaas"
+2026-03-20,46,Not Guilty,Dhanda Nyoliwala
+2026-03-20,47,2.0,BTS
+2026-03-20,48,NORMAL,BTS
+2026-03-20,49,Ehsaas,"Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar"
+2026-03-20,50,Merry Go Round,BTS
+2026-03-21,1,Bairan,Banjaare
+2026-03-21,2,Sheesha - Aakhya Mai Aakh Ghali Jo Bairan,"Mitta Ror, Swara Verma"
+2026-03-21,3,Gehra Hua,"Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan"
+2026-03-21,4,"Dhurandhar The Revenge - Aari Aari (From ""Dhurandhar The Revenge"")","Shashwat Sachdev, Bombay Rockers, Irshad Kamil, Khan Saab, Reble, Token, Jasmine Sandlas, Sudhir Yaduvanshi"
+2026-03-21,5,Khat,Navjot Ahuja
+2026-03-21,6,Dooron Dooron,"Paresh Pahuja, Shiv Tandan, Meghdeep Bose"
+2026-03-21,7,Sahiba,Aditya Rikhari
+2026-03-21,8,"Sitaare (From ""Ikkis"")","Arijit Singh, White Noise Collectives, Amitabh Bhattacharya"
+2026-03-21,9,Samjhawan,"Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Ghoshal"
+2026-03-21,10,Finding Her,"Kushagra, Bharath, Saaheal"
+2026-03-21,11,Apna Bana Le,"Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya"
+2026-03-21,12,Shararat,"Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas"
+2026-03-21,13,Dhurandhar - Title Track,"Shashwat Sachdev, Hanumankind, Jasmine Sandlas, Sudhir Yaduvanshi, Charanjit Ahuja, Muhammad Sadiq, Ranjit Kaur, Babu Singh Maan"
+2026-03-21,14,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain
+2026-03-21,15,"Pavazha Malli - From ""Think Indie""","Sai Abhyankkar, Shruti Haasan, Vivek"
+2026-03-21,16,For A Reason,"Karan Aujla, Ikky"
+2026-03-21,17,Boyfriend,"Karan Aujla, Ikky"
+2026-03-21,18,Bairi,"Virat, Pradeep Solanki, Heena"
+2026-03-21,19,Ishq,"Faheem Abdullah, Rauhan Malik, Amir Ameer"
+2026-03-21,20,Saiyaara,"Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Irshad Kamil"
+2026-03-21,21,Ishqa Ve,"Zeeshan Ali, Yuvraj Tung, Sandeep Aulakh, Honey Dhillon"
+2026-03-21,22,SWIM,BTS
+2026-03-21,23,Mann Mera,Gajendra Verma
+2026-03-21,24,"Raanjhan (From ""Do Patti"")","Sachet-Parampara, Parampara Tandon, Kausar Munir"
+2026-03-21,25,Deewaana Deewaana,"A.R. Rahman, Irshad Kamil"
+2026-03-21,26,Tere Liye,"Atif Aslam, Shreya Ghoshal, Sachin Gupta, Sameer Anjaan"
+2026-03-21,27,Lutt Le Gaya,"Shashwat Sachdev, Simran Choudhary"
+2026-03-21,28,Jaiye Sajana,"Shashwat Sachdev, Jasmine Sandlas, Satinder Sartaaj"
+2026-03-21,29,Naal Nachna,"Shashwat Sachdev, Afsana Khan, Irshad Kamil, Reble"
+2026-03-21,30,Ishq Jalakar - Karvaan,"Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury, Armaan Khan, Irshad Kamil, Roshan, Sahir Ludhianvi"
+2026-03-21,31,"Agar Tum Saath Ho (From ""Tamasha"")","Alka Yagnik, Arijit Singh"
+2026-03-21,32,Tere Bina,"A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan"
+2026-03-21,33,"Mutta Kalakki (From ""Youth"")","G. V. Prakash, Ken Karunaas"
+2026-03-21,34,Jo Tum Mere Ho,Anuv Jain
+2026-03-21,35,Haseen,"Talwiinder, NDS, Rippy Grewal"
+2026-03-21,36,"Aaya Sher (From ""The Paradise"") (Telugu)","Anirudh Ravichander, Jangi Reddy, Arjun Chandy, Kasarla Shyam"
+2026-03-21,37,Jaan Se Guzarte Hain,"Shashwat Sachdev, Khan Saab"
+2026-03-21,38,"Tum Ho Toh (From ""Saiyaara"")","Vishal Mishra, Hansika Pareek, Raj Shekhar"
+2026-03-21,39,Darkhaast,"Mithoon, Arijit Singh, Sunidhi Chauhan, Sayeed Quadri"
+2026-03-21,40,KALYANI,"ARJN, KDS, FIFTY4, RONN"
+2026-03-21,41,Body to Body,BTS
+2026-03-21,42,Jogi,"thiarajxtt, Bir"
+2026-03-21,43,"Barbaad (From ""Saiyaara"")","The Rish, Jubin Nautiyal"
+2026-03-21,44,Not Guilty,Dhanda Nyoliwala
+2026-03-21,45,Ye Tune Kya Kiya,"Pritam, Javed Bashir, Rajat Arora"
+2026-03-21,46,Oorum Blood,"Sai Abhyankkar, Paal Dabba, Bhumi, Deepthi Suresh"
+2026-03-21,47,"Mast Magan (From ""2 States)","Arijit Singh, Chinmayi"
+2026-03-21,48,Zaalima,"Arijit Singh, Harshdeep Kaur"
+2026-03-21,49,Ehsaas,"Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar"
+2026-03-21,50,Teri Deewani,"Kailash Kher, Paresh Kamath, Naresh Kamath"
 2026-03-22,1,Bairan,Banjaare
 2026-03-22,2,Sheesha,Mitta Ror
+2026-03-22,2,Sheesha - Aakhya Mai Aakh Ghali Jo Bairan,"Mitta Ror, Swara Verma"
 2026-03-22,3,Gehra Hua,Shashwat Sachdev
+2026-03-22,3,Gehra Hua,"Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan"
 2026-03-22,4,Dhurandhar The Revenge - Aari Aari,Shashwat Sachdev
+2026-03-22,4,"Dhurandhar The Revenge - Aari Aari (From ""Dhurandhar The Revenge"")","Shashwat Sachdev, Bombay Rockers, Irshad Kamil, Khan Saab, Reble, Token, Jasmine Sandlas, Sudhir Yaduvanshi"
 2026-03-22,5,Khat,Navjot Ahuja
 2026-03-22,6,Dooron Dooron,Paresh Pahuja
+2026-03-22,6,Dooron Dooron,"Paresh Pahuja, Shiv Tandan, Meghdeep Bose"
 2026-03-22,7,Sahiba,Aditya Rikhari
 2026-03-22,8,Sitaare,Arijit Singh
+2026-03-22,8,"Sitaare (From ""Ikkis"")","Arijit Singh, White Noise Collectives, Amitabh Bhattacharya"
 2026-03-22,9,Finding Her,Kushagra
+2026-03-22,9,Finding Her,"Kushagra, Bharath, Saaheal"
 2026-03-22,10,Apna Bana Le,Sachin-Jigar
+2026-03-22,10,Apna Bana Le,"Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya"
 2026-03-22,11,Samjhawan,Jawad Ahmad
+2026-03-22,11,Samjhawan,"Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Ghoshal"
 2026-03-22,12,Jaiye Sajana,Shashwat Sachdev
+2026-03-22,12,Jaiye Sajana,"Shashwat Sachdev, Jasmine Sandlas, Satinder Sartaaj"
 2026-03-22,13,Shararat,Shashwat Sachdev
+2026-03-22,13,Shararat,"Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas"
 2026-03-22,14,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain
 2026-03-22,15,Dhurandhar - Title Track,Shashwat Sachdev
+2026-03-22,15,Dhurandhar - Title Track,"Shashwat Sachdev, Hanumankind, Jasmine Sandlas, Sudhir Yaduvanshi, Charanjit Ahuja, Muhammad Sadiq, Ranjit Kaur, Babu Singh Maan"
 2026-03-22,16,For A Reason,Karan Aujla
+2026-03-22,16,For A Reason,"Karan Aujla, Ikky"
 2026-03-22,17,Pavazha Malli,Sai Abhyankkar
+2026-03-22,17,"Pavazha Malli - From ""Think Indie""","Sai Abhyankkar, Shruti Haasan, Vivek"
 2026-03-22,18,Jaan Se Guzarte Hain,Shashwat Sachdev
+2026-03-22,18,Jaan Se Guzarte Hain,"Shashwat Sachdev, Khan Saab"
 2026-03-22,19,Bairi,Virat
+2026-03-22,19,Bairi,"Virat, Pradeep Solanki, Heena"
 2026-03-22,20,Saiyaara,Tanishk Bagchi
+2026-03-22,20,Saiyaara,"Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Irshad Kamil"
 2026-03-22,21,Boyfriend,Karan Aujla
+2026-03-22,21,Boyfriend,"Karan Aujla, Ikky"
 2026-03-22,22,Ishq,Faheem Abdullah
+2026-03-22,22,Ishq,"Faheem Abdullah, Rauhan Malik, Amir Ameer"
 2026-03-22,23,Raanjhan,Sachet-Parampara
+2026-03-22,23,"Raanjhan (From ""Do Patti"")","Sachet-Parampara, Parampara Tandon, Kausar Munir"
 2026-03-22,24,Mann Mera,Gajendra Verma
 2026-03-22,25,Ishqa Ve,Zeeshan Ali
+2026-03-22,25,Ishqa Ve,"Zeeshan Ali, Yuvraj Tung, Sandeep Aulakh, Honey Dhillon"
 2026-03-22,26,SWIM,BTS
 2026-03-22,27,Tere Liye,Atif Aslam
+2026-03-22,27,Tere Liye,"Atif Aslam, Shreya Ghoshal, Sachin Gupta, Sameer Anjaan"
 2026-03-22,28,Deewaana Deewaana,A.R. Rahman
+2026-03-22,28,Deewaana Deewaana,"A.R. Rahman, Irshad Kamil"
 2026-03-22,29,Tum Ho Toh,Vishal Mishra
+2026-03-22,29,"Tum Ho Toh (From ""Saiyaara"")","Vishal Mishra, Hansika Pareek, Raj Shekhar"
 2026-03-22,30,Ishq Jalakar - Karvaan,Shashwat Sachdev
+2026-03-22,30,Ishq Jalakar - Karvaan,"Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury, Armaan Khan, Irshad Kamil, Roshan, Sahir Ludhianvi"
 2026-03-22,31,Aaya Sher,Anirudh Ravichander
+2026-03-22,31,"Aaya Sher (From ""The Paradise"") (Telugu)","Anirudh Ravichander, Jangi Reddy, Arjun Chandy, Kasarla Shyam"
 2026-03-22,32,Naal Nachna,Shashwat Sachdev
+2026-03-22,32,Naal Nachna,"Shashwat Sachdev, Afsana Khan, Irshad Kamil, Reble"
 2026-03-22,33,Lutt Le Gaya,Shashwat Sachdev
+2026-03-22,33,Lutt Le Gaya,"Shashwat Sachdev, Simran Choudhary"
 2026-03-22,34,Jo Tum Mere Ho,Anuv Jain
 2026-03-22,35,Agar Tum Saath Ho,Alka Yagnik
+2026-03-22,35,"Agar Tum Saath Ho (From ""Tamasha"")","Alka Yagnik, Arijit Singh"
 2026-03-22,36,Haseen,Talwiinder
+2026-03-22,36,Haseen,"Talwiinder, NDS, Rippy Grewal"
 2026-03-22,37,Tere Bina,A.R. Rahman
+2026-03-22,37,Tere Bina,"A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan"
 2026-03-22,38,Darkhaast,Mithoon
+2026-03-22,38,Darkhaast,"Mithoon, Arijit Singh, Sunidhi Chauhan, Sayeed Quadri"
 2026-03-22,39,Mutta Kalakki,G. V. Prakash
+2026-03-22,39,"Mutta Kalakki (From ""Youth"")","G. V. Prakash, Ken Karunaas"
 2026-03-22,40,Ye Tune Kya Kiya,Pritam
+2026-03-22,40,Ye Tune Kya Kiya,"Pritam, Javed Bashir, Rajat Arora"
 2026-03-22,41,Barbaad,The Rish
+2026-03-22,41,"Barbaad (From ""Saiyaara"")","The Rish, Jubin Nautiyal"
 2026-03-22,42,KALYANI,ARJN
+2026-03-22,42,KALYANI,"ARJN, KDS, FIFTY4, RONN"
 2026-03-22,43,Not Guilty,Dhanda Nyoliwala
 2026-03-22,44,Body to Body,BTS
 2026-03-22,45,Thodi Si Daaru,AP Dhillon
+2026-03-22,45,Thodi Si Daaru,"AP Dhillon, Shreya Ghoshal"
 2026-03-22,46,Teri Deewani,Kailash Kher
+2026-03-22,46,Teri Deewani,"Kailash Kher, Paresh Kamath, Naresh Kamath"
 2026-03-22,47,Run Down The City - Monica,Shashwat Sachdev
+2026-03-22,47,Run Down The City - Monica,"Shashwat Sachdev, Reble, Asha Bhosle, R. D. Burman, Majrooh Sultanpuri"
 2026-03-22,48,Ehsaas,Faheem Abdullah
+2026-03-22,48,Ehsaas,"Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar"
 2026-03-22,49,Jogi,thiarajxtt
+2026-03-22,49,Jogi,"thiarajxtt, Bir"
 2026-03-22,50,Dhun,Mithoon
+2026-03-22,50,"Dhun (From ""Saiyaara"")","Mithoon, Arijit Singh"

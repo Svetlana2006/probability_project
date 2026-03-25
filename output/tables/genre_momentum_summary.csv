@@ -1,6 +1,6 @@
 Genre,Mean_Survival,Median_Survival,Spell_Count,Rank_Variance,Rank_Mean,Observations
+Hindi Indie,4.230769230769231,1.0,13,142.7205387205387,14.272727272727273,55
+International Pop/K-Pop,3.0,3.0,2,221.46666666666664,25.333333333333332,6
+Punjabi-Haryanvi Pop,1.875,1.0,8,170.31428571428572,32.2,15
 Hindi Film,1.0,1.0,24,194.6793478260869,25.375,24
-Hindi Indie,1.0,1.0,13,252.75641025641028,21.384615384615383,13
-International Pop/K-Pop,1.0,1.0,2,162.0,35.0,2
-Punjabi-Haryanvi Pop,1.0,1.0,8,280.4107142857142,28.875,8
 South Indian Film,1.0,1.0,3,124.0,29.0,3

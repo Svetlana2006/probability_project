@@ -1,51 +1,442 @@
 Date,Rank,Song,Artist,Genre,Date_Index,State,New_Spell,Spell_Number,Days_On_Chart,Total_Appearances,Artist_Past_Appearances,Prev_Rank,Delta_R,Volatility_So_Far,Is_New_Entry,Next_Date,Next_Rank,Observed_Next_State,Next_State,Top10_Tomorrow,Exit_Tomorrow
-2026-03-22,1,Bairan,Banjaare,Hindi Indie,0,Top10,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,2,Sheesha,Mitta Ror,Punjabi-Haryanvi Pop,0,Top10,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,3,Gehra Hua,Shashwat Sachdev,Hindi Film,0,Top10,True,1,1,1,2,,,0.0,False,,,,,,
-2026-03-22,4,Dhurandhar The Revenge - Aari Aari,Shashwat Sachdev,Hindi Film,0,Top10,True,1,1,1,1,,,0.0,False,,,,,,
-2026-03-22,5,Khat,Navjot Ahuja,Hindi Indie,0,Top10,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,6,Dooron Dooron,Paresh Pahuja,Hindi Indie,0,Top10,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,7,Sahiba,Aditya Rikhari,Hindi Indie,0,Top10,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,8,Sitaare,Arijit Singh,Hindi Film,0,Top10,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,9,Finding Her,Kushagra,Hindi Indie,0,Top10,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,10,Apna Bana Le,Sachin-Jigar,Hindi Film,0,Top10,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,11,Samjhawan,Jawad Ahmad,Hindi Film,0,11-25,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,12,Jaiye Sajana,Shashwat Sachdev,Hindi Film,0,11-25,True,1,1,1,5,,,0.0,False,,,,,,
-2026-03-22,13,Shararat,Shashwat Sachdev,Hindi Film,0,11-25,True,1,1,1,9,,,0.0,False,,,,,,
-2026-03-22,14,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain,Hindi Indie,0,11-25,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,15,Dhurandhar - Title Track,Shashwat Sachdev,Hindi Film,0,11-25,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,16,For A Reason,Karan Aujla,Punjabi-Haryanvi Pop,0,11-25,True,1,1,1,1,,,0.0,False,,,,,,
-2026-03-22,17,Pavazha Malli,Sai Abhyankkar,South Indian Film,0,11-25,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,18,Jaan Se Guzarte Hain,Shashwat Sachdev,Hindi Film,0,11-25,True,1,1,1,4,,,0.0,False,,,,,,
-2026-03-22,19,Bairi,Virat,Punjabi-Haryanvi Pop,0,11-25,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,20,Saiyaara,Tanishk Bagchi,Hindi Film,0,11-25,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,21,Boyfriend,Karan Aujla,Punjabi-Haryanvi Pop,0,11-25,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,22,Ishq,Faheem Abdullah,Hindi Indie,0,11-25,True,1,1,1,1,,,0.0,False,,,,,,
-2026-03-22,23,Raanjhan,Sachet-Parampara,Hindi Film,0,11-25,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,24,Mann Mera,Gajendra Verma,Hindi Indie,0,11-25,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,25,Ishqa Ve,Zeeshan Ali,Hindi Indie,0,11-25,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,26,SWIM,BTS,International Pop/K-Pop,0,26-50,True,1,1,1,1,,,0.0,False,,,,,,
-2026-03-22,27,Tere Liye,Atif Aslam,Hindi Film,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,28,Deewaana Deewaana,A.R. Rahman,Hindi Film,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,29,Tum Ho Toh,Vishal Mishra,Hindi Film,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,30,Ishq Jalakar - Karvaan,Shashwat Sachdev,Hindi Film,0,26-50,True,1,1,1,3,,,0.0,False,,,,,,
-2026-03-22,31,Aaya Sher,Anirudh Ravichander,South Indian Film,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,32,Naal Nachna,Shashwat Sachdev,Hindi Film,0,26-50,True,1,1,1,7,,,0.0,False,,,,,,
-2026-03-22,33,Lutt Le Gaya,Shashwat Sachdev,Hindi Film,0,26-50,True,1,1,1,6,,,0.0,False,,,,,,
-2026-03-22,34,Jo Tum Mere Ho,Anuv Jain,Hindi Indie,0,26-50,True,1,1,1,1,,,0.0,False,,,,,,
-2026-03-22,35,Agar Tum Saath Ho,Alka Yagnik,Hindi Film,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,36,Haseen,Talwiinder,Punjabi-Haryanvi Pop,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,37,Tere Bina,A.R. Rahman,Hindi Film,0,26-50,True,1,1,1,1,,,0.0,False,,,,,,
-2026-03-22,38,Darkhaast,Mithoon,Hindi Film,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,39,Mutta Kalakki,G. V. Prakash,South Indian Film,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,40,Ye Tune Kya Kiya,Pritam,Hindi Film,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,41,Barbaad,The Rish,Hindi Indie,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,42,KALYANI,ARJN,Hindi Indie,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,43,Not Guilty,Dhanda Nyoliwala,Punjabi-Haryanvi Pop,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,44,Body to Body,BTS,International Pop/K-Pop,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,45,Thodi Si Daaru,AP Dhillon,Punjabi-Haryanvi Pop,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,46,Teri Deewani,Kailash Kher,Hindi Film,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,47,Run Down The City - Monica,Shashwat Sachdev,Hindi Film,0,26-50,True,1,1,1,8,,,0.0,False,,,,,,
-2026-03-22,48,Ehsaas,Faheem Abdullah,Hindi Indie,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,49,Jogi,thiarajxtt,Punjabi-Haryanvi Pop,0,26-50,True,1,1,1,0,,,0.0,False,,,,,,
-2026-03-22,50,Dhun,Mithoon,Hindi Film,0,26-50,True,1,1,1,1,,,0.0,False,,,,,,
+2026-03-15,1,Bairan,Banjaare,Hindi Indie,0,Top10,True,1,1,1,0,,,0.0,False,2026-03-16,1.0,Top10,Top10,1,0
+2026-03-15,2,Sheesha - Aakhya Mai Aakh Ghali Jo Bairan,"Mitta Ror, Swara Verma",,0,Top10,True,1,1,1,0,,,0.0,False,2026-03-16,2.0,Top10,Top10,1,0
+2026-03-15,3,Gehra Hua,"Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan",,0,Top10,True,1,1,1,0,,,0.0,False,2026-03-16,3.0,Top10,Top10,1,0
+2026-03-15,4,Sahiba,Aditya Rikhari,Hindi Indie,0,Top10,True,1,1,1,0,,,0.0,False,2026-03-16,6.0,Top10,Top10,1,0
+2026-03-15,5,Dooron Dooron,"Paresh Pahuja, Shiv Tandan, Meghdeep Bose",,0,Top10,True,1,1,1,0,,,0.0,False,2026-03-16,4.0,Top10,Top10,1,0
+2026-03-15,6,Khat,Navjot Ahuja,Hindi Indie,0,Top10,True,1,1,1,0,,,0.0,False,2026-03-16,5.0,Top10,Top10,1,0
+2026-03-15,7,Samjhawan,"Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Ghoshal",,0,Top10,True,1,1,1,0,,,0.0,False,2026-03-16,7.0,Top10,Top10,1,0
+2026-03-15,8,"Sitaare (From ""Ikkis"")","Arijit Singh, White Noise Collectives, Amitabh Bhattacharya",,0,Top10,True,1,1,1,0,,,0.0,False,2026-03-16,8.0,Top10,Top10,1,0
+2026-03-15,9,Shararat,"Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas",,0,Top10,True,1,1,1,0,,,0.0,False,2026-03-16,12.0,11-25,11-25,0,0
+2026-03-15,10,Finding Her,"Kushagra, Bharath, Saaheal",,0,Top10,True,1,1,1,0,,,0.0,False,2026-03-16,10.0,Top10,Top10,1,0
+2026-03-15,11,Apna Bana Le,"Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya",,0,11-25,True,1,1,1,0,,,0.0,False,2026-03-16,9.0,Top10,Top10,1,0
+2026-03-15,12,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain,Hindi Indie,0,11-25,True,1,1,1,0,,,0.0,False,2026-03-16,11.0,11-25,11-25,0,0
+2026-03-15,13,Bairi,"Virat, Pradeep Solanki, Heena",,0,11-25,True,1,1,1,0,,,0.0,False,2026-03-16,13.0,11-25,11-25,0,0
+2026-03-15,14,Ishq,"Faheem Abdullah, Rauhan Malik, Amir Ameer",,0,11-25,True,1,1,1,0,,,0.0,False,2026-03-16,14.0,11-25,11-25,0,0
+2026-03-15,15,For A Reason,"Karan Aujla, Ikky",,0,11-25,True,1,1,1,8,,,0.0,False,2026-03-16,15.0,11-25,11-25,0,0
+2026-03-15,16,Saiyaara,"Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Irshad Kamil",,0,11-25,True,1,1,1,0,,,0.0,False,2026-03-16,17.0,11-25,11-25,0,0
+2026-03-15,17,Mann Mera,Gajendra Verma,Hindi Indie,0,11-25,True,1,1,1,0,,,0.0,False,2026-03-16,18.0,11-25,11-25,0,0
+2026-03-15,18,Boyfriend,"Karan Aujla, Ikky",,0,11-25,True,1,1,1,0,,,0.0,False,2026-03-16,16.0,11-25,11-25,0,0
+2026-03-15,19,Ishqa Ve,"Zeeshan Ali, Yuvraj Tung, Sandeep Aulakh, Honey Dhillon",,0,11-25,True,1,1,1,0,,,0.0,False,2026-03-16,20.0,11-25,11-25,0,0
+2026-03-15,20,"Raanjhan (From ""Do Patti"")","Sachet-Parampara, Parampara Tandon, Kausar Munir",,0,11-25,True,1,1,1,0,,,0.0,False,2026-03-16,19.0,11-25,11-25,0,0
+2026-03-15,21,Tere Liye,"Atif Aslam, Shreya Ghoshal, Sachin Gupta, Sameer Anjaan",,0,11-25,True,1,1,1,0,,,0.0,False,2026-03-16,21.0,11-25,11-25,0,0
+2026-03-15,22,Dhurandhar - Title Track,"Shashwat Sachdev, Hanumankind, Jasmine Sandlas, Sudhir Yaduvanshi, Charanjit Ahuja, Muhammad Sadiq, Ranjit Kaur, Babu Singh Maan",,0,11-25,True,1,1,1,0,,,0.0,False,2026-03-16,23.0,11-25,11-25,0,0
+2026-03-15,23,Jo Tum Mere Ho,Anuv Jain,Hindi Indie,0,11-25,True,1,1,1,8,,,0.0,False,2026-03-16,25.0,11-25,11-25,0,0
+2026-03-15,24,Tere Bina,"A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan",,0,11-25,True,1,1,1,0,,,0.0,False,2026-03-16,26.0,26-50,26-50,0,0
+2026-03-15,25,Deewaana Deewaana,"A.R. Rahman, Irshad Kamil",,0,11-25,True,1,1,1,0,,,0.0,False,2026-03-16,24.0,11-25,11-25,0,0
+2026-03-15,26,"Pavazha Malli - From ""Think Indie""","Sai Abhyankkar, Shruti Haasan, Vivek",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,22.0,11-25,11-25,0,0
+2026-03-15,27,"Aaya Sher (From ""The Paradise"") (Telugu)","Anirudh Ravichander, Jangi Reddy, Arjun Chandy, Kasarla Shyam",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,28.0,26-50,26-50,0,0
+2026-03-15,28,"Agar Tum Saath Ho (From ""Tamasha"")","Alka Yagnik, Arijit Singh",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,27.0,26-50,26-50,0,0
+2026-03-15,29,Haseen,"Talwiinder, NDS, Rippy Grewal",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,29.0,26-50,26-50,0,0
+2026-03-15,30,"Tum Ho Toh (From ""Saiyaara"")","Vishal Mishra, Hansika Pareek, Raj Shekhar",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,30.0,26-50,26-50,0,0
+2026-03-15,31,Ye Tune Kya Kiya,"Pritam, Javed Bashir, Rajat Arora",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,33.0,26-50,26-50,0,0
+2026-03-15,32,Not Guilty,Dhanda Nyoliwala,Punjabi-Haryanvi Pop,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,32.0,26-50,26-50,0,0
+2026-03-15,33,Zaalima,"Arijit Singh, Harshdeep Kaur",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,37.0,26-50,26-50,0,0
+2026-03-15,34,Darkhaast,"Mithoon, Arijit Singh, Sunidhi Chauhan, Sayeed Quadri",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,31.0,26-50,26-50,0,0
+2026-03-15,35,Tu Na Samjhe,"Hellow Raja, MaxxTurnn",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,50.0,26-50,26-50,0,0
+2026-03-15,36,KALYANI,"ARJN, KDS, FIFTY4, RONN",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,43.0,26-50,26-50,0,0
+2026-03-15,37,Ehsaas,"Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,36.0,26-50,26-50,0,0
+2026-03-15,38,"Mast Magan (From ""2 States)","Arijit Singh, Chinmayi",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,38.0,26-50,26-50,0,0
+2026-03-15,39,Lutt Le Gaya,"Shashwat Sachdev, Simran Choudhary",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,39.0,26-50,26-50,0,0
+2026-03-15,40,"Barbaad (From ""Saiyaara"")","The Rish, Jubin Nautiyal",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,35.0,26-50,26-50,0,0
+2026-03-15,41,Teri Deewani,"Kailash Kher, Paresh Kamath, Naresh Kamath",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,40.0,26-50,26-50,0,0
+2026-03-15,42,Naal Nachna,"Shashwat Sachdev, Afsana Khan, Irshad Kamil, Reble",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,34.0,26-50,26-50,0,0
+2026-03-15,43,"Humdard (From ""Ek Villain"")",Arijit Singh,,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,41.0,26-50,26-50,0,0
+2026-03-15,44,Thodi Si Daaru,"AP Dhillon, Shreya Ghoshal",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,42.0,26-50,26-50,0,0
+2026-03-15,45,Ishq Jalakar - Karvaan,"Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury, Armaan Khan, Irshad Kamil, Roshan, Sahir Ludhianvi",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,44.0,26-50,26-50,0,0
+2026-03-15,46,Kithe Reh Gaya,"Neeti Mohan, Abhijit Vaghani",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,46.0,26-50,26-50,0,0
+2026-03-15,47,Mann Mera - Original Version,Gajendra Verma,,0,26-50,True,1,1,1,8,,,0.0,False,2026-03-16,45.0,26-50,26-50,0,0
+2026-03-15,48,Jhol - Acoustic,"Maanu, Annural Khalid, Abdullah Siddiqui",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,,,Exit,0,1
+2026-03-15,49,"Dhun (From ""Saiyaara"")","Mithoon, Arijit Singh",,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,,,Exit,0,1
+2026-03-15,50,High On You,Jind Universe,,0,26-50,True,1,1,1,0,,,0.0,False,2026-03-16,49.0,26-50,26-50,0,0
+2026-03-16,1,Bairan,Banjaare,Hindi Indie,1,Top10,False,1,2,2,1,1.0,0.0,0.0,False,2026-03-17,1.0,Top10,Top10,1,0
+2026-03-16,2,Sheesha - Aakhya Mai Aakh Ghali Jo Bairan,"Mitta Ror, Swara Verma",,1,Top10,False,1,2,2,1,2.0,0.0,0.0,False,2026-03-17,2.0,Top10,Top10,1,0
+2026-03-16,3,Gehra Hua,"Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan",,1,Top10,False,1,2,2,1,3.0,0.0,0.0,False,2026-03-17,3.0,Top10,Top10,1,0
+2026-03-16,4,Dooron Dooron,"Paresh Pahuja, Shiv Tandan, Meghdeep Bose",,1,Top10,False,1,2,2,1,5.0,-1.0,0.0,False,2026-03-17,4.0,Top10,Top10,1,0
+2026-03-16,5,Khat,Navjot Ahuja,Hindi Indie,1,Top10,False,1,2,2,1,6.0,-1.0,0.0,False,2026-03-17,5.0,Top10,Top10,1,0
+2026-03-16,6,Sahiba,Aditya Rikhari,Hindi Indie,1,Top10,False,1,2,2,1,4.0,2.0,0.0,False,2026-03-17,6.0,Top10,Top10,1,0
+2026-03-16,7,Samjhawan,"Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Ghoshal",,1,Top10,False,1,2,2,1,7.0,0.0,0.0,False,2026-03-17,7.0,Top10,Top10,1,0
+2026-03-16,8,"Sitaare (From ""Ikkis"")","Arijit Singh, White Noise Collectives, Amitabh Bhattacharya",,1,Top10,False,1,2,2,1,8.0,0.0,0.0,False,2026-03-17,8.0,Top10,Top10,1,0
+2026-03-16,9,Apna Bana Le,"Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya",,1,Top10,False,1,2,2,1,11.0,-2.0,0.0,False,2026-03-17,10.0,Top10,Top10,1,0
+2026-03-16,10,Finding Her,"Kushagra, Bharath, Saaheal",,1,Top10,False,1,2,2,1,10.0,0.0,0.0,False,2026-03-17,9.0,Top10,Top10,1,0
+2026-03-16,11,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain,Hindi Indie,1,11-25,False,1,2,2,1,12.0,-1.0,0.0,False,2026-03-17,11.0,11-25,11-25,0,0
+2026-03-16,12,Shararat,"Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas",,1,11-25,False,1,2,2,1,9.0,3.0,0.0,False,2026-03-17,12.0,11-25,11-25,0,0
+2026-03-16,13,Bairi,"Virat, Pradeep Solanki, Heena",,1,11-25,False,1,2,2,1,13.0,0.0,0.0,False,2026-03-17,14.0,11-25,11-25,0,0
+2026-03-16,14,Ishq,"Faheem Abdullah, Rauhan Malik, Amir Ameer",,1,11-25,False,1,2,2,1,14.0,0.0,0.0,False,2026-03-17,13.0,11-25,11-25,0,0
+2026-03-16,15,For A Reason,"Karan Aujla, Ikky",,1,11-25,False,1,2,2,9,15.0,0.0,0.0,False,2026-03-17,15.0,11-25,11-25,0,0
+2026-03-16,16,Boyfriend,"Karan Aujla, Ikky",,1,11-25,False,1,2,2,1,18.0,-2.0,0.0,False,2026-03-17,16.0,11-25,11-25,0,0
+2026-03-16,17,Saiyaara,"Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Irshad Kamil",,1,11-25,False,1,2,2,1,16.0,1.0,0.0,False,2026-03-17,18.0,11-25,11-25,0,0
+2026-03-16,18,Mann Mera,Gajendra Verma,Hindi Indie,1,11-25,False,1,2,2,1,17.0,1.0,0.0,False,2026-03-17,17.0,11-25,11-25,0,0
+2026-03-16,19,"Raanjhan (From ""Do Patti"")","Sachet-Parampara, Parampara Tandon, Kausar Munir",,1,11-25,False,1,2,2,1,20.0,-1.0,0.0,False,2026-03-17,21.0,11-25,11-25,0,0
+2026-03-16,20,Ishqa Ve,"Zeeshan Ali, Yuvraj Tung, Sandeep Aulakh, Honey Dhillon",,1,11-25,False,1,2,2,1,19.0,1.0,0.0,False,2026-03-17,19.0,11-25,11-25,0,0
+2026-03-16,21,Tere Liye,"Atif Aslam, Shreya Ghoshal, Sachin Gupta, Sameer Anjaan",,1,11-25,False,1,2,2,1,21.0,0.0,0.0,False,2026-03-17,20.0,11-25,11-25,0,0
+2026-03-16,22,"Pavazha Malli - From ""Think Indie""","Sai Abhyankkar, Shruti Haasan, Vivek",,1,11-25,False,1,2,2,1,26.0,-4.0,0.0,False,2026-03-17,22.0,11-25,11-25,0,0
+2026-03-16,23,Dhurandhar - Title Track,"Shashwat Sachdev, Hanumankind, Jasmine Sandlas, Sudhir Yaduvanshi, Charanjit Ahuja, Muhammad Sadiq, Ranjit Kaur, Babu Singh Maan",,1,11-25,False,1,2,2,1,22.0,1.0,0.0,False,2026-03-17,23.0,11-25,11-25,0,0
+2026-03-16,24,Deewaana Deewaana,"A.R. Rahman, Irshad Kamil",,1,11-25,False,1,2,2,1,25.0,-1.0,0.0,False,2026-03-17,24.0,11-25,11-25,0,0
+2026-03-16,25,Jo Tum Mere Ho,Anuv Jain,Hindi Indie,1,11-25,False,1,2,2,9,23.0,2.0,0.0,False,2026-03-17,25.0,11-25,11-25,0,0
+2026-03-16,26,Tere Bina,"A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan",,1,26-50,False,1,2,2,1,24.0,2.0,0.0,False,2026-03-17,26.0,26-50,26-50,0,0
+2026-03-16,27,"Agar Tum Saath Ho (From ""Tamasha"")","Alka Yagnik, Arijit Singh",,1,26-50,False,1,2,2,1,28.0,-1.0,0.0,False,2026-03-17,27.0,26-50,26-50,0,0
+2026-03-16,28,"Aaya Sher (From ""The Paradise"") (Telugu)","Anirudh Ravichander, Jangi Reddy, Arjun Chandy, Kasarla Shyam",,1,26-50,False,1,2,2,1,27.0,1.0,0.0,False,2026-03-17,29.0,26-50,26-50,0,0
+2026-03-16,29,Haseen,"Talwiinder, NDS, Rippy Grewal",,1,26-50,False,1,2,2,1,29.0,0.0,0.0,False,2026-03-17,30.0,26-50,26-50,0,0
+2026-03-16,30,"Tum Ho Toh (From ""Saiyaara"")","Vishal Mishra, Hansika Pareek, Raj Shekhar",,1,26-50,False,1,2,2,1,30.0,0.0,0.0,False,2026-03-17,28.0,26-50,26-50,0,0
+2026-03-16,31,Darkhaast,"Mithoon, Arijit Singh, Sunidhi Chauhan, Sayeed Quadri",,1,26-50,False,1,2,2,1,34.0,-3.0,0.0,False,2026-03-17,31.0,26-50,26-50,0,0
+2026-03-16,32,Not Guilty,Dhanda Nyoliwala,Punjabi-Haryanvi Pop,1,26-50,False,1,2,2,1,32.0,0.0,0.0,False,2026-03-17,32.0,26-50,26-50,0,0
+2026-03-16,33,Ye Tune Kya Kiya,"Pritam, Javed Bashir, Rajat Arora",,1,26-50,False,1,2,2,1,31.0,2.0,0.0,False,2026-03-17,33.0,26-50,26-50,0,0
+2026-03-16,34,Naal Nachna,"Shashwat Sachdev, Afsana Khan, Irshad Kamil, Reble",,1,26-50,False,1,2,2,1,42.0,-8.0,0.0,False,2026-03-17,35.0,26-50,26-50,0,0
+2026-03-16,35,"Barbaad (From ""Saiyaara"")","The Rish, Jubin Nautiyal",,1,26-50,False,1,2,2,1,40.0,-5.0,0.0,False,2026-03-17,36.0,26-50,26-50,0,0
+2026-03-16,36,Ehsaas,"Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar",,1,26-50,False,1,2,2,1,37.0,-1.0,0.0,False,2026-03-17,38.0,26-50,26-50,0,0
+2026-03-16,37,Zaalima,"Arijit Singh, Harshdeep Kaur",,1,26-50,False,1,2,2,1,33.0,4.0,0.0,False,2026-03-17,39.0,26-50,26-50,0,0
+2026-03-16,38,"Mast Magan (From ""2 States)","Arijit Singh, Chinmayi",,1,26-50,False,1,2,2,1,38.0,0.0,0.0,False,2026-03-17,37.0,26-50,26-50,0,0
+2026-03-16,39,Lutt Le Gaya,"Shashwat Sachdev, Simran Choudhary",,1,26-50,False,1,2,2,1,39.0,0.0,0.0,False,2026-03-17,41.0,26-50,26-50,0,0
+2026-03-16,40,Teri Deewani,"Kailash Kher, Paresh Kamath, Naresh Kamath",,1,26-50,False,1,2,2,1,41.0,-1.0,0.0,False,2026-03-17,40.0,26-50,26-50,0,0
+2026-03-16,41,"Humdard (From ""Ek Villain"")",Arijit Singh,,1,26-50,False,1,2,2,1,43.0,-2.0,0.0,False,2026-03-17,46.0,26-50,26-50,0,0
+2026-03-16,42,Thodi Si Daaru,"AP Dhillon, Shreya Ghoshal",,1,26-50,False,1,2,2,1,44.0,-2.0,0.0,False,2026-03-17,42.0,26-50,26-50,0,0
+2026-03-16,43,KALYANI,"ARJN, KDS, FIFTY4, RONN",,1,26-50,False,1,2,2,1,36.0,7.0,0.0,False,2026-03-17,44.0,26-50,26-50,0,0
+2026-03-16,44,Ishq Jalakar - Karvaan,"Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury, Armaan Khan, Irshad Kamil, Roshan, Sahir Ludhianvi",,1,26-50,False,1,2,2,1,45.0,-1.0,0.0,False,2026-03-17,45.0,26-50,26-50,0,0
+2026-03-16,45,Mann Mera - Original Version,Gajendra Verma,,1,26-50,False,1,2,2,9,47.0,-2.0,0.0,False,2026-03-17,50.0,26-50,26-50,0,0
+2026-03-16,46,Kithe Reh Gaya,"Neeti Mohan, Abhijit Vaghani",,1,26-50,False,1,2,2,1,46.0,0.0,0.0,False,2026-03-17,43.0,26-50,26-50,0,0
+2026-03-16,47,Aakh Ye Taalibaani,"Manish Sonipat Aala, Bali Sharma, Vampire",,1,26-50,True,1,1,1,0,,,0.0,True,2026-03-17,,,Exit,0,1
+2026-03-16,48,Ucha Lamba Kad,"Anand Raj Anand, Kalpana Patowary, Chorus",,1,26-50,True,1,1,1,0,,,0.0,True,2026-03-17,,,Exit,0,1
+2026-03-16,49,High On You,Jind Universe,,1,26-50,False,1,2,2,1,50.0,-1.0,0.0,False,2026-03-17,49.0,26-50,26-50,0,0
+2026-03-16,50,Tu Na Samjhe,"Hellow Raja, MaxxTurnn",,1,26-50,False,1,2,2,1,35.0,15.0,0.0,False,2026-03-17,,,Exit,0,1
+2026-03-17,1,Bairan,Banjaare,Hindi Indie,2,Top10,False,1,3,3,2,1.0,0.0,0.0,False,2026-03-18,1.0,Top10,Top10,1,0
+2026-03-17,2,Sheesha - Aakhya Mai Aakh Ghali Jo Bairan,"Mitta Ror, Swara Verma",,2,Top10,False,1,3,3,2,2.0,0.0,0.0,False,2026-03-18,2.0,Top10,Top10,1,0
+2026-03-17,3,Gehra Hua,"Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan",,2,Top10,False,1,3,3,2,3.0,0.0,0.0,False,2026-03-18,3.0,Top10,Top10,1,0
+2026-03-17,4,Dooron Dooron,"Paresh Pahuja, Shiv Tandan, Meghdeep Bose",,2,Top10,False,1,3,3,2,4.0,0.0,0.5,False,2026-03-18,4.0,Top10,Top10,1,0
+2026-03-17,5,Khat,Navjot Ahuja,Hindi Indie,2,Top10,False,1,3,3,2,5.0,0.0,0.5,False,2026-03-18,5.0,Top10,Top10,1,0
+2026-03-17,6,Sahiba,Aditya Rikhari,Hindi Indie,2,Top10,False,1,3,3,2,6.0,0.0,1.0,False,2026-03-18,6.0,Top10,Top10,1,0
+2026-03-17,7,Samjhawan,"Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Ghoshal",,2,Top10,False,1,3,3,2,7.0,0.0,0.0,False,2026-03-18,8.0,Top10,Top10,1,0
+2026-03-17,8,"Sitaare (From ""Ikkis"")","Arijit Singh, White Noise Collectives, Amitabh Bhattacharya",,2,Top10,False,1,3,3,2,8.0,0.0,0.0,False,2026-03-18,7.0,Top10,Top10,1,0
+2026-03-17,9,Finding Her,"Kushagra, Bharath, Saaheal",,2,Top10,False,1,3,3,2,10.0,-1.0,0.5,False,2026-03-18,9.0,Top10,Top10,1,0
+2026-03-17,10,Apna Bana Le,"Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya",,2,Top10,False,1,3,3,2,9.0,1.0,1.5,False,2026-03-18,10.0,Top10,Top10,1,0
+2026-03-17,11,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain,Hindi Indie,2,11-25,False,1,3,3,2,11.0,0.0,0.5,False,2026-03-18,11.0,11-25,11-25,0,0
+2026-03-17,12,Shararat,"Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas",,2,11-25,False,1,3,3,2,12.0,0.0,1.5,False,2026-03-18,15.0,11-25,11-25,0,0
+2026-03-17,13,Ishq,"Faheem Abdullah, Rauhan Malik, Amir Ameer",,2,11-25,False,1,3,3,2,14.0,-1.0,0.5,False,2026-03-18,16.0,11-25,11-25,0,0
+2026-03-17,14,Bairi,"Virat, Pradeep Solanki, Heena",,2,11-25,False,1,3,3,2,13.0,1.0,0.5,False,2026-03-18,13.0,11-25,11-25,0,0
+2026-03-17,15,For A Reason,"Karan Aujla, Ikky",,2,11-25,False,1,3,3,10,15.0,0.0,0.0,False,2026-03-18,12.0,11-25,11-25,0,0
+2026-03-17,16,Boyfriend,"Karan Aujla, Ikky",,2,11-25,False,1,3,3,2,16.0,0.0,1.0,False,2026-03-18,14.0,11-25,11-25,0,0
+2026-03-17,17,Mann Mera,Gajendra Verma,Hindi Indie,2,11-25,False,1,3,3,2,18.0,-1.0,1.0,False,2026-03-18,18.0,11-25,11-25,0,0
+2026-03-17,18,Saiyaara,"Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Irshad Kamil",,2,11-25,False,1,3,3,2,17.0,1.0,0.0,False,2026-03-18,19.0,11-25,11-25,0,0
+2026-03-17,19,Ishqa Ve,"Zeeshan Ali, Yuvraj Tung, Sandeep Aulakh, Honey Dhillon",,2,11-25,False,1,3,3,2,20.0,-1.0,1.0,False,2026-03-18,23.0,11-25,11-25,0,0
+2026-03-17,20,Tere Liye,"Atif Aslam, Shreya Ghoshal, Sachin Gupta, Sameer Anjaan",,2,11-25,False,1,3,3,2,21.0,-1.0,0.5,False,2026-03-18,26.0,26-50,26-50,0,0
+2026-03-17,21,"Raanjhan (From ""Do Patti"")","Sachet-Parampara, Parampara Tandon, Kausar Munir",,2,11-25,False,1,3,3,2,19.0,2.0,1.5,False,2026-03-18,22.0,11-25,11-25,0,0
+2026-03-17,22,"Pavazha Malli - From ""Think Indie""","Sai Abhyankkar, Shruti Haasan, Vivek",,2,11-25,False,1,3,3,2,22.0,0.0,2.0,False,2026-03-18,17.0,11-25,11-25,0,0
+2026-03-17,23,Dhurandhar - Title Track,"Shashwat Sachdev, Hanumankind, Jasmine Sandlas, Sudhir Yaduvanshi, Charanjit Ahuja, Muhammad Sadiq, Ranjit Kaur, Babu Singh Maan",,2,11-25,False,1,3,3,2,23.0,0.0,0.5,False,2026-03-18,20.0,11-25,11-25,0,0
+2026-03-17,24,Deewaana Deewaana,"A.R. Rahman, Irshad Kamil",,2,11-25,False,1,3,3,2,24.0,0.0,0.5,False,2026-03-18,24.0,11-25,11-25,0,0
+2026-03-17,25,Jo Tum Mere Ho,Anuv Jain,Hindi Indie,2,11-25,False,1,3,3,10,25.0,0.0,1.0,False,2026-03-18,32.0,26-50,26-50,0,0
+2026-03-17,26,Tere Bina,"A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan",,2,26-50,False,1,3,3,2,26.0,0.0,1.0,False,2026-03-18,27.0,26-50,26-50,0,0
+2026-03-17,27,"Agar Tum Saath Ho (From ""Tamasha"")","Alka Yagnik, Arijit Singh",,2,26-50,False,1,3,3,2,27.0,0.0,0.5,False,2026-03-18,30.0,26-50,26-50,0,0
+2026-03-17,28,"Tum Ho Toh (From ""Saiyaara"")","Vishal Mishra, Hansika Pareek, Raj Shekhar",,2,26-50,False,1,3,3,2,30.0,-2.0,1.0,False,2026-03-18,31.0,26-50,26-50,0,0
+2026-03-17,29,"Aaya Sher (From ""The Paradise"") (Telugu)","Anirudh Ravichander, Jangi Reddy, Arjun Chandy, Kasarla Shyam",,2,26-50,False,1,3,3,2,28.0,1.0,0.0,False,2026-03-18,29.0,26-50,26-50,0,0
+2026-03-17,30,Haseen,"Talwiinder, NDS, Rippy Grewal",,2,26-50,False,1,3,3,2,29.0,1.0,0.5,False,2026-03-18,33.0,26-50,26-50,0,0
+2026-03-17,31,Darkhaast,"Mithoon, Arijit Singh, Sunidhi Chauhan, Sayeed Quadri",,2,26-50,False,1,3,3,2,31.0,0.0,1.5,False,2026-03-18,25.0,11-25,11-25,0,0
+2026-03-17,32,Not Guilty,Dhanda Nyoliwala,Punjabi-Haryanvi Pop,2,26-50,False,1,3,3,2,32.0,0.0,0.0,False,2026-03-18,34.0,26-50,26-50,0,0
+2026-03-17,33,Ye Tune Kya Kiya,"Pritam, Javed Bashir, Rajat Arora",,2,26-50,False,1,3,3,2,33.0,0.0,1.0,False,2026-03-18,37.0,26-50,26-50,0,0
+2026-03-17,34,Shree Hanuman Chalisa,"Hariharan, Lalit Sen, Chander",,2,26-50,True,1,1,1,0,,,0.0,True,2026-03-18,,,Exit,0,1
+2026-03-17,35,Naal Nachna,"Shashwat Sachdev, Afsana Khan, Irshad Kamil, Reble",,2,26-50,False,1,3,3,2,34.0,1.0,4.5,False,2026-03-18,35.0,26-50,26-50,0,0
+2026-03-17,36,"Barbaad (From ""Saiyaara"")","The Rish, Jubin Nautiyal",,2,26-50,False,1,3,3,2,35.0,1.0,3.0,False,2026-03-18,36.0,26-50,26-50,0,0
+2026-03-17,37,"Mast Magan (From ""2 States)","Arijit Singh, Chinmayi",,2,26-50,False,1,3,3,2,38.0,-1.0,0.5,False,2026-03-18,41.0,26-50,26-50,0,0
+2026-03-17,38,Ehsaas,"Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar",,2,26-50,False,1,3,3,2,36.0,2.0,1.5,False,2026-03-18,42.0,26-50,26-50,0,0
+2026-03-17,39,Zaalima,"Arijit Singh, Harshdeep Kaur",,2,26-50,False,1,3,3,2,37.0,2.0,1.0,False,2026-03-18,50.0,26-50,26-50,0,0
+2026-03-17,40,Teri Deewani,"Kailash Kher, Paresh Kamath, Naresh Kamath",,2,26-50,False,1,3,3,2,40.0,0.0,0.5,False,2026-03-18,40.0,26-50,26-50,0,0
+2026-03-17,41,Lutt Le Gaya,"Shashwat Sachdev, Simran Choudhary",,2,26-50,False,1,3,3,2,39.0,2.0,1.0,False,2026-03-18,38.0,26-50,26-50,0,0
+2026-03-17,42,Thodi Si Daaru,"AP Dhillon, Shreya Ghoshal",,2,26-50,False,1,3,3,2,42.0,0.0,1.0,False,2026-03-18,44.0,26-50,26-50,0,0
+2026-03-17,43,Kithe Reh Gaya,"Neeti Mohan, Abhijit Vaghani",,2,26-50,False,1,3,3,2,46.0,-3.0,1.5,False,2026-03-18,49.0,26-50,26-50,0,0
+2026-03-17,44,KALYANI,"ARJN, KDS, FIFTY4, RONN",,2,26-50,False,1,3,3,2,43.0,1.0,3.0,False,2026-03-18,39.0,26-50,26-50,0,0
+2026-03-17,45,Ishq Jalakar - Karvaan,"Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury, Armaan Khan, Irshad Kamil, Roshan, Sahir Ludhianvi",,2,26-50,False,1,3,3,2,44.0,1.0,1.0,False,2026-03-18,43.0,26-50,26-50,0,0
+2026-03-17,46,"Humdard (From ""Ek Villain"")",Arijit Singh,,2,26-50,False,1,3,3,2,41.0,5.0,3.5,False,2026-03-18,45.0,26-50,26-50,0,0
+2026-03-17,47,Jhol - Acoustic,"Maanu, Annural Khalid, Abdullah Siddiqui",,2,26-50,True,2,1,2,1,,,0.0,True,2026-03-18,46.0,26-50,26-50,0,0
+2026-03-17,48,"Dhun (From ""Saiyaara"")","Mithoon, Arijit Singh",,2,26-50,True,2,1,2,1,,,0.0,True,2026-03-18,48.0,26-50,26-50,0,0
+2026-03-17,49,High On You,Jind Universe,,2,26-50,False,1,3,3,2,49.0,0.0,0.5,False,2026-03-18,47.0,26-50,26-50,0,0
+2026-03-17,50,Mann Mera - Original Version,Gajendra Verma,,2,26-50,False,1,3,3,10,45.0,5.0,3.5,False,2026-03-18,,,Exit,0,1
+2026-03-18,1,Bairan,Banjaare,Hindi Indie,3,Top10,False,1,4,4,3,1.0,0.0,0.0,False,2026-03-19,1.0,Top10,Top10,1,0
+2026-03-18,2,Sheesha - Aakhya Mai Aakh Ghali Jo Bairan,"Mitta Ror, Swara Verma",,3,Top10,False,1,4,4,3,2.0,0.0,0.0,False,2026-03-19,2.0,Top10,Top10,1,0
+2026-03-18,3,Gehra Hua,"Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan",,3,Top10,False,1,4,4,3,3.0,0.0,0.0,False,2026-03-19,3.0,Top10,Top10,1,0
+2026-03-18,4,Dooron Dooron,"Paresh Pahuja, Shiv Tandan, Meghdeep Bose",,3,Top10,False,1,4,4,3,4.0,0.0,0.4714045207910317,False,2026-03-19,4.0,Top10,Top10,1,0
+2026-03-18,5,Khat,Navjot Ahuja,Hindi Indie,3,Top10,False,1,4,4,3,5.0,0.0,0.4714045207910317,False,2026-03-19,5.0,Top10,Top10,1,0
+2026-03-18,6,Sahiba,Aditya Rikhari,Hindi Indie,3,Top10,False,1,4,4,3,6.0,0.0,0.9428090415820634,False,2026-03-19,8.0,Top10,Top10,1,0
+2026-03-18,7,"Sitaare (From ""Ikkis"")","Arijit Singh, White Noise Collectives, Amitabh Bhattacharya",,3,Top10,False,1,4,4,3,8.0,-1.0,0.4714045207910317,False,2026-03-19,6.0,Top10,Top10,1,0
+2026-03-18,8,Samjhawan,"Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Ghoshal",,3,Top10,False,1,4,4,3,7.0,1.0,0.4714045207910317,False,2026-03-19,9.0,Top10,Top10,1,0
+2026-03-18,9,Finding Her,"Kushagra, Bharath, Saaheal",,3,Top10,False,1,4,4,3,9.0,0.0,0.4714045207910317,False,2026-03-19,10.0,Top10,Top10,1,0
+2026-03-18,10,Apna Bana Le,"Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya",,3,Top10,False,1,4,4,3,10.0,0.0,1.247219128924647,False,2026-03-19,11.0,11-25,11-25,0,0
+2026-03-18,11,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain,Hindi Indie,3,11-25,False,1,4,4,3,11.0,0.0,0.4714045207910317,False,2026-03-19,12.0,11-25,11-25,0,0
+2026-03-18,12,For A Reason,"Karan Aujla, Ikky",,3,11-25,False,1,4,4,11,15.0,-3.0,1.4142135623730951,False,2026-03-19,17.0,11-25,11-25,0,0
+2026-03-18,13,Bairi,"Virat, Pradeep Solanki, Heena",,3,11-25,False,1,4,4,3,14.0,-1.0,0.816496580927726,False,2026-03-19,13.0,11-25,11-25,0,0
+2026-03-18,14,Boyfriend,"Karan Aujla, Ikky",,3,11-25,False,1,4,4,3,16.0,-2.0,0.9428090415820634,False,2026-03-19,19.0,11-25,11-25,0,0
+2026-03-18,15,Shararat,"Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas",,3,11-25,False,1,4,4,3,12.0,3.0,1.4142135623730951,False,2026-03-19,16.0,11-25,11-25,0,0
+2026-03-18,16,Ishq,"Faheem Abdullah, Rauhan Malik, Amir Ameer",,3,11-25,False,1,4,4,3,13.0,3.0,1.699673171197595,False,2026-03-19,15.0,11-25,11-25,0,0
+2026-03-18,17,"Pavazha Malli - From ""Think Indie""","Sai Abhyankkar, Shruti Haasan, Vivek",,3,11-25,False,1,4,4,3,22.0,-5.0,2.160246899469287,False,2026-03-19,14.0,11-25,11-25,0,0
+2026-03-18,18,Mann Mera,Gajendra Verma,Hindi Indie,3,11-25,False,1,4,4,3,17.0,1.0,0.9428090415820634,False,2026-03-19,20.0,11-25,11-25,0,0
+2026-03-18,19,Saiyaara,"Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Irshad Kamil",,3,11-25,False,1,4,4,3,18.0,1.0,0.0,False,2026-03-19,21.0,11-25,11-25,0,0
+2026-03-18,20,Dhurandhar - Title Track,"Shashwat Sachdev, Hanumankind, Jasmine Sandlas, Sudhir Yaduvanshi, Charanjit Ahuja, Muhammad Sadiq, Ranjit Kaur, Babu Singh Maan",,3,11-25,False,1,4,4,3,23.0,-3.0,1.699673171197595,False,2026-03-19,18.0,11-25,11-25,0,0
+2026-03-18,21,"Dhurandhar The Revenge - Aari Aari (From ""Dhurandhar The Revenge"")","Shashwat Sachdev, Bombay Rockers, Irshad Kamil, Khan Saab, Reble, Token, Jasmine Sandlas, Sudhir Yaduvanshi",,3,11-25,True,1,1,1,0,,,0.0,True,2026-03-19,7.0,Top10,Top10,1,0
+2026-03-18,22,"Raanjhan (From ""Do Patti"")","Sachet-Parampara, Parampara Tandon, Kausar Munir",,3,11-25,False,1,4,4,3,21.0,1.0,1.247219128924647,False,2026-03-19,23.0,11-25,11-25,0,0
+2026-03-18,23,Ishqa Ve,"Zeeshan Ali, Yuvraj Tung, Sandeep Aulakh, Honey Dhillon",,3,11-25,False,1,4,4,3,19.0,4.0,2.0548046676563256,False,2026-03-19,22.0,11-25,11-25,0,0
+2026-03-18,24,Deewaana Deewaana,"A.R. Rahman, Irshad Kamil",,3,11-25,False,1,4,4,3,24.0,0.0,0.4714045207910317,False,2026-03-19,24.0,11-25,11-25,0,0
+2026-03-18,25,Darkhaast,"Mithoon, Arijit Singh, Sunidhi Chauhan, Sayeed Quadri",,3,11-25,False,1,4,4,3,31.0,-6.0,2.449489742783178,False,2026-03-19,25.0,11-25,11-25,0,0
+2026-03-18,26,Tere Liye,"Atif Aslam, Shreya Ghoshal, Sachin Gupta, Sameer Anjaan",,3,26-50,False,1,4,4,3,20.0,6.0,3.0912061651652345,False,2026-03-19,26.0,26-50,26-50,0,0
+2026-03-18,27,Tere Bina,"A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan",,3,26-50,False,1,4,4,3,26.0,1.0,0.816496580927726,False,2026-03-19,29.0,26-50,26-50,0,0
+2026-03-18,28,Jogi,"thiarajxtt, Bir",,3,26-50,True,1,1,1,0,,,0.0,True,2026-03-19,38.0,26-50,26-50,0,0
+2026-03-18,29,"Aaya Sher (From ""The Paradise"") (Telugu)","Anirudh Ravichander, Jangi Reddy, Arjun Chandy, Kasarla Shyam",,3,26-50,False,1,4,4,3,29.0,0.0,0.4714045207910317,False,2026-03-19,30.0,26-50,26-50,0,0
+2026-03-18,30,"Agar Tum Saath Ho (From ""Tamasha"")","Alka Yagnik, Arijit Singh",,3,26-50,False,1,4,4,3,27.0,3.0,1.699673171197595,False,2026-03-19,28.0,26-50,26-50,0,0
+2026-03-18,31,"Tum Ho Toh (From ""Saiyaara"")","Vishal Mishra, Hansika Pareek, Raj Shekhar",,3,26-50,False,1,4,4,3,28.0,3.0,2.0548046676563256,False,2026-03-19,34.0,26-50,26-50,0,0
+2026-03-18,32,Jo Tum Mere Ho,Anuv Jain,Hindi Indie,3,26-50,False,1,4,4,11,25.0,7.0,2.943920288775949,False,2026-03-19,27.0,26-50,26-50,0,0
+2026-03-18,33,Haseen,"Talwiinder, NDS, Rippy Grewal",,3,26-50,False,1,4,4,3,30.0,3.0,1.247219128924647,False,2026-03-19,31.0,26-50,26-50,0,0
+2026-03-18,34,Not Guilty,Dhanda Nyoliwala,Punjabi-Haryanvi Pop,3,26-50,False,1,4,4,3,32.0,2.0,0.9428090415820634,False,2026-03-19,32.0,26-50,26-50,0,0
+2026-03-18,35,Naal Nachna,"Shashwat Sachdev, Afsana Khan, Irshad Kamil, Reble",,3,26-50,False,1,4,4,3,35.0,0.0,4.0276819911981905,False,2026-03-19,33.0,26-50,26-50,0,0
+2026-03-18,36,"Barbaad (From ""Saiyaara"")","The Rish, Jubin Nautiyal",,3,26-50,False,1,4,4,3,36.0,0.0,2.6246692913372702,False,2026-03-19,35.0,26-50,26-50,0,0
+2026-03-18,37,Ye Tune Kya Kiya,"Pritam, Javed Bashir, Rajat Arora",,3,26-50,False,1,4,4,3,33.0,4.0,1.632993161855452,False,2026-03-19,39.0,26-50,26-50,0,0
+2026-03-18,38,Lutt Le Gaya,"Shashwat Sachdev, Simran Choudhary",,3,26-50,False,1,4,4,3,41.0,-3.0,2.0548046676563256,False,2026-03-19,37.0,26-50,26-50,0,0
+2026-03-18,39,KALYANI,"ARJN, KDS, FIFTY4, RONN",,3,26-50,False,1,4,4,3,44.0,-5.0,4.898979485566356,False,2026-03-19,36.0,26-50,26-50,0,0
+2026-03-18,40,Teri Deewani,"Kailash Kher, Paresh Kamath, Naresh Kamath",,3,26-50,False,1,4,4,3,40.0,0.0,0.4714045207910317,False,2026-03-19,46.0,26-50,26-50,0,0
+2026-03-18,41,"Mast Magan (From ""2 States)","Arijit Singh, Chinmayi",,3,26-50,False,1,4,4,3,37.0,4.0,2.160246899469287,False,2026-03-19,,,Exit,0,1
+2026-03-18,42,Ehsaas,"Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar",,3,26-50,False,1,4,4,3,38.0,4.0,2.0548046676563256,False,2026-03-19,40.0,26-50,26-50,0,0
+2026-03-18,43,Ishq Jalakar - Karvaan,"Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury, Armaan Khan, Irshad Kamil, Roshan, Sahir Ludhianvi",,3,26-50,False,1,4,4,3,45.0,-2.0,1.247219128924647,False,2026-03-19,41.0,26-50,26-50,0,0
+2026-03-18,44,Thodi Si Daaru,"AP Dhillon, Shreya Ghoshal",,3,26-50,False,1,4,4,3,42.0,2.0,1.632993161855452,False,2026-03-19,,,Exit,0,1
+2026-03-18,45,"Humdard (From ""Ek Villain"")",Arijit Singh,,3,26-50,False,1,4,4,3,46.0,-1.0,3.0912061651652345,False,2026-03-19,43.0,26-50,26-50,0,0
+2026-03-18,46,Jhol - Acoustic,"Maanu, Annural Khalid, Abdullah Siddiqui",,3,26-50,False,2,2,3,2,47.0,-1.0,0.0,False,2026-03-19,44.0,26-50,26-50,0,0
+2026-03-18,47,High On You,Jind Universe,,3,26-50,False,1,4,4,3,49.0,-2.0,0.816496580927726,False,2026-03-19,,,Exit,0,1
+2026-03-18,48,"Dhun (From ""Saiyaara"")","Mithoon, Arijit Singh",,3,26-50,False,2,2,3,2,48.0,0.0,0.0,False,2026-03-19,47.0,26-50,26-50,0,0
+2026-03-18,49,Kithe Reh Gaya,"Neeti Mohan, Abhijit Vaghani",,3,26-50,False,1,4,4,3,43.0,6.0,3.7416573867739413,False,2026-03-19,50.0,26-50,26-50,0,0
+2026-03-18,50,Zaalima,"Arijit Singh, Harshdeep Kaur",,3,26-50,False,1,4,4,3,39.0,11.0,3.8586123009300755,False,2026-03-19,48.0,26-50,26-50,0,0
+2026-03-19,1,Bairan,Banjaare,Hindi Indie,4,Top10,False,1,5,5,4,1.0,0.0,0.0,False,2026-03-20,1.0,Top10,Top10,1,0
+2026-03-19,2,Sheesha - Aakhya Mai Aakh Ghali Jo Bairan,"Mitta Ror, Swara Verma",,4,Top10,False,1,5,5,4,2.0,0.0,0.0,False,2026-03-20,2.0,Top10,Top10,1,0
+2026-03-19,3,Gehra Hua,"Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan",,4,Top10,False,1,5,5,4,3.0,0.0,0.0,False,2026-03-20,3.0,Top10,Top10,1,0
+2026-03-19,4,Dooron Dooron,"Paresh Pahuja, Shiv Tandan, Meghdeep Bose",,4,Top10,False,1,5,5,4,4.0,0.0,0.4330127018922193,False,2026-03-20,6.0,Top10,Top10,1,0
+2026-03-19,5,Khat,Navjot Ahuja,Hindi Indie,4,Top10,False,1,5,5,4,5.0,0.0,0.4330127018922193,False,2026-03-20,5.0,Top10,Top10,1,0
+2026-03-19,6,"Sitaare (From ""Ikkis"")","Arijit Singh, White Noise Collectives, Amitabh Bhattacharya",,4,Top10,False,1,5,5,4,7.0,-1.0,0.5,False,2026-03-20,7.0,Top10,Top10,1,0
+2026-03-19,7,"Dhurandhar The Revenge - Aari Aari (From ""Dhurandhar The Revenge"")","Shashwat Sachdev, Bombay Rockers, Irshad Kamil, Khan Saab, Reble, Token, Jasmine Sandlas, Sudhir Yaduvanshi",,4,Top10,False,1,2,2,1,21.0,-14.0,0.0,False,2026-03-20,4.0,Top10,Top10,1,0
+2026-03-19,8,Sahiba,Aditya Rikhari,Hindi Indie,4,Top10,False,1,5,5,4,6.0,2.0,1.0,False,2026-03-20,8.0,Top10,Top10,1,0
+2026-03-19,9,Samjhawan,"Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Ghoshal",,4,Top10,False,1,5,5,4,8.0,1.0,0.5,False,2026-03-20,11.0,11-25,11-25,0,0
+2026-03-19,10,Finding Her,"Kushagra, Bharath, Saaheal",,4,Top10,False,1,5,5,4,9.0,1.0,0.7071067811865476,False,2026-03-20,12.0,11-25,11-25,0,0
+2026-03-19,11,Apna Bana Le,"Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya",,4,11-25,False,1,5,5,4,10.0,1.0,1.224744871391589,False,2026-03-20,13.0,11-25,11-25,0,0
+2026-03-19,12,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain,Hindi Indie,4,11-25,False,1,5,5,4,11.0,1.0,0.7071067811865476,False,2026-03-20,14.0,11-25,11-25,0,0
+2026-03-19,13,Bairi,"Virat, Pradeep Solanki, Heena",,4,11-25,False,1,5,5,4,13.0,0.0,0.7071067811865476,False,2026-03-20,19.0,11-25,11-25,0,0
+2026-03-19,14,"Pavazha Malli - From ""Think Indie""","Sai Abhyankkar, Shruti Haasan, Vivek",,4,11-25,False,1,5,5,4,17.0,-3.0,1.8708286933869707,False,2026-03-20,18.0,11-25,11-25,0,0
+2026-03-19,15,Ishq,"Faheem Abdullah, Rauhan Malik, Amir Ameer",,4,11-25,False,1,5,5,4,16.0,-1.0,1.6393596310755,False,2026-03-20,22.0,11-25,11-25,0,0
+2026-03-19,16,Shararat,"Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas",,4,11-25,False,1,5,5,4,15.0,1.0,1.299038105676658,False,2026-03-20,15.0,11-25,11-25,0,0
+2026-03-19,17,For A Reason,"Karan Aujla, Ikky",,4,11-25,False,1,5,5,12,12.0,5.0,2.8722813232690143,False,2026-03-20,17.0,11-25,11-25,0,0
+2026-03-19,18,Dhurandhar - Title Track,"Shashwat Sachdev, Hanumankind, Jasmine Sandlas, Sudhir Yaduvanshi, Charanjit Ahuja, Muhammad Sadiq, Ranjit Kaur, Babu Singh Maan",,4,11-25,False,1,5,5,4,20.0,-2.0,1.5811388300841898,False,2026-03-20,16.0,11-25,11-25,0,0
+2026-03-19,19,Boyfriend,"Karan Aujla, Ikky",,4,11-25,False,1,5,5,4,14.0,5.0,2.8613807855648994,False,2026-03-20,20.0,11-25,11-25,0,0
+2026-03-19,20,Mann Mera,Gajendra Verma,Hindi Indie,4,11-25,False,1,5,5,4,18.0,2.0,1.0897247358851685,False,2026-03-20,23.0,11-25,11-25,0,0
+2026-03-19,21,Saiyaara,"Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Irshad Kamil",,4,11-25,False,1,5,5,4,19.0,2.0,0.4330127018922193,False,2026-03-20,24.0,11-25,11-25,0,0
+2026-03-19,22,Ishqa Ve,"Zeeshan Ali, Yuvraj Tung, Sandeep Aulakh, Honey Dhillon",,4,11-25,False,1,5,5,4,23.0,-1.0,2.0463381929681126,False,2026-03-20,21.0,11-25,11-25,0,0
+2026-03-19,23,"Raanjhan (From ""Do Patti"")","Sachet-Parampara, Parampara Tandon, Kausar Munir",,4,11-25,False,1,5,5,4,22.0,1.0,1.0897247358851685,False,2026-03-20,27.0,26-50,26-50,0,0
+2026-03-19,24,Deewaana Deewaana,"A.R. Rahman, Irshad Kamil",,4,11-25,False,1,5,5,4,24.0,0.0,0.4330127018922193,False,2026-03-20,25.0,11-25,11-25,0,0
+2026-03-19,25,Darkhaast,"Mithoon, Arijit Singh, Sunidhi Chauhan, Sayeed Quadri",,4,11-25,False,1,5,5,4,25.0,0.0,2.48746859276655,False,2026-03-20,29.0,26-50,26-50,0,0
+2026-03-19,26,Tere Liye,"Atif Aslam, Shreya Ghoshal, Sachin Gupta, Sameer Anjaan",,4,26-50,False,1,5,5,4,26.0,0.0,2.7726341266023544,False,2026-03-20,26.0,26-50,26-50,0,0
+2026-03-19,27,Jo Tum Mere Ho,Anuv Jain,Hindi Indie,4,26-50,False,1,5,5,12,32.0,-5.0,4.301162633521313,False,2026-03-20,32.0,26-50,26-50,0,0
+2026-03-19,28,"Agar Tum Saath Ho (From ""Tamasha"")","Alka Yagnik, Arijit Singh",,4,26-50,False,1,5,5,4,30.0,-2.0,1.8708286933869707,False,2026-03-20,31.0,26-50,26-50,0,0
+2026-03-19,29,Tere Bina,"A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan",,4,26-50,False,1,5,5,4,27.0,2.0,0.82915619758885,False,2026-03-20,35.0,26-50,26-50,0,0
+2026-03-19,30,"Aaya Sher (From ""The Paradise"") (Telugu)","Anirudh Ravichander, Jangi Reddy, Arjun Chandy, Kasarla Shyam",,4,26-50,False,1,5,5,4,29.0,1.0,0.4330127018922193,False,2026-03-20,33.0,26-50,26-50,0,0
+2026-03-19,31,Haseen,"Talwiinder, NDS, Rippy Grewal",,4,26-50,False,1,5,5,4,33.0,-2.0,1.8027756377319946,False,2026-03-20,37.0,26-50,26-50,0,0
+2026-03-19,32,Not Guilty,Dhanda Nyoliwala,Punjabi-Haryanvi Pop,4,26-50,False,1,5,5,4,34.0,-2.0,1.4142135623730951,False,2026-03-20,46.0,26-50,26-50,0,0
+2026-03-19,33,Naal Nachna,"Shashwat Sachdev, Afsana Khan, Irshad Kamil, Reble",,4,26-50,False,1,5,5,4,35.0,-2.0,3.491060010942235,False,2026-03-20,30.0,26-50,26-50,0,0
+2026-03-19,34,"Tum Ho Toh (From ""Saiyaara"")","Vishal Mishra, Hansika Pareek, Raj Shekhar",,4,26-50,False,1,5,5,4,31.0,3.0,2.1213203435596424,False,2026-03-20,41.0,26-50,26-50,0,0
+2026-03-19,35,"Barbaad (From ""Saiyaara"")","The Rish, Jubin Nautiyal",,4,26-50,False,1,5,5,4,36.0,-1.0,2.277608394786075,False,2026-03-20,44.0,26-50,26-50,0,0
+2026-03-19,36,KALYANI,"ARJN, KDS, FIFTY4, RONN",,4,26-50,False,1,5,5,4,39.0,-3.0,4.58257569495584,False,2026-03-20,39.0,26-50,26-50,0,0
+2026-03-19,37,Lutt Le Gaya,"Shashwat Sachdev, Simran Choudhary",,4,26-50,False,1,5,5,4,38.0,-1.0,1.8027756377319946,False,2026-03-20,34.0,26-50,26-50,0,0
+2026-03-19,38,Jogi,"thiarajxtt, Bir",,4,26-50,False,1,2,2,1,28.0,10.0,0.0,False,2026-03-20,36.0,26-50,26-50,0,0
+2026-03-19,39,Ye Tune Kya Kiya,"Pritam, Javed Bashir, Rajat Arora",,4,26-50,False,1,5,5,4,37.0,2.0,1.4142135623730951,False,2026-03-20,42.0,26-50,26-50,0,0
+2026-03-19,40,Ehsaas,"Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar",,4,26-50,False,1,5,5,4,42.0,-2.0,2.384848003542364,False,2026-03-20,49.0,26-50,26-50,0,0
+2026-03-19,41,Ishq Jalakar - Karvaan,"Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury, Armaan Khan, Irshad Kamil, Roshan, Sahir Ludhianvi",,4,26-50,False,1,5,5,4,43.0,-2.0,1.224744871391589,False,2026-03-20,38.0,26-50,26-50,0,0
+2026-03-19,42,"Mutta Kalakki (From ""Youth"")","G. V. Prakash, Ken Karunaas",,4,26-50,True,1,1,1,0,,,0.0,True,2026-03-20,45.0,26-50,26-50,0,0
+2026-03-19,43,"Humdard (From ""Ek Villain"")",Arijit Singh,,4,26-50,False,1,5,5,4,45.0,-2.0,2.9154759474226504,False,2026-03-20,,,Exit,0,1
+2026-03-19,44,Jhol - Acoustic,"Maanu, Annural Khalid, Abdullah Siddiqui",,4,26-50,False,2,3,4,3,46.0,-2.0,0.5,False,2026-03-20,,,Exit,0,1
+2026-03-19,45,Oorum Blood,"Sai Abhyankkar, Paal Dabba, Bhumi, Deepthi Suresh",,4,26-50,True,1,1,1,0,,,0.0,True,2026-03-20,,,Exit,0,1
+2026-03-19,46,Teri Deewani,"Kailash Kher, Paresh Kamath, Naresh Kamath",,4,26-50,False,1,5,5,4,40.0,6.0,2.7726341266023544,False,2026-03-20,,,Exit,0,1
+2026-03-19,47,"Dhun (From ""Saiyaara"")","Mithoon, Arijit Singh",,4,26-50,False,2,3,4,3,48.0,-1.0,0.5,False,2026-03-20,,,Exit,0,1
+2026-03-19,48,Zaalima,"Arijit Singh, Harshdeep Kaur",,4,26-50,False,1,5,5,4,50.0,-2.0,4.710360920354193,False,2026-03-20,,,Exit,0,1
+2026-03-19,49,Mann Mera - Original Version,Gajendra Verma,,4,26-50,True,2,1,4,11,,,0.0,True,2026-03-20,,,Exit,0,1
+2026-03-19,50,Kithe Reh Gaya,"Neeti Mohan, Abhijit Vaghani",,4,26-50,False,1,5,5,4,49.0,1.0,3.24037034920393,False,2026-03-20,,,Exit,0,1
+2026-03-20,1,Bairan,Banjaare,Hindi Indie,5,Top10,False,1,6,6,5,1.0,0.0,0.0,False,2026-03-21,1.0,Top10,Top10,1,0
+2026-03-20,2,Sheesha - Aakhya Mai Aakh Ghali Jo Bairan,"Mitta Ror, Swara Verma",,5,Top10,False,1,6,6,5,2.0,0.0,0.0,False,2026-03-21,2.0,Top10,Top10,1,0
+2026-03-20,3,Gehra Hua,"Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan",,5,Top10,False,1,6,6,5,3.0,0.0,0.0,False,2026-03-21,3.0,Top10,Top10,1,0
+2026-03-20,4,"Dhurandhar The Revenge - Aari Aari (From ""Dhurandhar The Revenge"")","Shashwat Sachdev, Bombay Rockers, Irshad Kamil, Khan Saab, Reble, Token, Jasmine Sandlas, Sudhir Yaduvanshi",,5,Top10,False,1,3,3,2,7.0,-3.0,5.5,False,2026-03-21,4.0,Top10,Top10,1,0
+2026-03-20,5,Khat,Navjot Ahuja,Hindi Indie,5,Top10,False,1,6,6,5,5.0,0.0,0.4000000000000001,False,2026-03-21,5.0,Top10,Top10,1,0
+2026-03-20,6,Dooron Dooron,"Paresh Pahuja, Shiv Tandan, Meghdeep Bose",,5,Top10,False,1,6,6,5,4.0,2.0,0.9797958971132713,False,2026-03-21,6.0,Top10,Top10,1,0
+2026-03-20,7,"Sitaare (From ""Ikkis"")","Arijit Singh, White Noise Collectives, Amitabh Bhattacharya",,5,Top10,False,1,6,6,5,6.0,1.0,0.7483314773547883,False,2026-03-21,8.0,Top10,Top10,1,0
+2026-03-20,8,Sahiba,Aditya Rikhari,Hindi Indie,5,Top10,False,1,6,6,5,8.0,0.0,0.9797958971132713,False,2026-03-21,7.0,Top10,Top10,1,0
+2026-03-20,9,Body to Body,BTS,International Pop/K-Pop,5,Top10,True,1,1,1,2,,,0.0,True,2026-03-21,41.0,26-50,26-50,0,0
+2026-03-20,10,SWIM,BTS,International Pop/K-Pop,5,Top10,True,1,1,1,9,,,0.0,True,2026-03-21,22.0,11-25,11-25,0,0
+2026-03-20,11,Samjhawan,"Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Ghoshal",,5,11-25,False,1,6,6,5,9.0,2.0,0.7483314773547883,False,2026-03-21,9.0,Top10,Top10,1,0
+2026-03-20,12,Finding Her,"Kushagra, Bharath, Saaheal",,5,11-25,False,1,6,6,5,10.0,2.0,1.019803902718557,False,2026-03-21,10.0,Top10,Top10,1,0
+2026-03-20,13,Apna Bana Le,"Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya",,5,11-25,False,1,6,6,5,11.0,2.0,1.3564659966250538,False,2026-03-21,11.0,11-25,11-25,0,0
+2026-03-20,14,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain,Hindi Indie,5,11-25,False,1,6,6,5,12.0,2.0,1.019803902718557,False,2026-03-21,14.0,11-25,11-25,0,0
+2026-03-20,15,Shararat,"Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas",,5,11-25,False,1,6,6,5,16.0,-1.0,1.6,False,2026-03-21,12.0,11-25,11-25,0,0
+2026-03-20,16,Dhurandhar - Title Track,"Shashwat Sachdev, Hanumankind, Jasmine Sandlas, Sudhir Yaduvanshi, Charanjit Ahuja, Muhammad Sadiq, Ranjit Kaur, Babu Singh Maan",,5,11-25,False,1,6,6,5,18.0,-2.0,1.4696938456699071,False,2026-03-21,13.0,11-25,11-25,0,0
+2026-03-20,17,For A Reason,"Karan Aujla, Ikky",,5,11-25,False,1,6,6,13,17.0,0.0,2.576819745345025,False,2026-03-21,16.0,11-25,11-25,0,0
+2026-03-20,18,"Pavazha Malli - From ""Think Indie""","Sai Abhyankkar, Shruti Haasan, Vivek",,5,11-25,False,1,6,6,5,14.0,4.0,3.261901286060018,False,2026-03-21,15.0,11-25,11-25,0,0
+2026-03-20,19,Bairi,"Virat, Pradeep Solanki, Heena",,5,11-25,False,1,6,6,5,13.0,6.0,2.481934729198171,False,2026-03-21,18.0,11-25,11-25,0,0
+2026-03-20,20,Boyfriend,"Karan Aujla, Ikky",,5,11-25,False,1,6,6,5,19.0,1.0,2.576819745345025,False,2026-03-21,17.0,11-25,11-25,0,0
+2026-03-20,21,Ishqa Ve,"Zeeshan Ali, Yuvraj Tung, Sandeep Aulakh, Honey Dhillon",,5,11-25,False,1,6,6,5,22.0,-1.0,1.9595917942265426,False,2026-03-21,21.0,11-25,11-25,0,0
+2026-03-20,22,Ishq,"Faheem Abdullah, Rauhan Malik, Amir Ameer",,5,11-25,False,1,6,6,5,15.0,7.0,3.0724582991474434,False,2026-03-21,19.0,11-25,11-25,0,0
+2026-03-20,23,Mann Mera,Gajendra Verma,Hindi Indie,5,11-25,False,1,6,6,5,20.0,3.0,1.32664991614216,False,2026-03-21,23.0,11-25,11-25,0,0
+2026-03-20,24,Saiyaara,"Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Irshad Kamil",,5,11-25,False,1,6,6,5,21.0,3.0,0.8,False,2026-03-21,20.0,11-25,11-25,0,0
+2026-03-20,25,Deewaana Deewaana,"A.R. Rahman, Irshad Kamil",,5,11-25,False,1,6,6,5,24.0,1.0,0.6324555320336759,False,2026-03-21,25.0,11-25,11-25,0,0
+2026-03-20,26,Tere Liye,"Atif Aslam, Shreya Ghoshal, Sachin Gupta, Sameer Anjaan",,5,26-50,False,1,6,6,5,26.0,0.0,2.5298221281347035,False,2026-03-21,26.0,26-50,26-50,0,0
+2026-03-20,27,"Raanjhan (From ""Do Patti"")","Sachet-Parampara, Parampara Tandon, Kausar Munir",,5,26-50,False,1,6,6,5,23.0,4.0,1.624807680927192,False,2026-03-21,24.0,11-25,11-25,0,0
+2026-03-20,28,Hooligan,BTS,,5,26-50,True,1,1,1,6,,,0.0,True,2026-03-21,,,Exit,0,1
+2026-03-20,29,Darkhaast,"Mithoon, Arijit Singh, Sunidhi Chauhan, Sayeed Quadri",,5,26-50,False,1,6,6,5,25.0,4.0,3.3466401061363023,False,2026-03-21,39.0,26-50,26-50,0,0
+2026-03-20,30,Naal Nachna,"Shashwat Sachdev, Afsana Khan, Irshad Kamil, Reble",,5,26-50,False,1,6,6,5,33.0,-3.0,3.136877428271624,False,2026-03-21,29.0,26-50,26-50,0,0
+2026-03-20,31,"Agar Tum Saath Ho (From ""Tamasha"")","Alka Yagnik, Arijit Singh",,5,26-50,False,1,6,6,5,28.0,3.0,2.0591260281974,False,2026-03-21,31.0,26-50,26-50,0,0
+2026-03-20,32,Jo Tum Mere Ho,Anuv Jain,Hindi Indie,5,26-50,False,1,6,6,13,27.0,5.0,4.166533331199932,False,2026-03-21,34.0,26-50,26-50,0,0
+2026-03-20,33,"Aaya Sher (From ""The Paradise"") (Telugu)","Anirudh Ravichander, Jangi Reddy, Arjun Chandy, Kasarla Shyam",,5,26-50,False,1,6,6,5,30.0,3.0,0.9797958971132713,False,2026-03-21,36.0,26-50,26-50,0,0
+2026-03-20,34,Lutt Le Gaya,"Shashwat Sachdev, Simran Choudhary",,5,26-50,False,1,6,6,5,37.0,-3.0,1.8973665961010275,False,2026-03-21,27.0,26-50,26-50,0,0
+2026-03-20,35,Tere Bina,"A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan",,5,26-50,False,1,6,6,5,29.0,6.0,2.039607805437114,False,2026-03-21,32.0,26-50,26-50,0,0
+2026-03-20,36,Jogi,"thiarajxtt, Bir",,5,26-50,False,1,3,3,2,38.0,-2.0,6.0,False,2026-03-21,42.0,26-50,26-50,0,0
+2026-03-20,37,Haseen,"Talwiinder, NDS, Rippy Grewal",,5,26-50,False,1,6,6,5,31.0,6.0,2.727636339397171,False,2026-03-21,35.0,26-50,26-50,0,0
+2026-03-20,38,Ishq Jalakar - Karvaan,"Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury, Armaan Khan, Irshad Kamil, Roshan, Sahir Ludhianvi",,5,26-50,False,1,6,6,5,41.0,-3.0,1.3564659966250538,False,2026-03-21,30.0,26-50,26-50,0,0
+2026-03-20,39,KALYANI,"ARJN, KDS, FIFTY4, RONN",,5,26-50,False,1,6,6,5,36.0,3.0,4.2708313008125245,False,2026-03-21,40.0,26-50,26-50,0,0
+2026-03-20,40,FYA,BTS,,5,26-50,True,1,1,1,5,,,0.0,True,2026-03-21,,,Exit,0,1
+2026-03-20,41,"Tum Ho Toh (From ""Saiyaara"")","Vishal Mishra, Hansika Pareek, Raj Shekhar",,5,26-50,False,1,6,6,5,34.0,7.0,3.059411708155671,False,2026-03-21,38.0,26-50,26-50,0,0
+2026-03-20,42,Ye Tune Kya Kiya,"Pritam, Javed Bashir, Rajat Arora",,5,26-50,False,1,6,6,5,39.0,3.0,1.32664991614216,False,2026-03-21,45.0,26-50,26-50,0,0
+2026-03-20,43,Aliens,BTS,,5,26-50,True,1,1,1,1,,,0.0,True,2026-03-21,,,Exit,0,1
+2026-03-20,44,"Barbaad (From ""Saiyaara"")","The Rish, Jubin Nautiyal",,5,26-50,False,1,6,6,5,35.0,9.0,4.578209256903839,False,2026-03-21,43.0,26-50,26-50,0,0
+2026-03-20,45,"Mutta Kalakki (From ""Youth"")","G. V. Prakash, Ken Karunaas",,5,26-50,False,1,2,2,1,42.0,3.0,0.0,False,2026-03-21,33.0,26-50,26-50,0,0
+2026-03-20,46,Not Guilty,Dhanda Nyoliwala,Punjabi-Haryanvi Pop,5,26-50,False,1,6,6,5,32.0,14.0,5.741080037762929,False,2026-03-21,44.0,26-50,26-50,0,0
+2026-03-20,47,2.0,BTS,,5,26-50,True,1,1,1,0,,,0.0,True,2026-03-21,,,Exit,0,1
+2026-03-20,48,NORMAL,BTS,,5,26-50,True,1,1,1,8,,,0.0,True,2026-03-21,,,Exit,0,1
+2026-03-20,49,Ehsaas,"Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar",,5,26-50,False,1,6,6,5,40.0,9.0,3.9293765408777,False,2026-03-21,49.0,26-50,26-50,0,0
+2026-03-20,50,Merry Go Round,BTS,,5,26-50,True,1,1,1,7,,,0.0,True,2026-03-21,,,Exit,0,1
+2026-03-21,1,Bairan,Banjaare,Hindi Indie,6,Top10,False,1,7,7,6,1.0,0.0,0.0,False,2026-03-22,1.0,Top10,Top10,1,0
+2026-03-21,2,Sheesha - Aakhya Mai Aakh Ghali Jo Bairan,"Mitta Ror, Swara Verma",,6,Top10,False,1,7,7,6,2.0,0.0,0.0,False,2026-03-22,2.0,Top10,Top10,1,0
+2026-03-21,3,Gehra Hua,"Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan",,6,Top10,False,1,7,7,6,3.0,0.0,0.0,False,2026-03-22,3.0,Top10,Top10,1,0
+2026-03-21,4,"Dhurandhar The Revenge - Aari Aari (From ""Dhurandhar The Revenge"")","Shashwat Sachdev, Bombay Rockers, Irshad Kamil, Khan Saab, Reble, Token, Jasmine Sandlas, Sudhir Yaduvanshi",,6,Top10,False,1,4,4,3,4.0,0.0,6.018490028422596,False,2026-03-22,4.0,Top10,Top10,1,0
+2026-03-21,5,Khat,Navjot Ahuja,Hindi Indie,6,Top10,False,1,7,7,6,5.0,0.0,0.372677996249965,False,2026-03-22,5.0,Top10,Top10,1,0
+2026-03-21,6,Dooron Dooron,"Paresh Pahuja, Shiv Tandan, Meghdeep Bose",,6,Top10,False,1,7,7,6,6.0,0.0,0.8975274678557507,False,2026-03-22,6.0,Top10,Top10,1,0
+2026-03-21,7,Sahiba,Aditya Rikhari,Hindi Indie,6,Top10,False,1,7,7,6,8.0,-1.0,1.118033988749895,False,2026-03-22,7.0,Top10,Top10,1,0
+2026-03-21,8,"Sitaare (From ""Ikkis"")","Arijit Singh, White Noise Collectives, Amitabh Bhattacharya",,6,Top10,False,1,7,7,6,7.0,1.0,0.816496580927726,False,2026-03-22,8.0,Top10,Top10,1,0
+2026-03-21,9,Samjhawan,"Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Ghoshal",,6,Top10,False,1,7,7,6,11.0,-2.0,1.2472191289246473,False,2026-03-22,11.0,11-25,11-25,0,0
+2026-03-21,10,Finding Her,"Kushagra, Bharath, Saaheal",,6,Top10,False,1,7,7,6,12.0,-2.0,1.2909944487358056,False,2026-03-22,9.0,Top10,Top10,1,0
+2026-03-21,11,Apna Bana Le,"Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya",,6,11-25,False,1,7,7,6,13.0,-2.0,1.5275252316519468,False,2026-03-22,10.0,Top10,Top10,1,0
+2026-03-21,12,Shararat,"Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas",,6,11-25,False,1,7,7,6,15.0,-3.0,2.140872096444188,False,2026-03-22,13.0,11-25,11-25,0,0
+2026-03-21,13,Dhurandhar - Title Track,"Shashwat Sachdev, Hanumankind, Jasmine Sandlas, Sudhir Yaduvanshi, Charanjit Ahuja, Muhammad Sadiq, Ranjit Kaur, Babu Singh Maan",,6,11-25,False,1,7,7,6,16.0,-3.0,1.5,False,2026-03-22,15.0,11-25,11-25,0,0
+2026-03-21,14,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain,Hindi Indie,6,11-25,False,1,7,7,6,14.0,0.0,0.9428090415820634,False,2026-03-22,14.0,11-25,11-25,0,0
+2026-03-21,15,"Pavazha Malli - From ""Think Indie""","Sai Abhyankkar, Shruti Haasan, Vivek",,6,11-25,False,1,7,7,6,18.0,-3.0,3.0230595245361753,False,2026-03-22,17.0,11-25,11-25,0,0
+2026-03-21,16,For A Reason,"Karan Aujla, Ikky",,6,11-25,False,1,7,7,14,17.0,-1.0,2.4094720491334933,False,2026-03-22,16.0,11-25,11-25,0,0
+2026-03-21,17,Boyfriend,"Karan Aujla, Ikky",,6,11-25,False,1,7,7,6,20.0,-3.0,2.6718699236468995,False,2026-03-22,21.0,11-25,11-25,0,0
+2026-03-21,18,Bairi,"Virat, Pradeep Solanki, Heena",,6,11-25,False,1,7,7,6,19.0,-1.0,2.4094720491334933,False,2026-03-22,19.0,11-25,11-25,0,0
+2026-03-21,19,Ishq,"Faheem Abdullah, Rauhan Malik, Amir Ameer",,6,11-25,False,1,7,7,6,22.0,-3.0,3.2871804872193366,False,2026-03-22,22.0,11-25,11-25,0,0
+2026-03-21,20,Saiyaara,"Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Irshad Kamil",,6,11-25,False,1,7,7,6,24.0,-4.0,2.211083193570267,False,2026-03-22,20.0,11-25,11-25,0,0
+2026-03-21,21,Ishqa Ve,"Zeeshan Ali, Yuvraj Tung, Sandeep Aulakh, Honey Dhillon",,6,11-25,False,1,7,7,6,21.0,0.0,1.7950549357115013,False,2026-03-22,25.0,11-25,11-25,0,0
+2026-03-21,22,SWIM,BTS,International Pop/K-Pop,6,11-25,False,1,2,2,10,10.0,12.0,0.0,False,2026-03-22,26.0,26-50,26-50,0,0
+2026-03-21,23,Mann Mera,Gajendra Verma,Hindi Indie,6,11-25,False,1,7,7,6,23.0,0.0,1.2909944487358056,False,2026-03-22,24.0,11-25,11-25,0,0
+2026-03-21,24,"Raanjhan (From ""Do Patti"")","Sachet-Parampara, Parampara Tandon, Kausar Munir",,6,11-25,False,1,7,7,6,27.0,-3.0,2.2110831935702664,False,2026-03-22,23.0,11-25,11-25,0,0
+2026-03-21,25,Deewaana Deewaana,"A.R. Rahman, Irshad Kamil",,6,11-25,False,1,7,7,6,25.0,0.0,0.5773502691896257,False,2026-03-22,28.0,26-50,26-50,0,0
+2026-03-21,26,Tere Liye,"Atif Aslam, Shreya Ghoshal, Sachin Gupta, Sameer Anjaan",,6,26-50,False,1,7,7,6,26.0,0.0,2.3392781412697,False,2026-03-22,27.0,26-50,26-50,0,0
+2026-03-21,27,Lutt Le Gaya,"Shashwat Sachdev, Simran Choudhary",,6,26-50,False,1,7,7,6,34.0,-7.0,2.8284271247461903,False,2026-03-22,33.0,26-50,26-50,0,0
+2026-03-21,28,Jaiye Sajana,"Shashwat Sachdev, Jasmine Sandlas, Satinder Sartaaj",,6,26-50,True,1,1,1,0,,,0.0,True,2026-03-22,12.0,11-25,11-25,0,0
+2026-03-21,29,Naal Nachna,"Shashwat Sachdev, Afsana Khan, Irshad Kamil, Reble",,6,26-50,False,1,7,7,6,30.0,-1.0,2.9107081994288304,False,2026-03-22,32.0,26-50,26-50,0,0
+2026-03-21,30,Ishq Jalakar - Karvaan,"Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury, Armaan Khan, Irshad Kamil, Roshan, Sahir Ludhianvi",,6,26-50,False,1,7,7,6,38.0,-8.0,2.753785273643051,False,2026-03-22,30.0,26-50,26-50,0,0
+2026-03-21,31,"Agar Tum Saath Ho (From ""Tamasha"")","Alka Yagnik, Arijit Singh",,6,26-50,False,1,7,7,6,31.0,0.0,1.8929694486000912,False,2026-03-22,35.0,26-50,26-50,0,0
+2026-03-21,32,Tere Bina,"A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan",,6,26-50,False,1,7,7,6,35.0,-3.0,2.6874192494328497,False,2026-03-22,37.0,26-50,26-50,0,0
+2026-03-21,33,"Mutta Kalakki (From ""Youth"")","G. V. Prakash, Ken Karunaas",,6,26-50,False,1,3,3,2,45.0,-12.0,7.5,False,2026-03-22,39.0,26-50,26-50,0,0
+2026-03-21,34,Jo Tum Mere Ho,Anuv Jain,Hindi Indie,6,26-50,False,1,7,7,14,32.0,2.0,3.8042374035044424,False,2026-03-22,34.0,26-50,26-50,0,0
+2026-03-21,35,Haseen,"Talwiinder, NDS, Rippy Grewal",,6,26-50,False,1,7,7,6,37.0,-2.0,2.8284271247461903,False,2026-03-22,36.0,26-50,26-50,0,0
+2026-03-21,36,"Aaya Sher (From ""The Paradise"") (Telugu)","Anirudh Ravichander, Jangi Reddy, Arjun Chandy, Kasarla Shyam",,6,26-50,False,1,7,7,6,33.0,3.0,1.118033988749895,False,2026-03-22,31.0,26-50,26-50,0,0
+2026-03-21,37,Jaan Se Guzarte Hain,"Shashwat Sachdev, Khan Saab",,6,26-50,True,1,1,1,0,,,0.0,True,2026-03-22,18.0,11-25,11-25,0,0
+2026-03-21,38,"Tum Ho Toh (From ""Saiyaara"")","Vishal Mishra, Hansika Pareek, Raj Shekhar",,6,26-50,False,1,7,7,6,41.0,-3.0,3.39934634239519,False,2026-03-22,29.0,26-50,26-50,0,0
+2026-03-21,39,Darkhaast,"Mithoon, Arijit Singh, Sunidhi Chauhan, Sayeed Quadri",,6,26-50,False,1,7,7,6,29.0,10.0,5.112620550059322,False,2026-03-22,38.0,26-50,26-50,0,0
+2026-03-21,40,KALYANI,"ARJN, KDS, FIFTY4, RONN",,6,26-50,False,1,7,7,6,39.0,1.0,3.901566636906542,False,2026-03-22,42.0,26-50,26-50,0,0
+2026-03-21,41,Body to Body,BTS,International Pop/K-Pop,6,26-50,False,1,2,2,3,9.0,32.0,0.0,False,2026-03-22,44.0,26-50,26-50,0,0
+2026-03-21,42,Jogi,"thiarajxtt, Bir",,6,26-50,False,1,4,4,3,36.0,6.0,4.988876515698588,False,2026-03-22,49.0,26-50,26-50,0,0
+2026-03-21,43,"Barbaad (From ""Saiyaara"")","The Rish, Jubin Nautiyal",,6,26-50,False,1,7,7,6,44.0,-1.0,4.232808366400098,False,2026-03-22,41.0,26-50,26-50,0,0
+2026-03-21,44,Not Guilty,Dhanda Nyoliwala,Punjabi-Haryanvi Pop,6,26-50,False,1,7,7,6,46.0,-2.0,5.5377492419453835,False,2026-03-22,43.0,26-50,26-50,0,0
+2026-03-21,45,Ye Tune Kya Kiya,"Pritam, Javed Bashir, Rajat Arora",,6,26-50,False,1,7,7,6,42.0,3.0,1.247219128924647,False,2026-03-22,40.0,26-50,26-50,0,0
+2026-03-21,46,Oorum Blood,"Sai Abhyankkar, Paal Dabba, Bhumi, Deepthi Suresh",,6,26-50,True,2,1,2,1,,,0.0,True,2026-03-22,,,Exit,0,1
+2026-03-21,47,"Mast Magan (From ""2 States)","Arijit Singh, Chinmayi",,6,26-50,True,2,1,5,4,,,0.0,True,2026-03-22,,,Exit,0,1
+2026-03-21,48,Zaalima,"Arijit Singh, Harshdeep Kaur",,6,26-50,True,2,1,6,5,,,0.0,True,2026-03-22,,,Exit,0,1
+2026-03-21,49,Ehsaas,"Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar",,6,26-50,False,1,7,7,6,49.0,0.0,3.696845502136472,False,2026-03-22,48.0,26-50,26-50,0,0
+2026-03-21,50,Teri Deewani,"Kailash Kher, Paresh Kamath, Naresh Kamath",,6,26-50,True,2,1,6,5,,,0.0,True,2026-03-22,46.0,26-50,26-50,0,0
+2026-03-22,1,Bairan,Banjaare,Hindi Indie,7,Top10,False,1,8,8,7,1.0,0.0,0.0,False,,,,,,
+2026-03-22,2,Sheesha,Mitta Ror,Punjabi-Haryanvi Pop,7,Top10,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,2,Sheesha - Aakhya Mai Aakh Ghali Jo Bairan,"Mitta Ror, Swara Verma",,7,Top10,False,1,8,8,7,2.0,0.0,0.0,False,,,,,,
+2026-03-22,3,Gehra Hua,Shashwat Sachdev,Hindi Film,7,Top10,True,1,1,1,2,,,0.0,True,,,,,,
+2026-03-22,3,Gehra Hua,"Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan",,7,Top10,False,1,8,8,7,3.0,0.0,0.0,False,,,,,,
+2026-03-22,4,Dhurandhar The Revenge - Aari Aari,Shashwat Sachdev,Hindi Film,7,Top10,True,1,1,1,1,,,0.0,True,,,,,,
+2026-03-22,4,"Dhurandhar The Revenge - Aari Aari (From ""Dhurandhar The Revenge"")","Shashwat Sachdev, Bombay Rockers, Irshad Kamil, Khan Saab, Reble, Token, Jasmine Sandlas, Sudhir Yaduvanshi",,7,Top10,False,1,5,5,4,4.0,0.0,5.7608593109014565,False,,,,,,
+2026-03-22,5,Khat,Navjot Ahuja,Hindi Indie,7,Top10,False,1,8,8,7,5.0,0.0,0.34992710611188266,False,,,,,,
+2026-03-22,6,Dooron Dooron,Paresh Pahuja,Hindi Indie,7,Top10,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,6,Dooron Dooron,"Paresh Pahuja, Shiv Tandan, Meghdeep Bose",,7,Top10,False,1,8,8,7,6.0,0.0,0.8329931278350429,False,,,,,,
+2026-03-22,7,Sahiba,Aditya Rikhari,Hindi Indie,7,Top10,False,1,8,8,7,7.0,0.0,1.049781318335648,False,,,,,,
+2026-03-22,8,Sitaare,Arijit Singh,Hindi Film,7,Top10,True,1,1,1,5,,,0.0,True,,,,,,
+2026-03-22,8,"Sitaare (From ""Ikkis"")","Arijit Singh, White Noise Collectives, Amitabh Bhattacharya",,7,Top10,False,1,8,8,7,8.0,0.0,0.7559289460184544,False,,,,,,
+2026-03-22,9,Finding Her,Kushagra,Hindi Indie,7,Top10,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,9,Finding Her,"Kushagra, Bharath, Saaheal",,7,Top10,False,1,8,8,7,10.0,-1.0,1.2453996981544782,False,,,,,,
+2026-03-22,10,Apna Bana Le,Sachin-Jigar,Hindi Film,7,Top10,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,10,Apna Bana Le,"Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya",,7,Top10,False,1,8,8,7,11.0,-1.0,1.4568627181693672,False,,,,,,
+2026-03-22,11,Samjhawan,Jawad Ahmad,Hindi Film,7,11-25,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,11,Samjhawan,"Jawad Ahmad, Shaarib Toshi, Arijit Singh, Shreya Ghoshal",,7,11-25,False,1,8,8,7,9.0,2.0,1.2936264483053452,False,,,,,,
+2026-03-22,12,Jaiye Sajana,Shashwat Sachdev,Hindi Film,7,11-25,True,1,1,1,5,,,0.0,True,,,,,,
+2026-03-22,12,Jaiye Sajana,"Shashwat Sachdev, Jasmine Sandlas, Satinder Sartaaj",,7,11-25,False,1,2,2,1,28.0,-16.0,0.0,False,,,,,,
+2026-03-22,13,Shararat,Shashwat Sachdev,Hindi Film,7,11-25,True,1,1,1,9,,,0.0,True,,,,,,
+2026-03-22,13,Shararat,"Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas",,7,11-25,False,1,8,8,7,12.0,1.0,1.9897697538834456,False,,,,,,
+2026-03-22,14,Arz Kiya Hai | Coke Studio Bharat,Anuv Jain,Hindi Indie,7,11-25,False,1,8,8,7,14.0,0.0,0.880630571852711,False,,,,,,
+2026-03-22,15,Dhurandhar - Title Track,Shashwat Sachdev,Hindi Film,7,11-25,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,15,Dhurandhar - Title Track,"Shashwat Sachdev, Hanumankind, Jasmine Sandlas, Sudhir Yaduvanshi, Charanjit Ahuja, Muhammad Sadiq, Ranjit Kaur, Babu Singh Maan",,7,11-25,False,1,8,8,7,13.0,2.0,1.8516401995451028,False,,,,,,
+2026-03-22,16,For A Reason,Karan Aujla,Punjabi-Haryanvi Pop,7,11-25,True,1,1,1,1,,,0.0,True,,,,,,
+2026-03-22,16,For A Reason,"Karan Aujla, Ikky",,7,11-25,False,1,8,8,15,16.0,0.0,2.2314999074019015,False,,,,,,
+2026-03-22,17,Pavazha Malli,Sai Abhyankkar,South Indian Film,7,11-25,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,17,"Pavazha Malli - From ""Think Indie""","Sai Abhyankkar, Shruti Haasan, Vivek",,7,11-25,False,1,8,8,7,15.0,2.0,3.1036515689143473,False,,,,,,
+2026-03-22,18,Jaan Se Guzarte Hain,Shashwat Sachdev,Hindi Film,7,11-25,True,1,1,1,4,,,0.0,True,,,,,,
+2026-03-22,18,Jaan Se Guzarte Hain,"Shashwat Sachdev, Khan Saab",,7,11-25,False,1,2,2,1,37.0,-19.0,0.0,False,,,,,,
+2026-03-22,19,Bairi,Virat,Punjabi-Haryanvi Pop,7,11-25,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,19,Bairi,"Virat, Pradeep Solanki, Heena",,7,11-25,False,1,8,8,7,18.0,1.0,2.2314999074019015,False,,,,,,
+2026-03-22,20,Saiyaara,Tanishk Bagchi,Hindi Film,7,11-25,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,20,Saiyaara,"Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Irshad Kamil",,7,11-25,False,1,8,8,7,20.0,0.0,2.0603150145508513,False,,,,,,
+2026-03-22,21,Boyfriend,Karan Aujla,Punjabi-Haryanvi Pop,7,11-25,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,21,Boyfriend,"Karan Aujla, Ikky",,7,11-25,False,1,8,8,7,17.0,4.0,2.8713930346059686,False,,,,,,
+2026-03-22,22,Ishq,Faheem Abdullah,Hindi Indie,7,11-25,True,1,1,1,1,,,0.0,True,,,,,,
+2026-03-22,22,Ishq,"Faheem Abdullah, Rauhan Malik, Amir Ameer",,7,11-25,False,1,8,8,7,19.0,3.0,3.136356914300021,False,,,,,,
+2026-03-22,23,Raanjhan,Sachet-Parampara,Hindi Film,7,11-25,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,23,"Raanjhan (From ""Do Patti"")","Sachet-Parampara, Parampara Tandon, Kausar Munir",,7,11-25,False,1,8,8,7,24.0,-1.0,2.1285234893930487,False,,,,,,
+2026-03-22,24,Mann Mera,Gajendra Verma,Hindi Indie,7,11-25,False,1,8,8,7,23.0,1.0,1.1952286093343936,False,,,,,,
+2026-03-22,25,Ishqa Ve,Zeeshan Ali,Hindi Indie,7,11-25,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,25,Ishqa Ve,"Zeeshan Ali, Yuvraj Tung, Sandeep Aulakh, Honey Dhillon",,7,11-25,False,1,8,8,7,21.0,4.0,2.099562636671296,False,,,,,,
+2026-03-22,26,SWIM,BTS,International Pop/K-Pop,7,26-50,False,1,3,3,11,22.0,4.0,4.0,False,,,,,,
+2026-03-22,27,Tere Liye,Atif Aslam,Hindi Film,7,26-50,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,27,Tere Liye,"Atif Aslam, Shreya Ghoshal, Sachin Gupta, Sameer Anjaan",,7,26-50,False,1,8,8,7,26.0,1.0,2.1665358411575864,False,,,,,,
+2026-03-22,28,Deewaana Deewaana,A.R. Rahman,Hindi Film,7,26-50,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,28,Deewaana Deewaana,"A.R. Rahman, Irshad Kamil",,7,26-50,False,1,8,8,7,25.0,3.0,1.178030178747903,False,,,,,,
+2026-03-22,29,Tum Ho Toh,Vishal Mishra,Hindi Film,7,26-50,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,29,"Tum Ho Toh (From ""Saiyaara"")","Vishal Mishra, Hansika Pareek, Raj Shekhar",,7,26-50,False,1,8,8,7,38.0,-9.0,4.793703353017863,False,,,,,,
+2026-03-22,30,Ishq Jalakar - Karvaan,Shashwat Sachdev,Hindi Film,7,26-50,True,1,1,1,3,,,0.0,True,,,,,,
+2026-03-22,30,Ishq Jalakar - Karvaan,"Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury, Armaan Khan, Irshad Kamil, Roshan, Sahir Ludhianvi",,7,26-50,False,1,8,8,7,30.0,0.0,2.695423180587601,False,,,,,,
+2026-03-22,31,Aaya Sher,Anirudh Ravichander,South Indian Film,7,26-50,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,31,"Aaya Sher (From ""The Paradise"") (Telugu)","Anirudh Ravichander, Jangi Reddy, Arjun Chandy, Kasarla Shyam",,7,26-50,False,1,8,8,7,36.0,-5.0,2.498979383505129,False,,,,,,
+2026-03-22,32,Naal Nachna,Shashwat Sachdev,Hindi Film,7,26-50,True,1,1,1,7,,,0.0,True,,,,,,
+2026-03-22,32,Naal Nachna,"Shashwat Sachdev, Afsana Khan, Irshad Kamil, Reble",,7,26-50,False,1,8,8,7,29.0,3.0,3.2450904833144416,False,,,,,,
+2026-03-22,33,Lutt Le Gaya,Shashwat Sachdev,Hindi Film,7,26-50,True,1,1,1,6,,,0.0,True,,,,,,
+2026-03-22,33,Lutt Le Gaya,"Shashwat Sachdev, Simran Choudhary",,7,26-50,False,1,8,8,7,27.0,6.0,3.8332593899996397,False,,,,,,
+2026-03-22,34,Jo Tum Mere Ho,Anuv Jain,Hindi Indie,7,26-50,False,1,8,8,15,34.0,0.0,3.579989738897619,False,,,,,,
+2026-03-22,35,Agar Tum Saath Ho,Alka Yagnik,Hindi Film,7,26-50,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,35,"Agar Tum Saath Ho (From ""Tamasha"")","Alka Yagnik, Arijit Singh",,7,26-50,False,1,8,8,7,31.0,4.0,2.138089935299395,False,,,,,,
+2026-03-22,36,Haseen,Talwiinder,Punjabi-Haryanvi Pop,7,26-50,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,36,Haseen,"Talwiinder, NDS, Rippy Grewal",,7,26-50,False,1,8,8,7,35.0,1.0,2.6186146828319083,False,,,,,,
+2026-03-22,37,Tere Bina,A.R. Rahman,Hindi Film,7,26-50,True,1,1,1,1,,,0.0,True,,,,,,
+2026-03-22,37,Tere Bina,"A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan",,7,26-50,False,1,8,8,7,32.0,5.0,2.799416848895061,False,,,,,,
+2026-03-22,38,Darkhaast,Mithoon,Hindi Film,7,26-50,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,38,Darkhaast,"Mithoon, Arijit Singh, Sunidhi Chauhan, Sayeed Quadri",,7,26-50,False,1,8,8,7,39.0,-1.0,4.776643856371568,False,,,,,,
+2026-03-22,39,Mutta Kalakki,G. V. Prakash,South Indian Film,7,26-50,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,39,"Mutta Kalakki (From ""Youth"")","G. V. Prakash, Ken Karunaas",,7,26-50,False,1,4,4,3,33.0,6.0,7.874007874011811,False,,,,,,
+2026-03-22,40,Ye Tune Kya Kiya,Pritam,Hindi Film,7,26-50,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,40,Ye Tune Kya Kiya,"Pritam, Javed Bashir, Rajat Arora",,7,26-50,False,1,8,8,7,45.0,-5.0,2.813959371941744,False,,,,,,
+2026-03-22,41,Barbaad,The Rish,Hindi Indie,7,26-50,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,41,"Barbaad (From ""Saiyaara"")","The Rish, Jubin Nautiyal",,7,26-50,False,1,8,8,7,43.0,-2.0,4.015276949301485,False,,,,,,
+2026-03-22,42,KALYANI,ARJN,Hindi Indie,7,26-50,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,42,KALYANI,"ARJN, KDS, FIFTY4, RONN",,7,26-50,False,1,8,8,7,40.0,2.0,3.6421567954234173,False,,,,,,
+2026-03-22,43,Not Guilty,Dhanda Nyoliwala,Punjabi-Haryanvi Pop,7,26-50,False,1,8,8,7,44.0,-1.0,5.233331166861201,False,,,,,,
+2026-03-22,44,Body to Body,BTS,International Pop/K-Pop,7,26-50,False,1,3,3,4,41.0,3.0,14.5,False,,,,,,
+2026-03-22,45,Thodi Si Daaru,AP Dhillon,Punjabi-Haryanvi Pop,7,26-50,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,45,Thodi Si Daaru,"AP Dhillon, Shreya Ghoshal",,7,26-50,True,2,1,5,4,,,0.0,True,,,,,,
+2026-03-22,46,Teri Deewani,Kailash Kher,Hindi Film,7,26-50,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,46,Teri Deewani,"Kailash Kher, Paresh Kamath, Naresh Kamath",,7,26-50,False,2,2,7,6,50.0,-4.0,0.0,False,,,,,,
+2026-03-22,47,Run Down The City - Monica,Shashwat Sachdev,Hindi Film,7,26-50,True,1,1,1,8,,,0.0,True,,,,,,
+2026-03-22,47,Run Down The City - Monica,"Shashwat Sachdev, Reble, Asha Bhosle, R. D. Burman, Majrooh Sultanpuri",,7,26-50,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,48,Ehsaas,Faheem Abdullah,Hindi Indie,7,26-50,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,48,Ehsaas,"Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar",,7,26-50,False,1,8,8,7,49.0,-1.0,3.5799897388976194,False,,,,,,
+2026-03-22,49,Jogi,thiarajxtt,Punjabi-Haryanvi Pop,7,26-50,True,1,1,1,0,,,0.0,True,,,,,,
+2026-03-22,49,Jogi,"thiarajxtt, Bir",,7,26-50,False,1,5,5,4,42.0,7.0,4.437059837324712,False,,,,,,
+2026-03-22,50,Dhun,Mithoon,Hindi Film,7,26-50,True,1,1,1,1,,,0.0,True,,,,,,
+2026-03-22,50,"Dhun (From ""Saiyaara"")","Mithoon, Arijit Singh",,7,26-50,True,3,1,5,4,,,0.0,True,,,,,,
