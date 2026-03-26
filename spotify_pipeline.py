@@ -1467,15 +1467,24 @@ def analyze_prediction(df: pd.DataFrame, tables_dir: Path, figures_dir: Path) ->
     
     # --- Future Prediction ---
     if not future_data.empty:
+        # Retrain on ALL labeled data (train + test) so every known day informs the prediction.
+        # The train/test split above is only used for measuring historical accuracy.
+        all_X = modeling[feature_cols].copy()
+        if "Genre" in modeling.columns and modeling["Genre"].notna().any():
+            all_X = pd.concat([all_X, pd.get_dummies(modeling["Genre"], prefix="Genre", dtype=float)], axis=1)
+        all_X, _ = all_X.align(all_X, join="outer", axis=1, fill_value=0)  # ensure consistent columns
+        full_model = LogisticRegression(max_iter=1000, random_state=42)
+        full_model.fit(all_X, modeling["Top10_Tomorrow"].astype(int))
+
         future_X = future_data[feature_cols].copy()
         if "Genre" in modeling.columns and modeling["Genre"].notna().any():
             future_X = pd.concat([future_X, pd.get_dummies(future_data["Genre"], prefix="Genre", dtype=float)], axis=1)
         
-        # Align future_X with train_X to match the features used for training
-        _, future_X_aligned = train_X.align(future_X, join="left", axis=1, fill_value=0)
-        future_X_aligned = future_X_aligned[train_X.columns]  # Ensure column order matches
+        # Align future_X to match the full_model's feature set
+        all_X, future_X_aligned = all_X.align(future_X, join="left", axis=1, fill_value=0)
+        future_X_aligned = future_X_aligned[all_X.columns]
         
-        future_probs = model.predict_proba(future_X_aligned)[:, 1]
+        future_probs = full_model.predict_proba(future_X_aligned)[:, 1]
         future_preds = (future_probs >= 0.5).astype(int)
         
         future_output = future_data[["Date", "Artist", "Song", "Rank"]].copy()
