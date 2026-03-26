@@ -123,6 +123,10 @@ def clean_workbook(workbook_path: Path, year: int | None) -> pd.DataFrame:
     frames = [clean_sheet(workbook_path, sheet_name, year) for sheet_name in excel_file.sheet_names]
     combined = pd.concat(frames, ignore_index=True)
     combined = combined.drop_duplicates(subset=["Date", "Rank", "Song", "Artist"], keep="last")
+    # Drop alternate-credit versions of the same song at the same rank slot
+    # (Spotify stores both a short and a full-credit version at the same position)
+    combined = combined.sort_values(["Date", "Rank", "Artist"], kind="stable")  # shortest Artist first
+    combined = combined.drop_duplicates(subset=["Date", "Rank"], keep="first")
     return combined.sort_values(["Date", "Rank"], kind="stable").reset_index(drop=True)
 
 

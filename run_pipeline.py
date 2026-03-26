@@ -77,18 +77,18 @@ def main() -> None:
                 latest_date = datetime.strptime(latest_date_str, "%Y-%m-%d").date()
                 next_date = latest_date + timedelta(days=1)
                 
-                print(f"\n🔮 PREDICTED TOP 10 FOR {next_date.strftime('%d %b %Y')} (Tomorrow)")
-                print(f"{'Rank':<5} | {'Song':<35} | {'Artist':<25} | {'Prob'}")
-                print("-" * 80)
-                # Take top 10 unique songs (by probability)
-                top_10 = future_df.head(10)
-                for i, row in enumerate(top_10.itertuples(), 1):
+                print(f"\n>>> PREDICTED TOP 10 FOR {next_date.strftime('%d %b %Y')} (Tomorrow)")
+                print(f"{'Pred #':<7} | {'Song':<35} | {'Artist':<25} | {'Confidence'}")
+                print("-" * 85)
+                # Filter to songs the model predicts will stay in Top 10, sorted by today's rank
+                in_top10 = future_df[future_df["Predicted_Class"] == 1].sort_values("Rank").head(10)
+                for i, row in enumerate(in_top10.itertuples(), 1):
                     song = str(row.Song)[:32] + "..." if len(str(row.Song)) > 35 else str(row.Song)
                     artist = str(row.Artist)[:22] + "..." if len(str(row.Artist)) > 25 else str(row.Artist)
                     prob = f"{row.Predicted_Probability*100:>.1f}%"
-                    print(f"{i:<5} | {song:<35} | {artist:<25} | {prob}")
-                print("-" * 80)
-                print(f"Detailed predictions saved to: {future_pred_path}")
+                    print(f"{i:<7} | {song:<35} | {artist:<25} | {prob}")
+                print("-" * 85)
+                print(f"Full table: {future_pred_path}")
         except Exception as e:
             print(f"\nNote: Could not print future predictions table: {e}")
 

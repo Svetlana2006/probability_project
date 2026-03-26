@@ -1,11 +1,11 @@
 Analysis,Hypothesis,Test,Statistic,PValue,Decision_5pct,Note
-Rank Changes,H0: Delta_R follows a normal distribution,Shapiro-Wilk,0.8017782600479955,1.4552057643173225e-19,Reject H0,Applied to non-null day-to-day rank changes.
-Rank Changes,H0: Delta_R follows the fitted normal distribution,Kolmogorov-Smirnov,0.1780604725622369,1.9784913675028778e-09,Reject H0,Compared against the normal fit estimated from the sample.
-Rank Changes,H0: Delta_R follows the fitted Laplace distribution,Kolmogorov-Smirnov,0.1811145510835913,9.62410639240525e-10,Reject H0,Compared against the Laplace fit estimated from the sample.
-Survival,H0: Song survival is memoryless,Likelihood Ratio Test (Exponential vs Weibull),6.320029519020437,0.011938164161158782,Reject H0,Weibull shape > 1 suggests persistence strengthens with time; < 1 suggests early drop-off risk.
-New Entries,H0: Daily new-entry counts follow a Poisson process with constant rate,Chi-square goodness of fit,700.632902062439,0.0,Reject H0,Poisson rate estimated from the observed daily entry counts.
-New Entries,H0: Weekend and weekday entry rates are equal,Two-sample Poisson rate z-test,5.216013695041294,1.8281466518388356e-07,Reject H0,Compares the mean number of new entrants per weekend day against weekday days.
-Artist Dominance,H0: Artist chart appearances are uniformly distributed,Chi-square goodness of fit,224.54421768707488,9.325873406851315e-15,Reject H0,Expected counts assume equal chart exposure across artists.
+Rank Changes,H0: Delta_R follows a normal distribution,Shapiro-Wilk,0.7847884569250335,4.339614009808613e-19,Reject H0,Applied to non-null day-to-day rank changes.
+Rank Changes,H0: Delta_R follows the fitted normal distribution,Kolmogorov-Smirnov,0.19799356708610727,2.8851536097847677e-10,Reject H0,Compared against the normal fit estimated from the sample.
+Rank Changes,H0: Delta_R follows the fitted Laplace distribution,Kolmogorov-Smirnov,0.18070175438596492,1.2933200500614326e-08,Reject H0,Compared against the Laplace fit estimated from the sample.
+Survival,H0: Song survival is memoryless,Likelihood Ratio Test (Exponential vs Weibull),19.427983077331305,1.0446515578244053e-05,Reject H0,Weibull shape > 1 suggests persistence strengthens with time; < 1 suggests early drop-off risk.
+New Entries,H0: Daily new-entry counts follow a Poisson process with constant rate,Chi-square goodness of fit,486.42406088860366,0.0,Reject H0,Poisson rate estimated from the observed daily entry counts.
+New Entries,H0: Weekend and weekday entry rates are equal,Two-sample Poisson rate z-test,4.95008744813725,7.418014307258858e-07,Reject H0,Compares the mean number of new entrants per weekend day against weekday days.
+Artist Dominance,H0: Artist chart appearances are uniformly distributed,Chi-square goodness of fit,204.8,2.7730040486062535e-12,Reject H0,Expected counts assume equal chart exposure across artists.
 Genre Momentum,H0: Survival distributions are equal across genres,Kruskal-Wallis,19.715008613264406,0.0005684212228529089,Reject H0,Compares completed and censored spell durations by genre without assuming normality.
-Top10 Prediction,H0: Today's rank has no effect on Top 10 retention,Logistic regression coefficient sign,-0.7767345110574482,,Interpret coefficient directly,A more negative coefficient means better current ranks are associated with higher retention odds.
-Top10 Prediction,H0: Days-on-chart has no effect on Top 10 retention,Logistic regression coefficient sign,-0.1232975979299408,,Interpret coefficient directly,Positive values indicate longer-running songs are more likely to stay in the Top 10 next day.
+Top10 Prediction,H0: Today's rank has no effect on Top 10 retention,Logistic regression coefficient sign,-0.7762518251477545,,Interpret coefficient directly,A more negative coefficient means better current ranks are associated with higher retention odds.
+Top10 Prediction,H0: Days-on-chart has no effect on Top 10 retention,Logistic regression coefficient sign,-0.11711298250934027,,Interpret coefficient directly,Positive values indicate longer-running songs are more likely to stay in the Top 10 next day.
