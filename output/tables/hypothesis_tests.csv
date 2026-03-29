@@ -1,11 +1,11 @@
 Analysis,Hypothesis,Test,Statistic,PValue,Decision_5pct,Note
-Rank Changes,H0: Delta_R follows a normal distribution,Shapiro-Wilk,0.8098445931620407,3.422996783287611e-22,Reject H0,Applied to non-null day-to-day rank changes.
-Rank Changes,H0: Delta_R follows the fitted normal distribution,Kolmogorov-Smirnov,0.18737022581545715,9.438895190170062e-14,Reject H0,Compared against the normal fit estimated from the sample.
-Rank Changes,H0: Delta_R follows the fitted Laplace distribution,Kolmogorov-Smirnov,0.18518518518518517,1.930690539052424e-13,Reject H0,Compared against the Laplace fit estimated from the sample.
-Survival,H0: Song survival is memoryless,Likelihood Ratio Test (Exponential vs Weibull),6.056424347763937,0.013855794950779932,Reject H0,Weibull shape > 1 suggests persistence strengthens with time; < 1 suggests early drop-off risk.
-New Entries,H0: Daily new-entry counts follow a Poisson process with constant rate,Chi-square goodness of fit,1747.791605006736,0.0,Reject H0,Poisson rate estimated from the observed daily entry counts.
-New Entries,H0: Weekend and weekday entry rates are equal,Two-sample Poisson rate z-test,3.1494488946610852,0.0016357871618017938,Reject H0,Compares the mean number of new entrants per weekend day against weekday days.
-Artist Dominance,H0: Artist chart appearances are uniformly distributed,Chi-square goodness of fit,393.2933333333334,0.0,Reject H0,Expected counts assume equal chart exposure across artists.
+Rank Changes,H0: Delta_R follows a normal distribution,Shapiro-Wilk,0.8202407590660314,8.819065903128529e-23,Reject H0,Applied to non-null day-to-day rank changes.
+Rank Changes,H0: Delta_R follows the fitted normal distribution,Kolmogorov-Smirnov,0.18611798360678355,4.9882602031994466e-15,Reject H0,Compared against the normal fit estimated from the sample.
+Rank Changes,H0: Delta_R follows the fitted Laplace distribution,Kolmogorov-Smirnov,0.17916666666666664,5.947072326520143e-14,Reject H0,Compared against the Laplace fit estimated from the sample.
+Survival,H0: Song survival is memoryless,Likelihood Ratio Test (Exponential vs Weibull),5.922606279661068,0.014947831286913793,Reject H0,Weibull shape > 1 suggests persistence strengthens with time; < 1 suggests early drop-off risk.
+New Entries,H0: Daily new-entry counts follow a Poisson process with constant rate,Chi-square goodness of fit,987.2046956121505,0.0,Reject H0,Poisson rate estimated from the observed daily entry counts.
+New Entries,H0: Weekend and weekday entry rates are equal,Two-sample Poisson rate z-test,3.4293585814272363,0.000605009629391251,Reject H0,Compares the mean number of new entrants per weekend day against weekday days.
+Artist Dominance,H0: Artist chart appearances are uniformly distributed,Chi-square goodness of fit,429.6553846153847,0.0,Reject H0,Expected counts assume equal chart exposure across artists.
 Genre Momentum,H0: Survival distributions are equal across genres,Kruskal-Wallis,19.712886209495082,0.0005689691367782312,Reject H0,Compares completed and censored spell durations by genre without assuming normality.
-Top10 Prediction,H0: Today's rank has no effect on Top 10 retention,Logistic regression coefficient sign,-0.42161323505173354,,Interpret coefficient directly,A more negative coefficient means better current ranks are associated with higher retention odds.
-Top10 Prediction,H0: Days-on-chart has no effect on Top 10 retention,Logistic regression coefficient sign,0.1319622366469926,,Interpret coefficient directly,Positive values indicate longer-running songs are more likely to stay in the Top 10 next day.
+Top10 Prediction,H0: Today's rank has no effect on Top 10 retention,Logistic regression coefficient sign,-0.44623753567622204,,Interpret coefficient directly,A more negative coefficient means better current ranks are associated with higher retention odds.
+Top10 Prediction,H0: Days-on-chart has no effect on Top 10 retention,Logistic regression coefficient sign,-0.03910772405164706,,Interpret coefficient directly,Positive values indicate longer-running songs are more likely to stay in the Top 10 next day.
