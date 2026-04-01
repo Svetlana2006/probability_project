@@ -15,6 +15,9 @@ python backfill_charts.py --start 2026-03-15 --end 2026-03-21
 # Fetch a single day:
 python backfill_charts.py --start 2026-03-20 --end 2026-03-20
 
+# Fetch March 29, 2026 (default if no dates provided):
+python backfill_charts.py
+
 # Use a different workbook:
 python backfill_charts.py --start 2026-03-15 --end 2026-03-21 --input "My Workbook.xlsx"
 """
@@ -44,8 +47,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Backfill historical India Top 50 Spotify charts into the workbook."
     )
-    parser.add_argument("--start", required=True, help="Start date (YYYY-MM-DD).")
-    parser.add_argument("--end", required=True, help="End date (YYYY-MM-DD).")
+    parser.add_argument("--start", help="Start date (YYYY-MM-DD). Defaults to 2026-03-29 if not provided.")
+    parser.add_argument("--end", help="End date (YYYY-MM-DD). Defaults to 2026-03-29 if not provided.")
     parser.add_argument(
         "--input",
         default="Probability Project.xlsx",
@@ -63,9 +66,13 @@ def main() -> None:
     )
     args = parser.parse_args()
 
+    # Set default date to 2026-03-29 if not provided
+    start_str = args.start or "2026-03-29"
+    end_str = args.end or "2026-03-29"
+
     try:
-        start_date = date.fromisoformat(args.start)
-        end_date = date.fromisoformat(args.end)
+        start_date = date.fromisoformat(start_str)
+        end_date = date.fromisoformat(end_str)
     except ValueError as exc:
         print(f"Invalid date format: {exc}")
         sys.exit(1)
