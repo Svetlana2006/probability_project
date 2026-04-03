@@ -1,11 +1,11 @@
 Analysis,Hypothesis,Test,Statistic,PValue,Decision_5pct,Note
-Rank Changes,H0: Delta_R follows a normal distribution,Shapiro-Wilk,0.8160089420582934,4.781561591548516e-27,Reject H0,Applied to non-null day-to-day rank changes.
-Rank Changes,H0: Delta_R follows the fitted normal distribution,Kolmogorov-Smirnov,0.18661881528083635,5.05809772490661e-21,Reject H0,Compared against the normal fit estimated from the sample.
-Rank Changes,H0: Delta_R follows the fitted Laplace distribution,Kolmogorov-Smirnov,0.17062314540059348,1.2639586454902238e-17,Reject H0,Compared against the Laplace fit estimated from the sample.
-Survival,H0: Song survival is memoryless,Likelihood Ratio Test (Exponential vs Weibull),4.792606422239828,0.028582144343277882,Reject H0,Weibull shape > 1 suggests persistence strengthens with time; < 1 suggests early drop-off risk.
-New Entries,H0: Daily new-entry counts follow a Poisson process with constant rate,Chi-square goodness of fit,251.65737064046849,0.0,Reject H0,Poisson rate estimated from the observed daily entry counts.
-New Entries,H0: Weekend and weekday entry rates are equal,Two-sample Poisson rate z-test,2.142070152035953,0.03218783733576758,Reject H0,Compares the mean number of new entrants per weekend day against weekday days.
-Artist Dominance,H0: Artist chart appearances are uniformly distributed,Chi-square goodness of fit,604.0823529411764,0.0,Reject H0,Expected counts assume equal chart exposure across artists.
-Genre Momentum,H0: Survival distributions are equal across genres,Kruskal-Wallis,20.240182186234858,0.00044772219761294213,Reject H0,Compares completed and censored spell durations by genre without assuming normality.
-Top10 Prediction,H0: Today's rank has no effect on Top 10 retention,Logistic regression coefficient sign,-0.4966834811059297,,Interpret coefficient directly,A more negative coefficient means better current ranks are associated with higher retention odds.
-Top10 Prediction,H0: Days-on-chart has no effect on Top 10 retention,Logistic regression coefficient sign,0.03079277298845362,,Interpret coefficient directly,Positive values indicate longer-running songs are more likely to stay in the Top 10 next day.
+Rank Changes,H0: Delta_R follows a normal distribution,Shapiro-Wilk,0.8273917046707067,3.5272035565757395e-27,Reject H0,Applied to non-null day-to-day rank changes.
+Rank Changes,H0: Delta_R follows the fitted normal distribution,Kolmogorov-Smirnov,0.18375113486294747,8.273458787424617e-22,Reject H0,Compared against the normal fit estimated from the sample.
+Rank Changes,H0: Delta_R follows the fitted Laplace distribution,Kolmogorov-Smirnov,0.1634349030470914,2.5507391895125246e-17,Reject H0,Compared against the Laplace fit estimated from the sample.
+Survival,H0: Song survival is memoryless,Likelihood Ratio Test (Exponential vs Weibull),4.062765049646373,0.04383866077863652,Reject H0,Weibull shape > 1 suggests persistence strengthens with time; < 1 suggests early drop-off risk.
+New Entries,H0: Daily new-entry counts follow a Poisson process with constant rate,Chi-square goodness of fit,196.50895681323817,0.0,Reject H0,Poisson rate estimated from the observed daily entry counts.
+New Entries,H0: Weekend and weekday entry rates are equal,Two-sample Poisson rate z-test,2.3896063292384677,0.01686644082771771,Reject H0,Compares the mean number of new entrants per weekend day against weekday days.
+Artist Dominance,H0: Artist chart appearances are uniformly distributed,Chi-square goodness of fit,645.6599999999999,0.0,Reject H0,Expected counts assume equal chart exposure across artists.
+Genre Momentum,H0: Survival distributions are equal across genres,Kruskal-Wallis,20.725836506379576,0.00035886546665570517,Reject H0,Compares completed and censored spell durations by genre without assuming normality.
+Top10 Prediction,H0: Today's rank has no effect on Top 10 retention,Logistic regression coefficient sign,-0.4966558135221652,,Interpret coefficient directly,A more negative coefficient means better current ranks are associated with higher retention odds.
+Top10 Prediction,H0: Days-on-chart has no effect on Top 10 retention,Logistic regression coefficient sign,0.03177849654644718,,Interpret coefficient directly,Positive values indicate longer-running songs are more likely to stay in the Top 10 next day.
