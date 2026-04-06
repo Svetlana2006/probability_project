@@ -1,7 +1,7 @@
-# Browser Profile (contains secrets and locked files)
+# Browser Profile (contains Spotify session secrets — never commit)
 .browser-profile/
 
-# Python
+# Python cache (auto-generated, not useful to track)
 __pycache__/
 *.pyc
 *.pyo
@@ -9,12 +9,3 @@ __pycache__/
 
 # Matplotlib cache
 .matplotlib/
-
-# Output Data & Reports
-# output/ is now tracked so figures, tables, and report.md are visible on GitHub.
-# Only skip the template csv (it regenerates automatically) and error log.
-output/genre_mapping_template.csv
-pipeline_err.txt
-
-# Personal Workbooks (optional - remove if you want to track the excel)
-# *.xlsx
