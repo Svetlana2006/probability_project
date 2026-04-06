@@ -12,14 +12,14 @@
 - Wrote a hypothesis-test summary table for the statistical questions that had enough data.
 
 ## Notes
-- Genre metadata matched for 203 of 1050 chart rows.
+- Genre metadata matched for 1050 of 1050 chart rows.
 - Laplace provides a better AIC than Normal, which supports heavier-tailed rank movement.
-- Observed zero-move share in |Delta_R| is 30.10%; the zero-inflated Poisson fit checks whether no-move days exceed Poisson expectations.
+- Observed zero-move share in |Delta_R| is 28.89%; the zero-inflated Poisson fit checks whether no-move days exceed Poisson expectations.
 - Survival fits were estimated on completed spells only; spells still active at the final chart date are treated as right-censored in the Kaplan-Meier table.
-- 27.32% of observed spells start on the first chart date in the dataset, so some song lifetimes may be left-truncated.
-- Pareto provides the lower AIC for artist appearance counts in this sample.
-- Top 3 artists account for 10.76% of all Top 50 chart slots in the dataset.
-- The artist-appearance Gini coefficient is 0.4601.
+- 47.62% of observed spells start on the first chart date in the dataset, so some song lifetimes may be left-truncated.
+- Lognormal provides the lower AIC for artist appearance counts in this sample.
+- Top 3 artists account for 30.00% of all Top 50 chart slots in the dataset.
+- The artist-appearance Gini coefficient is 0.4392.
 - A Cox proportional hazards model is not included because the required survival package is not installed in this environment.
 - Expected time before exit was computed from the absorbing Markov chain fundamental matrix.
 - The full absorbing chain has stationary mass on Exit; a conditional stationary distribution among surviving states was also saved.
@@ -30,11 +30,11 @@
 - Rank Changes: Shapiro-Wilk -> Reject H0 (p=0.000000)
 - Rank Changes: Kolmogorov-Smirnov -> Reject H0 (p=0.000000)
 - Rank Changes: Kolmogorov-Smirnov -> Reject H0 (p=0.000000)
-- Survival: Likelihood Ratio Test (Exponential vs Weibull) -> Reject H0 (p=0.030917)
-- New Entries: Chi-square goodness of fit -> Reject H0 (p=0.000000)
-- New Entries: Two-sample Poisson rate z-test -> Reject H0 (p=0.023034)
+- Survival: Likelihood Ratio Test (Exponential vs Weibull) -> Fail to reject H0 (p=0.222568)
+- New Entries: Chi-square goodness of fit -> Fail to reject H0 (p=0.770876)
+- New Entries: Two-sample Poisson rate z-test -> Fail to reject H0 (p=0.596599)
 - Artist Dominance: Chi-square goodness of fit -> Reject H0 (p=0.000000)
-- Genre Momentum: Kruskal-Wallis -> Reject H0 (p=0.000696)
+- Genre Momentum: Kruskal-Wallis -> Reject H0 (p=0.007830)
 - Top10 Prediction: Logistic regression coefficient sign -> Interpret coefficient directly (p=NA)
 - Top10 Prediction: Logistic regression coefficient sign -> Interpret coefficient directly (p=NA)
 

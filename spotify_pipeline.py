@@ -52,9 +52,28 @@ def infer_date(sheet_name: str, year: int | None) -> str:
 
 def normalize_text(value: str) -> str:
     text = str(value)
-    text = re.sub(r"\s*\([^)]*\)", "", text)
     text = re.sub(r"\s+", " ", text)
     return text.strip(" -")
+
+
+def normalize_song_title(value: str) -> str:
+    text = normalize_text(value)
+    text = re.sub(r"\s*\([^)]*\)", "", text)
+    text = re.sub(r'\s*\(from\s+["“].*$', "", text, flags=re.IGNORECASE)
+    text = re.sub(r'\s*-\s*from\s+["“].*$', "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s+", " ", text)
+    return text.strip(" -")
+
+
+def normalize_artist_name(value: str) -> str:
+    text = normalize_text(value)
+    primary_artist = re.split(
+        r",| feat\.? | featuring | ft\.? |\s*&\s*|\s+x\s+",
+        text,
+        maxsplit=1,
+        flags=re.IGNORECASE,
+    )[0]
+    return primary_artist.strip(" -")
 
 
 def strip_html(value: str) -> str:
@@ -71,7 +90,7 @@ def split_artist_title(value: str) -> tuple[str, str]:
         artist, song = text.split(" - ", 1)
     else:
         artist, song = "", text
-    return normalize_text(artist), normalize_text(song)
+    return normalize_artist_name(artist), normalize_song_title(song)
 
 
 def clean_sheet(workbook_path: Path, sheet_name: str, year: int | None) -> pd.DataFrame:
@@ -83,8 +102,9 @@ def clean_sheet(workbook_path: Path, sheet_name: str, year: int | None) -> pd.Da
         cleaned["Rank"] = pd.to_numeric(cleaned["Rank"], errors="coerce")
         cleaned = cleaned.dropna(subset=["Date", "Rank", "Song", "Artist"])
         cleaned["Rank"] = cleaned["Rank"].astype(int)
-        cleaned["Song"] = cleaned["Song"].astype(str).str.strip()
-        cleaned["Artist"] = cleaned["Artist"].astype(str).str.strip()
+        cleaned["Song"] = cleaned["Song"].astype(str).map(normalize_song_title)
+        cleaned["Artist"] = cleaned["Artist"].astype(str).map(normalize_artist_name)
+        cleaned = cleaned[(cleaned["Song"] != "") & (cleaned["Artist"] != "")]
         return cleaned.sort_values(["Date", "Rank"], kind="stable").reset_index(drop=True)
 
     raw = pd.read_excel(workbook_path, sheet_name=sheet_name, header=None)
@@ -133,9 +153,9 @@ def clean_workbook(workbook_path: Path, year: int | None) -> pd.DataFrame:
 def add_song_keys(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     df["Song_Key"] = (
-        df["Artist"].fillna("").astype(str).str.strip().str.lower()
+        df["Artist"].fillna("").astype(str).map(normalize_artist_name).str.lower()
         + " || "
-        + df["Song"].fillna("").astype(str).str.strip().str.lower()
+        + df["Song"].fillna("").astype(str).map(normalize_song_title).str.lower()
     )
     return df
 
@@ -238,8 +258,8 @@ def finalize_live_chart(frame: pd.DataFrame) -> pd.DataFrame | None:
     live = frame.copy()
     live["Date"] = pd.to_datetime(live["Date"], errors="coerce").dt.strftime("%Y-%m-%d")
     live["Rank"] = pd.to_numeric(live["Rank"], errors="coerce")
-    live["Song"] = live["Song"].astype(str).str.strip()
-    live["Artist"] = live["Artist"].astype(str).str.strip()
+    live["Song"] = live["Song"].astype(str).map(normalize_song_title)
+    live["Artist"] = live["Artist"].astype(str).map(normalize_artist_name)
     live = live.dropna(subset=["Date", "Rank", "Song", "Artist"])
     live = live[live["Song"] != ""]
     live = live[live["Artist"] != ""]
