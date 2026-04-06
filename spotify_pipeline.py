@@ -726,6 +726,13 @@ def prepare_analysis_frame(df: pd.DataFrame) -> tuple[pd.DataFrame, list[pd.Time
     df["Volatility_So_Far"] = (
         df.groupby(["Song_Key", "Spell_Number"], group_keys=False)["Delta_R"].apply(compute_group_expanding_std)
     )
+    # Rank_Velocity: 3-day rolling mean of rank change per song; negative = climbing.
+    # First-day entries have NaN Prev_Rank so Delta_R is NaN; they get velocity 0 (neutral).
+    df["Rank_Velocity"] = (
+        df.groupby("Song_Key")["Delta_R"]
+        .transform(lambda s: s.rolling(window=3, min_periods=1).mean())
+        .fillna(0)
+    )
     df["Is_New_Entry"] = (df["Days_On_Chart"] == 1) & (df["Date_Index"] > 0)
 
     if next_date_map:
@@ -1421,9 +1428,11 @@ def analyze_prediction(df: pd.DataFrame, tables_dir: Path, figures_dir: Path) ->
         notes.append("Top 10 prediction was skipped because the train/test split does not contain both outcome classes.")
         return modeling, tests, notes
 
-    feature_cols = ["Rank", "Days_On_Chart", "Artist_Past_Appearances", "Volatility_So_Far", "Total_Appearances"]
+    feature_cols = ["Rank", "Days_On_Chart", "Artist_Past_Appearances", "Volatility_So_Far", "Total_Appearances", "Rank_Velocity"]
     train_X = train[feature_cols].copy()
+    train_X["Rank_Velocity"] = train_X["Rank_Velocity"].fillna(0)
     test_X = test[feature_cols].copy()
+    test_X["Rank_Velocity"] = test_X["Rank_Velocity"].fillna(0)
 
     if "Genre" in modeling.columns and modeling["Genre"].notna().any():
         train_X = pd.concat([train_X, pd.get_dummies(train["Genre"], prefix="Genre", dtype=float)], axis=1)
@@ -1503,16 +1512,28 @@ def analyze_prediction(df: pd.DataFrame, tables_dir: Path, figures_dir: Path) ->
         # Align future_X to match the full_model's feature set
         all_X, future_X_aligned = all_X.align(future_X, join="left", axis=1, fill_value=0)
         future_X_aligned = future_X_aligned[all_X.columns]
+        future_X_aligned["Rank_Velocity"] = future_X_aligned["Rank_Velocity"].fillna(0)
         
         future_probs = full_model.predict_proba(future_X_aligned)[:, 1]
         future_preds = (future_probs >= 0.5).astype(int)
         
         future_output = future_data[["Date", "Artist", "Song", "Rank"]].copy()
+        future_output["Rank_Velocity"] = future_data["Rank_Velocity"].values
         future_output["Predicted_Probability"] = future_probs
         future_output["Predicted_Class"] = future_preds
+        # Flag songs currently outside the Top 10 that are predicted to enter tomorrow
+        future_output["Currently_Top10"] = (future_output["Rank"] <= 10).astype(int)
+        future_output["Is_Top10_Challenger"] = (
+            (future_output["Rank"] > 10) & (future_output["Predicted_Class"] == 1)
+        ).astype(int)
         future_output = future_output.sort_values("Predicted_Probability", ascending=False, kind="stable")
         future_output.to_csv(tables_dir / "top10_future_predictions.csv", index=False)
-        notes.append(f"Generated future Top 10 predictions for the latest data ({future_data['Date'].iloc[0].strftime('%Y-%m-%d')}).")
+        challengers = int(future_output["Is_Top10_Challenger"].sum())
+        notes.append(
+            f"Generated future Top 10 predictions for the latest data ({future_data['Date'].iloc[0].strftime('%Y-%m-%d')}). "
+            f"Rank_Velocity (3-day rolling avg rank change, negative = climbing) is now a model feature. "
+            f"{challengers} song(s) currently outside the Top 10 are predicted to enter it tomorrow (Is_Top10_Challenger=1 in top10_future_predictions.csv)."
+        )
 
     if not top_rank_coef.empty:
         tests.append(
@@ -1541,7 +1562,11 @@ def analyze_prediction(df: pd.DataFrame, tables_dir: Path, figures_dir: Path) ->
             }
         )
 
-    notes.append("Top 10 prediction uses a chronological train/test split, so it measures next-day forecasting rather than random resampling.")
+    notes.append(
+        "Top 10 prediction uses a chronological train/test split to measure next-day forecasting. "
+        "Rank_Velocity (3-day rolling mean of daily rank change; negative = climbing) is included as a feature "
+        "so fast-rising songs outside the Top 10 are scored as potential challengers."
+    )
     return metrics, tests, notes
 
 

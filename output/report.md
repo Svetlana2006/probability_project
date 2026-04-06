@@ -23,8 +23,8 @@
 - A Cox proportional hazards model is not included because the required survival package is not installed in this environment.
 - Expected time before exit was computed from the absorbing Markov chain fundamental matrix.
 - The full absorbing chain has stationary mass on Exit; a conditional stationary distribution among surviving states was also saved.
-- Generated future Top 10 predictions for the latest data (2026-04-04).
-- Top 10 prediction uses a chronological train/test split, so it measures next-day forecasting rather than random resampling.
+- Generated future Top 10 predictions for the latest data (2026-04-04). Rank_Velocity (3-day rolling avg rank change, negative = climbing) is now a model feature. 0 song(s) currently outside the Top 10 are predicted to enter it tomorrow (Is_Top10_Challenger=1 in top10_future_predictions.csv).
+- Top 10 prediction uses a chronological train/test split to measure next-day forecasting. Rank_Velocity (3-day rolling mean of daily rank change; negative = climbing) is included as a feature so fast-rising songs outside the Top 10 are scored as potential challengers.
 
 ## Hypothesis Summary
 - Rank Changes: Shapiro-Wilk -> Reject H0 (p=0.000000)
