@@ -11,8 +11,9 @@ __pycache__/
 .matplotlib/
 
 # Output Data & Reports
-output/
-spotify_data.csv
+# output/ is now tracked so figures, tables, and report.md are visible on GitHub.
+# Only skip the template csv (it regenerates automatically) and error log.
+output/genre_mapping_template.csv
 pipeline_err.txt
 
 # Personal Workbooks (optional - remove if you want to track the excel)
