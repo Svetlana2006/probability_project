@@ -19,3 +19,4 @@ Date,New_Entries,Chart_Size,Weekday,Is_Weekend
 2026-04-01,2,50,Wednesday,False
 2026-04-02,2,50,Thursday,False
 2026-04-03,1,50,Friday,False
+2026-04-04,2,50,Saturday,True
