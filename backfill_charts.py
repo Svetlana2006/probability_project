@@ -15,7 +15,7 @@ python backfill_charts.py --start 2026-03-15 --end 2026-03-21
 # Fetch a single day:
 python backfill_charts.py --start 2026-03-20 --end 2026-03-20
 
-# Fetch March 29, 2026 (default if no dates provided):
+# Fetch April 7-8, 2026 (default if no dates provided):
 python backfill_charts.py
 
 # Use a different workbook:
@@ -47,8 +47,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Backfill historical India Top 50 Spotify charts into the workbook."
     )
-    parser.add_argument("--start", help="Start date (YYYY-MM-DD). Defaults to 2026-03-29 if not provided.")
-    parser.add_argument("--end", help="End date (YYYY-MM-DD). Defaults to 2026-03-29 if not provided.")
+    parser.add_argument("--start", help="Start date (YYYY-MM-DD). Defaults to 2026-04-07 if not provided.")
+    parser.add_argument("--end", help="End date (YYYY-MM-DD). Defaults to 2026-04-08 if not provided.")
     parser.add_argument(
         "--input",
         default="Probability Project.xlsx",
@@ -66,9 +66,9 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    # Set default date to 2026-03-29 if not provided
-    start_str = args.start or "2026-03-29"
-    end_str = args.end or "2026-03-29"
+    # Default to backfilling April 7-8, 2026 when no explicit range is provided.
+    start_str = args.start or "2026-04-07"
+    end_str = args.end or "2026-04-08"
 
     try:
         start_date = date.fromisoformat(start_str)
@@ -86,7 +86,7 @@ def main() -> None:
     browser_executable = resolve_browser_executable()
 
     dates = list(date_range(start_date, end_date))
-    print(f"Fetching {len(dates)} chart(s): {args.start} → {args.end}\n")
+    print(f"Fetching {len(dates)} chart(s): {start_str} → {end_str}\n")
 
     success, skipped, failed = 0, 0, 0
 
