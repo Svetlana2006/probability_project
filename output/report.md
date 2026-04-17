@@ -1,8 +1,8 @@
 # Spotify Top 50 Probability Pipeline Report
 
 ## Dataset Snapshot
-- Cleaned chart rows: 1550
-- Unique chart dates: 31
+- Cleaned chart rows: 1600
+- Unique chart dates: 32
 - This pipeline is designed for daily Spotify Top 50 exports stored as one sheet per date.
 
 ## What Was Automated
@@ -12,29 +12,29 @@
 - Wrote a hypothesis-test summary table for the statistical questions that had enough data.
 
 ## Notes
-- Genre metadata matched for 1549 of 1550 chart rows.
+- Genre metadata matched for 1598 of 1600 chart rows.
 - Laplace provides a better AIC than Normal, which supports heavier-tailed rank movement.
-- Observed zero-move share in |Delta_R| is 27.81%; the zero-inflated Poisson fit checks whether no-move days exceed Poisson expectations.
+- Observed zero-move share in |Delta_R| is 27.51%; the zero-inflated Poisson fit checks whether no-move days exceed Poisson expectations.
 - Survival fits were estimated on completed spells only; spells still active at the final chart date are treated as right-censored in the Kaplan-Meier table.
-- 39.68% of observed spells start on the first chart date in the dataset, so some song lifetimes may be left-truncated.
+- 39.06% of observed spells start on the first chart date in the dataset, so some song lifetimes may be left-truncated.
 - Lognormal provides the lower AIC for artist appearance counts in this sample.
-- Top 3 artists account for 30.97% of all Top 50 chart slots in the dataset.
-- The artist-appearance Gini coefficient is 0.4664.
+- Top 3 artists account for 30.88% of all Top 50 chart slots in the dataset.
+- The artist-appearance Gini coefficient is 0.4654.
 - A Cox proportional hazards model is not included because the required survival package is not installed in this environment.
 - Expected time before exit was computed from the absorbing Markov chain fundamental matrix.
 - The full absorbing chain has stationary mass on Exit; a conditional stationary distribution among surviving states was also saved.
-- Generated future Top 10 predictions for the latest data (2026-04-14). Rank_Velocity (3-day rolling avg rank change, negative = climbing) is now a model feature. 1 song(s) currently outside the Top 10 are predicted to enter it tomorrow (Is_Top10_Challenger=1 in top10_future_predictions.csv).
+- Generated future Top 10 predictions for the latest data (2026-04-15). Rank_Velocity (3-day rolling avg rank change, negative = climbing) is now a model feature. 1 song(s) currently outside the Top 10 are predicted to enter it tomorrow (Is_Top10_Challenger=1 in top10_future_predictions.csv).
 - Top 10 prediction uses a chronological train/test split to measure next-day forecasting. Rank_Velocity (3-day rolling mean of daily rank change; negative = climbing) is included as a feature so fast-rising songs outside the Top 10 are scored as potential challengers.
 
 ## Hypothesis Summary
 - Rank Changes: Shapiro-Wilk -> Reject H0 (p=0.000000)
 - Rank Changes: Kolmogorov-Smirnov -> Reject H0 (p=0.000000)
 - Rank Changes: Kolmogorov-Smirnov -> Reject H0 (p=0.000000)
-- Survival: Likelihood Ratio Test (Exponential vs Weibull) -> Fail to reject H0 (p=0.369619)
-- New Entries: Chi-square goodness of fit -> Fail to reject H0 (p=0.213488)
-- New Entries: Two-sample Poisson rate z-test -> Fail to reject H0 (p=0.418910)
+- Survival: Likelihood Ratio Test (Exponential vs Weibull) -> Fail to reject H0 (p=0.466705)
+- New Entries: Chi-square goodness of fit -> Fail to reject H0 (p=0.141319)
+- New Entries: Two-sample Poisson rate z-test -> Fail to reject H0 (p=0.440178)
 - Artist Dominance: Chi-square goodness of fit -> Reject H0 (p=0.000000)
-- Genre Momentum: Kruskal-Wallis -> Reject H0 (p=0.004913)
+- Genre Momentum: Kruskal-Wallis -> Reject H0 (p=0.009680)
 - Top10 Prediction: Logistic regression coefficient sign -> Interpret coefficient directly (p=NA)
 - Top10 Prediction: Logistic regression coefficient sign -> Interpret coefficient directly (p=NA)
 
