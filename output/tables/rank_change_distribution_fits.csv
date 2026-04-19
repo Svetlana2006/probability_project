@@ -1,5 +1,5 @@
 Model,Target,LogLikelihood,AIC,Parameters
-Normal,Delta_R,-3872.510815902556,7749.021631805112,"mu=0.1164, sigma=3.0918"
-Laplace,Delta_R,-3544.457383144335,7092.91476628867,"loc=0.0000, scale=1.8941"
-Poisson,|Delta_R|,-3249.588191582771,6501.176383165542,lambda=1.8941
-ZeroInflatedPoisson,|Delta_R|,-3082.7224155572903,6169.444831114581,"lambda=2.2824, zero_inflation=0.1910"
+Normal,Delta_R,-4101.624437553303,8207.248875106607,"mu=0.1138, sigma=3.0576"
+Laplace,Delta_R,-3764.97706054708,7533.95412109416,"loc=0.0000, scale=1.8874"
+Poisson,|Delta_R|,-3424.793706692273,6851.587413384546,lambda=1.8874
+ZeroInflatedPoisson,|Delta_R|,-3258.610555733751,6521.221111467502,"lambda=2.2616, zero_inflation=0.1853"
