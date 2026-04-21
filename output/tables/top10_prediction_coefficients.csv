@@ -1,13 +1,13 @@
 Feature,Coefficient
-Genre_Hindi Indie,1.530141861156765
-Genre_Hindi Film,1.2209093027763693
-Total_Appearances,0.32876479974682576
-Artist_Past_Appearances,-0.003793790326687244
-Genre_Devotional/Spiritual,-0.027615500550399665
-Volatility_So_Far,-0.07686362950901021
-Days_On_Chart,-0.29337540938474976
-Rank_Velocity,-0.3992179048178595
-Genre_International Pop/K-Pop,-0.4669816762682712
-Genre_South Indian Film,-0.4754199557423033
-Rank,-0.8605477417003266
-Genre_Punjabi-Haryanvi Pop,-1.8540440474870883
+Genre_Hindi Indie,1.5356490820350317
+Genre_Hindi Film,1.223063375525619
+Total_Appearances,0.35297344456645946
+Artist_Past_Appearances,-0.004061423314717313
+Genre_Devotional/Spiritual,-0.025454267866318683
+Volatility_So_Far,-0.07357096601470411
+Days_On_Chart,-0.318870244053648
+Rank_Velocity,-0.41243218206310217
+Genre_South Indian Film,-0.44264353616920227
+Genre_International Pop/K-Pop,-0.45481667382808944
+Rank,-0.8735614763259598
+Genre_Punjabi-Haryanvi Pop,-1.8887409996281381
