@@ -66,9 +66,9 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    # Default to backfilling April 17, 2026 when no explicit range is provided.
-    start_str = args.start or "2026-04-17"
-    end_str = args.end or "2026-04-17"
+    # Default to backfilling April 20-22, 2026 when no explicit range is provided.
+    start_str = args.start or "2026-04-20"
+    end_str = args.end or "2026-04-22"
 
     try:
         start_date = date.fromisoformat(start_str)
