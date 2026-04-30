@@ -1,8 +1,8 @@
 # Spotify Top 50 Probability Pipeline Report
 
 ## Dataset Snapshot
-- Cleaned chart rows: 2250
-- Unique chart dates: 45
+- Cleaned chart rows: 2500
+- Unique chart dates: 50
 - This pipeline is designed for daily Spotify Top 50 exports stored as one sheet per date.
 
 ## What Was Automated
@@ -12,14 +12,14 @@
 - Wrote a hypothesis-test summary table for the statistical questions that had enough data.
 
 ## Notes
-- Genre metadata matched for 2226 of 2250 chart rows.
+- Genre metadata matched for 2476 of 2500 chart rows.
 - Laplace provides a better AIC than Normal, which supports heavier-tailed rank movement.
-- Observed zero-move share in |Delta_R| is 28.55%; the zero-inflated Poisson fit checks whether no-move days exceed Poisson expectations.
+- Observed zero-move share in |Delta_R| is 28.74%; the zero-inflated Poisson fit checks whether no-move days exceed Poisson expectations.
 - Survival fits were estimated on completed spells only; spells still active at the final chart date are treated as right-censored in the Kaplan-Meier table.
-- 32.89% of observed spells start on the first chart date in the dataset, so some song lifetimes may be left-truncated.
+- 32.26% of observed spells start on the first chart date in the dataset, so some song lifetimes may be left-truncated.
 - Lognormal provides the lower AIC for artist appearance counts in this sample.
-- Top 3 artists account for 30.09% of all Top 50 chart slots in the dataset.
-- The artist-appearance Gini coefficient is 0.4922.
+- Top 3 artists account for 29.48% of all Top 50 chart slots in the dataset.
+- The artist-appearance Gini coefficient is 0.4823.
 - A Cox proportional hazards model is not included because the required survival package is not installed in this environment.
 - Expected time before exit was computed from the absorbing Markov chain fundamental matrix.
 - The full absorbing chain has stationary mass on Exit; a conditional stationary distribution among surviving states was also saved.
@@ -30,11 +30,11 @@
 - Rank Changes: Shapiro-Wilk -> Reject H0 (p=0.000000)
 - Rank Changes: Kolmogorov-Smirnov -> Reject H0 (p=0.000000)
 - Rank Changes: Kolmogorov-Smirnov -> Reject H0 (p=0.000000)
-- Survival: Likelihood Ratio Test (Exponential vs Weibull) -> Fail to reject H0 (p=0.069514)
-- New Entries: Chi-square goodness of fit -> Fail to reject H0 (p=0.157762)
-- New Entries: Two-sample Poisson rate z-test -> Fail to reject H0 (p=0.076778)
+- Survival: Likelihood Ratio Test (Exponential vs Weibull) -> Reject H0 (p=0.036688)
+- New Entries: Chi-square goodness of fit -> Fail to reject H0 (p=0.308476)
+- New Entries: Two-sample Poisson rate z-test -> Fail to reject H0 (p=0.135187)
 - Artist Dominance: Chi-square goodness of fit -> Reject H0 (p=0.000000)
-- Genre Momentum: Kruskal-Wallis -> Reject H0 (p=0.000657)
+- Genre Momentum: Kruskal-Wallis -> Reject H0 (p=0.000111)
 - Top10 Prediction: Logistic regression coefficient sign -> Interpret coefficient directly (p=NA)
 - Top10 Prediction: Logistic regression coefficient sign -> Interpret coefficient directly (p=NA)
 
